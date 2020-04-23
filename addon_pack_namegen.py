@@ -28,22 +28,16 @@ Wikientries are now being used to form "organic" lists, the problem with these e
 one another, meaning that there is no standardised function that i can create to pass each link through
 '''
 
-def italian_surnames(): #This function is a test case of reading a wikipedia list to source names, with the names being loaded in DL elements (descriptive lists)
-    file = requests.get("https://en.wiktionary.org/wiki/Appendix:Italian_surnames")
-    soup = BeautifulSoup(file.content, "html.parser")
-    rec_data = soup.find_all("li")
-    df = pd.DataFrame(columns=["name", "tag", "origin"])
-    for item in rec_data:
-        if item.string == "Zullo":#This is the final part of the page, is used to exit loop
-            adder = str(item.string)
-            df = df.append({"name": adder, "tag": "S", "origin": "ITA"}, ignore_index=True)
-            break
-        if item.string is not None:
-            adder = str(item.string)
-            df = df.append({"name": adder, "tag": "S", "origin": "ITA"}, ignore_index=True)  # S tag is indicative of the surname
-    df["name"] = df["name"].str.replace("[^\w\s]", "")
-    print(df.tail(60))
-    return df
+def find_town_names():
+    df = pd.read_csv("cities5000.txt", sep="\t", header=None)
+    df.columns = ["geonameid", "name", "asciiname", "alternatenames", "lat", "lon",
+                  "class", "code", "country_code", "cc2", "admin1", "admin2", "admin3",
+                  "admin4", "pop", "elevation", "dem_el", "timezone", "mod_date"]
+    print(df)
+    df = df[~df["timezone"].str.contains('America|Australia|Atlantic')]
+    print(df)
+    print(pd.unique(df["timezone"]))
+    df.to_excel("town_names.xlsx", index=False)
 
 def soup_surnames():
     #is_valid = False
@@ -234,7 +228,7 @@ def splice_names():
     frames = [df, df_bs4]
     df_merge = pd.concat(frames)
     df_merge.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
-    df_merge.to_excel("firstnames_merged.xlsx", index=False)
+    df_merge.to_excel("names_merged.xlsx", index=False)
     #print(df_merge)
 
     print("Checking if name exists more than once")
@@ -251,7 +245,6 @@ def form_international_names(): #add npc_df as argument
     #Due to a distinct lack of international names, outside of europe from the previous sources
     #This function will use the first name database provided by Matthias Winkelmann and Jörg MICHAEL at the following address
     #https://github.com/MatthiasWinkelmann/firstname-database
-
     exists = check_if_exists()
     add_files = False #Default value
     decision = start_soup(add_files)
@@ -558,4 +551,5 @@ def form_files(data):
 #df = soup_surnames()
 # #df = splice_names()
 #print(df)
+find_town_names()
 
