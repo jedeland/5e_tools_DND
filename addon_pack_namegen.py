@@ -44,17 +44,12 @@ def find_town_names():
                   "NO|NP|PH|PL|PT|RO|RS|RU|SA|SE|SI|SK|SY|TR|TW|UA|UZ|VN|XK"
 
     df = df[df["country_code"].str.contains(long_string)]
-    print(df)
-    print(pd.unique(df["country_code"]))
     code_list = list(pd.unique(df["country_code"]))
     temp_df = pd.read_excel("surnames_cleaned.xlsx")
-    print(pd.unique(temp_df["origin"]))
 
     df_names_temp = pd.read_excel("surnames_cleaned.xlsx")
     name_args = pd.unique(df_names_temp["origin"])
-    print(name_args)
-    #print(df)
-    #print(pd.unique(df["timezone"]))
+
     df.to_excel("town_names.xlsx", index=False)
 
 def soup_surnames():
@@ -169,7 +164,32 @@ def read_wiki(df, key, origins, page_type):
 def translate_names(df_in):
     df_in["origin"] = np.where((df_in["origin"] == "Surnames"), "African", df_in["origin"])
     df_in["origin"] = np.where((df_in["origin"] == "Low"), "German", df_in["origin"])
+    find_town_names()
+
     print("Translating names using python libraries")
+    def translate_to_latin(df_latin):
+        print("Translating to latin using transliteration")
+    def assign_possible_family_affix(df_affix):
+
+        #This needs to relate to the town names excel, so the "names" of the nations are related to the capital
+        #print("Creating new last names, using the rules proscribed here: https://en.wikipedia.org/wiki/List_of_family_name_affixes")
+        name_affixes = {"Bet": ["Riyadh", "Baghdad"], "Al'":["Riyadh", "Baghdad"], "von": ["Vienna", "Zurich", "Berlin"], "zu": ["Vienna", "Zurich", "Berlin"],
+                        "De": ["Brussels", "Luxembourg", "Amsterdam", "Paris", "Rome", "Malta", "Madrid", "Manilla", "Lisbon"],
+                        "Van": ["Brussels", "Luxembourg", "Amsterdam"], "Del": ["Paris", "Manilla"], "Della": ["Rome"], "Du": ["Paris"],
+                        "Af": ["Stockholm", "Oslo"], "Di": ["Rome", "Madrid"]}
+        location_df = pd.read_excel("town_names.xlsx")
+        single_names = location_df[~location_df["asciiname"].str.contains(" ", na=False)]
+        print(single_names)
+        for k, arg in name_affixes.items():
+            print(k, arg)
+            for i in arg:
+                i_location = location_df["timezone"].str.contains(i, na=False)
+                print(i_location)
+                for g in i_location:
+                    location = g["asciiname"].values
+                    df_affix = df_affix.append({"name": i+" "+location, "tag": "N", "origin": k}, ignore_index=True)
+        return df_affix
+    assign_possible_family_affix(df_in)
 
 def find_latin_name(page, link):
     name = ""
@@ -560,8 +580,8 @@ def form_files(data):
 
 
 #df = form_latin_name_dict()
-#df = soup_surnames()
+df = soup_surnames()
 # #df = splice_names()
-#print(df)
-find_town_names()
+print(df)
+
 
