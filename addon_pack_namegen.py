@@ -91,7 +91,7 @@ def soup_surnames():
         df = df[~df.isin(['None', None]).any(axis=1)]
         df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
         print("Printing dataframe: \n\n\n", df.head(20))
-        translate_names(df)
+        df = translate_names(df)
         #print(df)
         df.to_excel("surnames_cleaned.xlsx", index=False)
         #print(pd.unique(df["origin"])) big_list = pd.unique(df["origin"]) print(list(big_list))
@@ -183,13 +183,21 @@ def translate_names(df_in):
         for k, arg in name_affixes.items():
             print(k, arg)
             for i in arg:
-                i_location = location_df["timezone"].str.contains(i, na=False)
+                i_location = single_names[single_names["timezone"].str.contains(i, na=False)]
+                i_location = i_location[i_location["pop"] > 7000]
                 print(i_location)
-                for g in i_location:
-                    location = g["asciiname"].values
-                    df_affix = df_affix.append({"name": i+" "+location, "tag": "N", "origin": k}, ignore_index=True)
+                for index, row in i_location.iterrows():
+                    location = row["asciiname"]
+                    print(k+" "+location)
+                    df_affix = df_affix.append({"name": k+" "+location, "tag": "N", "origin": i}, ignore_index=True)
+        print(df_affix)
         return df_affix
-    assign_possible_family_affix(df_in)
+    def standarise_names(df_standard):
+        print("This function will standardise the name tags")
+        names = pd.unique(df_standard["origin"])
+
+    df_in = assign_possible_family_affix(df_in)
+    return df_in
 
 def find_latin_name(page, link):
     name = ""
