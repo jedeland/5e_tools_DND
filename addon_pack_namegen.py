@@ -29,21 +29,39 @@ one another, meaning that there is no standardised function that i can create to
 '''
 
 def find_town_names():
-    df = pd.read_csv("cities5000.txt", sep="\t", header=None)
+
+    df = pd.read_csv("cities1000.txt", sep="\t", header=None)
     df.columns = ["geonameid", "name", "asciiname", "alternatenames", "lat", "lon",
                   "class", "code", "country_code", "cc2", "admin1", "admin2", "admin3",
                   "admin4", "pop", "elevation", "dem_el", "timezone", "mod_date"]
     print(df)
-    df = df[~df["timezone"].str.contains('America|Australia|Atlantic')]
+    df = df[~df["timezone"].str.contains('America|Australia|Atlantic|Africa|Pacific')]
     print(df)
-    print(pd.unique(df["timezone"]))
+    print(pd.unique(df["country_code"]))
+    codes = pd.unique(df["country_code"])
+    long_string = "AM|AL|AT|AZ|BE|BG|BY|CH|CN|CZ|DE|EE|ES|FI|FR|GB|GE|GR|" \
+                  "HR|HU|IE|IL|IN|IQ|IR|IT|JP|KR|KZ|LI|LK|LU|LV|MK|MT|NL|" \
+                  "NO|NP|PH|PL|PT|RO|RS|RU|SA|SE|SI|SK|SY|TR|TW|UA|UZ|VN|XK"
+
+    df = df[df["country_code"].str.contains(long_string)]
+    print(df)
+    print(pd.unique(df["country_code"]))
+    code_list = list(pd.unique(df["country_code"]))
+    temp_df = pd.read_excel("surnames_cleaned.xlsx")
+    print(pd.unique(temp_df["origin"]))
+
+    df_names_temp = pd.read_excel("surnames_cleaned.xlsx")
+    name_args = pd.unique(df_names_temp["origin"])
+    print(name_args)
+    #print(df)
+    #print(pd.unique(df["timezone"]))
     df.to_excel("town_names.xlsx", index=False)
 
 def soup_surnames():
     #is_valid = False
     if os.path.exists("surnames_cleaned_complete.xlsx"):
         #Implements checks
-        df = pd.read_csv("surnames_cleaned.xlsx")
+        df = pd.read_excel("surnames_cleaned.xlsx")
         non_valid_names = df.loc[df["name"].str.contains("Appendix|learn more|previous", na=False)]
         df.drop(non_valid_names, inplace=True)
         print(df)
@@ -70,26 +88,18 @@ def soup_surnames():
                 wiktionary_page = "https://en.wiktionary.org"
                 #if key == "Arabic surnames" or key == "Persian surnames":
                 df = read_wiki(df, key_format, nationality.strip(), wiktionary_page)
-
-
             elif value == 'https://en.wikipedia.org/wiki/Category:Surnames_by_language':
-
                 key_format = "https://en.wikipedia.org/wiki/Category:{}".format(key)
                 wiki_page = "https://en.wikipedia.org"
                 df = read_wiki(df, key_format, nationality.strip(), wiki_page)
-
         #Clean out dataframe
         df = df[~df.isin(['None', None]).any(axis=1)]
         df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
-
         print("Printing dataframe: \n\n\n", df.head(20))
         translate_names(df)
         #print(df)
         df.to_excel("surnames_cleaned.xlsx", index=False)
-
-        print(pd.unique(df["origin"]))
-        big_list = pd.unique(df["origin"])
-        print(list(big_list))
+        #print(pd.unique(df["origin"])) big_list = pd.unique(df["origin"]) print(list(big_list))
         return df
 
 def read_wiki(df, key, origins, page_type):
@@ -117,7 +127,7 @@ def read_wiki(df, key, origins, page_type):
                 elif origins in problem_list:
                     problem_name = name.string.split("(")[0]  # Incase of any disambiguations or other issues
                     print(problem_name)
-                    if any(re.findall(r"Appendix|learn more|previous|List", problem_name, re.IGNORECASE)):
+                    if any(re.findall(r"Appendix|learn more|previous|List|Surnames|surnames", problem_name, re.IGNORECASE)):
                         print("Invalid name: ", problem_name)
                     else:
                         split_name = find_latin_name(page_type, name.a["href"])
@@ -143,7 +153,7 @@ def read_wiki(df, key, origins, page_type):
             for name in list_tag:
                 name = name.string.split("(")[0] #Incase of any disambiguations or other issues
                 print(name,"\n", origins)
-                if any(re.findall(r"Appendix|learn more|previous", name, re.IGNORECASE)):
+                if any(re.findall(r"Appendix|learn more|previous|List|Surnames", name, re.IGNORECASE)):
                     print("Invalid name: ", name)
                 else:
                     df = df.append({"name": name, "tag": "N", "origin": origins}, ignore_index=True)
@@ -157,6 +167,8 @@ def read_wiki(df, key, origins, page_type):
         return df
 
 def translate_names(df_in):
+    df_in["origin"] = np.where((df_in["origin"] == "Surnames"), "African", df_in["origin"])
+    df_in["origin"] = np.where((df_in["origin"] == "Low"), "German", df_in["origin"])
     print("Translating names using python libraries")
 
 def find_latin_name(page, link):
