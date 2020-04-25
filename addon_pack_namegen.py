@@ -1,8 +1,8 @@
-import pandas as pd; import numpy as np;
+import pandas as pd; import numpy as np
 import requests; import os; import re; import json
 from bs4 import BeautifulSoup
 from transliterate import translit, detect_language; import time
-
+from unidecode import unidecode
 
 
 
@@ -58,7 +58,7 @@ def soup_surnames():
         #Implements checks
         df = pd.read_excel("surnames_cleaned.xlsx")
         non_valid_names = df.loc[df["name"].str.contains("Appendix|learn more|previous", na=False)]
-        df.drop(non_valid_names, inplace=True)
+        df.drop(non_valid_names, inplace=True), df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
         print(df)
         print(pd.unique(df["name"]))
         return df
@@ -88,11 +88,13 @@ def soup_surnames():
                 wiki_page = "https://en.wikipedia.org"
                 df = read_wiki(df, key_format, nationality.strip(), wiki_page)
         #Clean out dataframe
-        df = df[~df.isin(['None', None]).any(axis=1)]
-        df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+
+
         print("Printing dataframe: \n\n\n", df.head(20))
         df = translate_names(df)
         #print(df)
+        df = df[~df.isin(['None', None]).any(axis=1)]
+        df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
         df.to_excel("surnames_cleaned.xlsx", index=False)
         #print(pd.unique(df["origin"])) big_list = pd.unique(df["origin"]) print(list(big_list))
         return df
@@ -115,14 +117,14 @@ def read_wiki(df, key, origins, page_type):
                 if origins not in problem_list:
                     split_name = name.string.split("(")[0]  # Incase of any disambiguations or other issues
                     print(split_name)
-                    if any(re.findall(r"Appendix|learn more|previous", split_name, re.IGNORECASE)):
+                    if any(re.findall(r"Appendix|learn more|previous|List|Surnames|surnames|name|names", split_name, re.IGNORECASE)):
                         print("Invalid name: ", split_name)
                     else:
                         df = df.append({"name": split_name, "tag": "N", "origin": origins}, ignore_index=True)
                 elif origins in problem_list:
                     problem_name = name.string.split("(")[0]  # Incase of any disambiguations or other issues
                     print(problem_name)
-                    if any(re.findall(r"Appendix|learn more|previous|List|Surnames|surnames", problem_name, re.IGNORECASE)):
+                    if any(re.findall(r"Appendix|learn more|previous|List|Surnames|surnames|name|names|", problem_name, re.IGNORECASE)):
                         print("Invalid name: ", problem_name)
                     else:
                         split_name = find_latin_name(page_type, name.a["href"])
@@ -148,7 +150,7 @@ def read_wiki(df, key, origins, page_type):
             for name in list_tag:
                 name = name.string.split("(")[0] #Incase of any disambiguations or other issues
                 print(name,"\n", origins)
-                if any(re.findall(r"Appendix|learn more|previous|List|Surnames", name, re.IGNORECASE)):
+                if any(re.findall(r"Appendix|learn more|previous|List|Surnames|name", name, re.IGNORECASE)):
                     print("Invalid name: ", name)
                 else:
                     df = df.append({"name": name, "tag": "N", "origin": origins}, ignore_index=True)
@@ -168,7 +170,30 @@ def translate_names(df_in):
 
     print("Translating names using python libraries")
     def translate_to_latin(df_latin):
-        print("Translating to latin using transliteration")
+        print("Translating to latin using unidecode")
+        asian_languages = ["Chinese", "Korean", "Japanese"] #Relevant Asian Language Tags
+        for i in asian_languages:
+            df_temp = df_latin.loc[df_latin["origin"] == i]
+            for index, row in df_temp.iterrows():
+                print(row["name"])
+                latin_name = unidecode(row["name"])
+                latin_nopunct = re.sub(r'[^\w\s]', '', latin_name)
+                latin_nopunct = latin_nopunct.capitalize()
+                print(latin_name)
+                df_latin.replace(row["name"], latin_nopunct, inplace=True)
+        cyrillic_languages = ["Armenian", "Bulgarian", "Georgian", "Greek", "Russian", "Serbo"]
+        for g in cyrillic_languages:
+            df_temp = df_latin.loc[df_latin["origin"] == g]
+            for index, row in df_temp.iterrows():
+                print(row["name"])
+                latin_name = translit(row["name"], reversed=True)
+                latin_nopunct = re.sub(r'[^\w\s]', '', latin_name)
+                latin_nopunct = latin_nopunct.capitalize()
+                print(latin_name)
+                df_latin.replace(row["name"], latin_nopunct, inplace=True)
+
+        #for language in
+        return df_latin
     def assign_possible_family_affix(df_affix):
 
         #This needs to relate to the town names excel, so the "names" of the nations are related to the capital
@@ -176,7 +201,7 @@ def translate_names(df_in):
         name_affixes = {"Bet": ["Riyadh", "Baghdad"], "Al'":["Riyadh", "Baghdad"], "von": ["Vienna", "Zurich", "Berlin"], "zu": ["Vienna", "Zurich", "Berlin"],
                         "De": ["Brussels", "Luxembourg", "Amsterdam", "Paris", "Rome", "Malta", "Madrid", "Manilla", "Lisbon"],
                         "Van": ["Brussels", "Luxembourg", "Amsterdam"], "Del": ["Paris", "Manilla"], "Della": ["Rome"], "Du": ["Paris"],
-                        "Af": ["Stockholm", "Oslo"], "Di": ["Rome", "Madrid"]}
+                        "Af": ["Stockholm", "Oslo"], "Di": ["Rome", "Madrid"], "of": ["London"]}
         location_df = pd.read_excel("town_names.xlsx")
         single_names = location_df[~location_df["asciiname"].str.contains(" ", na=False)]
         print(single_names)
@@ -195,7 +220,7 @@ def translate_names(df_in):
     def standarise_names(df_standard):
         print("This function will standardise the name tags")
         names = pd.unique(df_standard["origin"])
-
+    df_in = translate_to_latin(df_in)
     df_in = assign_possible_family_affix(df_in)
     return df_in
 
@@ -218,7 +243,7 @@ def find_latin_name(page, link):
                 text_modified = re.sub(r'[^\w\s]', '', text_arg)
                 text = text_modified.capitalize()
                 name = text_modified
-                if name[0]== "ʾ":
+                if name[0]== "ʾ|ʿ":
                     name = name[1:]
                 print("---000---", name)
                 return name
