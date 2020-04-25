@@ -184,13 +184,19 @@ def translate_names(df_in):
         cyrillic_languages = ["Armenian", "Bulgarian", "Georgian", "Greek", "Russian", "Serbo"]
         for g in cyrillic_languages:
             df_temp = df_latin.loc[df_latin["origin"] == g]
+            
             for index, row in df_temp.iterrows():
                 print(row["name"])
-                latin_name = translit(row["name"], reversed=True)
-                latin_nopunct = re.sub(r'[^\w\s]', '', latin_name)
-                latin_nopunct = latin_nopunct.capitalize()
-                print(latin_name)
-                df_latin.replace(row["name"], latin_nopunct, inplace=True)
+                test_string = row["name"]
+                res = all(ord(c) < 128 for c in test_string)
+                if res is True:
+                    pass
+                else:
+                    latin_name = translit(row["name"], reversed=True)
+                    latin_nopunct = re.sub(r'[^\w\s]', '', latin_name)
+                    latin_nopunct = latin_nopunct.capitalize()
+                    print(latin_name)
+                    df_latin.replace(row["name"], latin_nopunct, inplace=True)
 
         #for language in
         return df_latin
