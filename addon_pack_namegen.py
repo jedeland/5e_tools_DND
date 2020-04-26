@@ -65,9 +65,7 @@ def soup_surnames():
     else:
         print("Starting Soup")
         df = pd.DataFrame(columns=["name", "tag", "origin"])
-        bins = ["Asian", "African", "European", "Iberian", "Russian", "Caucausus", "Balkan"]
         surname_urls = read_surnames()
-        #print("Surname arguments are as follows: ", surname_urls)
         for key, value in surname_urls.items():
             try:
                 if "-" in key:
@@ -189,14 +187,15 @@ def translate_names(df_in):
                 print(row["name"])
                 test_string = row["name"]
                 res = all(ord(c) < 128 for c in test_string)
-                if res is True:
-                    pass
-                else:
+                try:
                     latin_name = translit(row["name"], reversed=True)
                     latin_nopunct = re.sub(r'[^\w\s]', '', latin_name)
                     latin_nopunct = latin_nopunct.capitalize()
                     print(latin_name)
                     df_latin.replace(row["name"], latin_nopunct, inplace=True)
+                except:
+                    pass
+
 
         #for language in
         return df_latin
@@ -225,9 +224,18 @@ def translate_names(df_in):
         return df_affix
     def standarise_names(df_standard):
         print("This function will standardise the name tags")
+        df = pd.read_excel("firstnames_merged.xlsx")
+        first_names = pd.unique(df["origin"])
         names = pd.unique(df_standard["origin"])
+        print("Printing first name origins: \n\n\n")
+        print(list(first_names))
+        print("Printing surname origins: \n\n\n")
+        print(list(names))
+        names_overall = first_names + names
+        print(set(names_overall))
     df_in = translate_to_latin(df_in)
     df_in = assign_possible_family_affix(df_in)
+    standarise_names(df_in)
     return df_in
 
 def find_latin_name(page, link):
@@ -294,21 +302,21 @@ def read_surnames():
 def splice_names():
     #Please note that most of the names involved in this function are infact latin-ised names, and cover countries that have already been found via web scraping
     df = form_international_names()
-    df_bs4 = form_latin_name_dict()
-
-    frames = [df, df_bs4]
-    df_merge = pd.concat(frames)
-    df_merge.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
-    df_merge.to_excel("names_merged.xlsx", index=False)
+    df_bs4 = soup_names()
+    df_surnames = soup_surnames()
+    frames = [df, df_bs4, df_surnames]
+    df_full = pd.concat(frames, ignore_index=True)
+    df_full.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+    df_full.to_excel("names_merged.xlsx", index=False)
     #print(df_merge)
 
     print("Checking if name exists more than once")
-    counts = df["origin"].value_counts()
-    counts = df[df["origin"].isin(counts.index[counts.gt(2)])]
+    counts = df_full["origin"].value_counts()
+    counts = df_full[df_full["origin"].isin(counts.index[counts.gt(2)])]
     #print(counts)
     print(counts.tail(40))
 
-    return df_merge
+    return df_full
 
 
 
@@ -414,7 +422,7 @@ def refactor_columns(col):
     nations.remove("etc.")
     return nations
 
-def form_latin_name_dict():
+def soup_names():
     test_case = False
     test_decision = True
     name_dict = {}
@@ -436,8 +444,8 @@ def form_latin_name_dict():
             file_list = [df_csv, df_xlsx]
             #print("Starting the soup is recommended before taking the test\nIf you wish to skip this step please ensure that everything is working in order...")
 
-            test_result = start_tests(file_list, nation_abrev)
-            print("Test result: ", test_result)
+            #test_result = start_tests(file_list, nation_abrev)
+            #print("Test result: ", test_result)
 
             #If you decide you need to add new names, please ensure you have added the following things
             #1. The nations name, relative to the wikipedia article, for instance https://en.wiktionary.org/wiki/Appendix:Russian_given_names
@@ -463,7 +471,8 @@ def form_latin_name_dict():
 
                 return df
             else:
-                return df_stable
+                print(df_xlsx)
+                return df_xlsx
         except:
             print("An error occured")
             pass
@@ -476,6 +485,9 @@ def form_latin_name_dict():
         print(df.tail(60))
 
         return df
+
+
+
 
 
 def start_soup(add_decision):
@@ -548,9 +560,93 @@ def add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats):
                     else:
                         df = df.append({"name": adder, "tag": "F", "origin": origins},
                                        ignore_index=True)
-    df = clean_df(df)
-    return df
+    def add_wiki_names(df_temp):
+        names_urls = read_wiki_names()
+        for key, value in names_urls.items():
+            try:
+                if "-" in key:
+                    nationality = key.split("-")[0]
+                else:
+                    nationality = key.split(" ")[0]
+            except:
+                pass
+            print(key, value)
+            if value == 'https://en.wikipedia.org/wiki/Category:Feminine_given_names':
+                # Wiktionary names are in their original language, need to follow deeper to find the english prounouncation
+                key_format = "https://en.wikipedia.org/wiki/Category:{}".format(key)
+                gender = "F"
+                # if key == "Arabic surnames" or key == "Persian surnames":
+                df_temp = read_category_names(df_temp, key_format, nationality.strip(), gender)
+            elif value == 'https://en.wikipedia.org/wiki/Category:Masculine_given_names':
+                key_format = "https://en.wikipedia.org/wiki/Category:{}".format(key)
+                gender = "M"
+                df_temp = read_category_names(df_temp, key_format, nationality.strip(), gender)
+        return df_temp
+    df_unmerged = add_wiki_names(df)
+    print(df_unmerged)
+    df_clean = clean_df(df)
+    print(df_clean)
+    con_frames = [df_clean,df_unmerged]
+    df_concat = pd.concat(con_frames, ignore_index=True)
+    print(df_concat)
+    return df_concat
 
+def read_category_names(df_category, key, origins, gender):
+        print("Value is from Wikipedia")
+        file = requests.get(key)
+        soup = BeautifulSoup(file.content, "lxml")
+        # First things first the soup needs to search if there is a next page
+        div_tag = soup.find_all("div", {"id": "mw-pages"})
+        for tag in div_tag:
+            list_tag = tag.find_all("li")
+            for name in list_tag:
+                name = name.string.split("(")[0] #Incase of any disambiguations or other issues
+                print(name,"\n", origins, gender)
+                if any(re.findall(r"Appendix|learn more|previous|List|Surnames|name", name, re.IGNORECASE)):
+                    print("Invalid name: ", name)
+                else:
+                    df_category = df_category.append({"name": name, "tag": gender, "origin": origins}, ignore_index=True)
+            a_tag = tag.find_all("a", href=True)
+            for a_link in a_tag:
+                if "next page" in a_link.string:
+                    print("There is a page in the tag: {}".format("https://en.wikipedia.org" + a_link["href"]))
+                    df_category = read_category_names(df_category, "https://en.wikipedia.org" + a_link["href"], origins, gender)
+                    break
+        print(df_category)
+        return df_category
+
+
+def read_wiki_names():
+    total_names = 0
+    valid_names = {}
+    print("Hello")
+    files = ["https://en.wikipedia.org/wiki/Category:Feminine_given_names", "https://en.wikipedia.org/wiki/Category:Masculine_given_names"]
+    #Would be possible to add the following links, but i have decided against it "https://en.wiktionary.org/wiki/Category:Female_given_names_by_language", "https://en.wiktionary.org/wiki/Category:Male_given_names_by_language"
+    for file_url in files:
+        file = requests.get(file_url)
+        print(file_url)
+        soup = BeautifulSoup(file.content, "lxml")
+        div_tag = soup.find_all("div", {"class":"CategoryTreeItem"})
+        for article in div_tag:
+            print(article.text)
+            try:
+                span_tag = article.find_all("span", {"dir": "ltr"})[0]  # The first span element with this tag holds the length of the article
+                print(span_tag)
+                if "," in span_tag.string:
+                    span_checker = span_tag.string.split(",", 1)[1]
+                else:
+                    span_checker = span_tag.string
+
+                span_checker = re.sub('[^0-9]', '', span_checker)
+                if int(span_checker) >= 25:
+                    total_names = total_names + int(span_checker)
+                    print(article, total_names)
+                    valid_names.update({article.a.text: file_url})
+            except:
+                pass
+
+    print(valid_names, "\n\n\n", int(total_names))
+    return valid_names
 
 def clean_df(df):
     df["name"] = df["name"].str.replace("[^\w\s]", "")
@@ -609,18 +705,18 @@ def generate_city_input():
     print("This function has not been implemented yet")
 
 def form_files(data):
-    #Aims to create a CSV, Excell and SQL version of the dataframe
-    data.to_csv("npcs.csv", index=False)
+    #Aims to create a SQL version of the dataframe
     data.to_excel("npcs.xlsx", index=False)
+    data.to_csv("npcs.csv", index=False)
+    print("Not implemented yet")
     #Continue Later
     #data.to_sql()
 
 
 
 
-#df = form_latin_name_dict()
-df = soup_surnames()
-# #df = splice_names()
-print(df)
+df = soup_names()
+#df = splice_names()
+#print(df)
 
 
