@@ -57,8 +57,8 @@ def soup_surnames():
     if os.path.exists("surnames_cleaned_complete.xlsx"):
         #Implements checks
         df = pd.read_excel("surnames_cleaned.xlsx")
-        non_valid_names = df.loc[df["name"].str.contains("Appendix|learn more|previous", na=False)]
-        df.drop(non_valid_names, inplace=True), df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+
+        df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
         print(df)
         print(pd.unique(df["name"]))
         return df
@@ -224,15 +224,13 @@ def translate_names(df_in):
         return df_affix
     def standarise_names(df_standard):
         print("This function will standardise the name tags")
-        df = pd.read_excel("firstnames_merged.xlsx")
-        first_names = pd.unique(df["origin"])
-        names = pd.unique(df_standard["origin"])
-        print("Printing first name origins: \n\n\n")
-        print(list(first_names))
-        print("Printing surname origins: \n\n\n")
-        print(list(names))
-        names_overall = first_names + names
-        print(set(names_overall))
+        df = pd.read_excel("names_merged.xlsx")
+        name_dict = {"Arabic": "Arabia", "French": "France", "Spanish": "Spain", "Indian": "India", "Finnish": "Finland",
+                     "Turkish": "Turkey", "Swedish": "Sweden", "German": "Germany", "": ""}
+        for k, v in name_dict.items():
+            print(k,v)
+
+
     df_in = translate_to_latin(df_in)
     df_in = assign_possible_family_affix(df_in)
     standarise_names(df_in)
@@ -715,8 +713,8 @@ def form_files(data):
 
 
 
-df = soup_names()
-#df = splice_names()
-#print(df)
+
+df = splice_names()
+print(df)
 
 
