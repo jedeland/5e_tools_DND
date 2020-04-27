@@ -59,6 +59,8 @@ def soup_surnames():
         df = pd.read_excel("surnames_cleaned.xlsx")
 
         df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+        #print(df)
+        df = df[~df.isin(['None', None]).any(axis=1)]
         print(df)
         print(pd.unique(df["name"]))
         return df
@@ -225,10 +227,20 @@ def translate_names(df_in):
     def standarise_names(df_standard):
         print("This function will standardise the name tags")
         df = pd.read_excel("names_merged.xlsx")
-        name_dict = {"Arabic": "Arabia", "French": "France", "Spanish": "Spain", "Indian": "India", "Finnish": "Finland",
-                     "Turkish": "Turkey", "Swedish": "Sweden", "German": "Germany", "": ""}
+        name_dict = {"Arabic": "Arabia", "French": "France", "Spanish": "Spain", "Indian": "India", "Finnish": "Finland", "Riyadh": "Arabia", "Montenegrin":"Balkan",
+                     "Turkish": "Turkey", "Swedish": "Sweden", "German": "Germany", "Georgian": "Georgia", "Japanese": "Japan", "USA": "England", "English":"England", "Great Briton": "England",
+                     "Estonian": "Estonia", "Baghdad": "Arabia", "Vienna": "Germany", "Zurich": "Swiss", "Berlin": "Germany", "Amsterdam": "Dutch", "Paris": "France", "Rome": "Italy", "Lisbon": "Portugal",
+                     "Stockholm": "Sweden", "Oslo": "Norway", "Norwegian": "Norway", "London": "England", "Portuguese": "Portugal", "Irish": "Celtic", "Scottish Gaelic": "Celtic", "Welsh": "Celtic", "Serbo": "Balkan", "Germanyic": "German",
+                     "Madrid": "Spain", "Brussels": "Belgium", "Bengali": "India", "Punjabi": "India", "Iranian": "Persian", "Hindi": "India", "Cornish": "Celtic", "Catalan": "Spain", "Bosnian": "Balkan", "Slovene": "Balkan",
+                     "Serbia": "Balkan", "Serbian": "Balkan", "Afrikaans": "Dutch", "Belarusian": "Russian", "Chichewa": "Bantu", "Galician": "Spain", "Hiligaynon": "Philippines", "Ilocano": "Philippines", "Kapampangan": "Philippines",
+                     "Tagalog": "Philippines", "Telugu": "India", "Maltese": "Malta"}
         for k, v in name_dict.items():
-            print(k,v)
+            try:
+                df_standard["origin"] = df_standard["origin"].str.replace(k, v)
+                print(k,v)
+            except:
+                pass
+        print(sorted(pd.unique(df_standard["origin"])))
 
 
     df_in = translate_to_latin(df_in)
