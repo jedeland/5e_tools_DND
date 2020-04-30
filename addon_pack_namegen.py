@@ -54,13 +54,13 @@ def find_town_names():
 
 def soup_surnames():
     #is_valid = False
-    if os.path.exists("surnames_cleaned_complete.xlsx"):
+    if os.path.exists("surnames_cleaned.xlsx"):
         #Implements checks
         df = pd.read_excel("surnames_cleaned.xlsx")
 
-        df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
+
         #print(df)
-        df = df[~df.isin(['None', None]).any(axis=1)]
+
         print(df)
         print(pd.unique(df["name"]))
         return df
@@ -316,7 +316,8 @@ def splice_names():
     df_surnames = soup_surnames()
     frames = [df, df_bs4, df_surnames]
     df_full = pd.concat(frames, ignore_index=True)
-    df_full["name"] = df_full["name"].str.replace("'^\s*$", np.nan)
+    df_full["name"] = df_full["name"].str.replace("\w{L}+", "")
+    df_full["name"] = df_full["name"].replace("", np.nan)
     df_full["name"] = df_full["name"].str.replace("[", "")
     df_full.dropna(axis=0, how='any', thresh=None, subset=["name"], inplace=True)
 
