@@ -316,9 +316,14 @@ def splice_names():
     df_surnames = soup_surnames()
     frames = [df, df_bs4, df_surnames]
     df_full = pd.concat(frames, ignore_index=True)
-    df_full.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
-    df_full.drop(labels=None, axis=0, index=None, columns=None, level=None, inplace=False, errors='raise')
-    df_full.to_excel("names_merged.xlsx", na_rep="None", index=False)
+    df_full["name"] = df_full["name"].str.replace("'^\s*$", np.nan)
+    df_full["name"] = df_full["name"].str.replace("[", "")
+    df_full.dropna(axis=0, how='any', thresh=None, subset=["name"], inplace=True)
+
+
+    print(df_full)
+    print(df_full[df_full["name"] == ""])
+    df_full.to_excel("names_merged.xlsx", na_rep="0", index=False)
     #print(df_merge)
 
     print("Checking if name exists more than once")
