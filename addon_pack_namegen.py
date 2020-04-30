@@ -317,7 +317,8 @@ def splice_names():
     frames = [df, df_bs4, df_surnames]
     df_full = pd.concat(frames, ignore_index=True)
     df_full.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
-    df_full.to_excel("names_merged.xlsx", index=False)
+    df_full.drop(labels=None, axis=0, index=None, columns=None, level=None, inplace=False, errors='raise')
+    df_full.to_excel("names_merged.xlsx", na_rep="None", index=False)
     #print(df_merge)
 
     print("Checking if name exists more than once")
@@ -727,6 +728,7 @@ def form_files(data):
 
 
 df = splice_names()
+df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 print(df)
 
 
