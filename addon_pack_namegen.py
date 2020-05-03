@@ -319,6 +319,7 @@ def splice_names():
     df_full["name"] = df_full["name"].str.replace("\w{L}+", "")
     df_full["name"] = df_full["name"].replace("", np.nan)
     df_full["name"] = df_full["name"].str.replace("[", "")
+    df_full = df_full.sort_values(["origin"])
     df_full.dropna(axis=0, how='any', thresh=None, subset=["name"], inplace=True)
 
 
