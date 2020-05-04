@@ -1,9 +1,8 @@
 import pandas as pd; import numpy as np
-import requests; import os; import re; import json
+import requests; import os; import re
 from bs4 import BeautifulSoup
 from transliterate import translit, detect_language; import time
 from unidecode import unidecode
-
 
 
 
@@ -29,7 +28,6 @@ one another, meaning that there is no standardised function that i can create to
 '''
 
 def find_town_names():
-
     df = pd.read_csv("cities1000.txt", sep="\t", header=None)
     df.columns = ["geonameid", "name", "asciiname", "alternatenames", "lat", "lon",
                   "class", "code", "country_code", "cc2", "admin1", "admin2", "admin3",
@@ -42,13 +40,8 @@ def find_town_names():
     long_string = "AM|AL|AT|AZ|BE|BG|BY|CH|CN|CZ|DE|EE|ES|FI|FR|GB|GE|GR|" \
                   "HR|HU|IE|IL|IN|IQ|IR|IT|JP|KR|KZ|LI|LK|LU|LV|MK|MT|NL|" \
                   "NO|NP|PH|PL|PT|RO|RS|RU|SA|SE|SI|SK|SY|TR|TW|UA|UZ|VN|XK"
-
     df = df[df["country_code"].str.contains(long_string)]
-    code_list = list(pd.unique(df["country_code"]))
-    temp_df = pd.read_excel("surnames_cleaned.xlsx")
-
     df_names_temp = pd.read_excel("surnames_cleaned.xlsx")
-    name_args = pd.unique(df_names_temp["origin"])
 
     df.to_excel("town_names.xlsx", index=False)
 
@@ -57,10 +50,6 @@ def soup_surnames():
     if os.path.exists("surnames_cleaned.xlsx"):
         #Implements checks
         df = pd.read_excel("surnames_cleaned.xlsx")
-
-
-        #print(df)
-
         print(df)
         print(pd.unique(df["name"]))
         return df
@@ -197,10 +186,9 @@ def translate_names(df_in):
                     df_latin.replace(row["name"], latin_nopunct, inplace=True)
                 except:
                     pass
-
-
         #for language in
         return df_latin
+
     def assign_possible_family_affix(df_affix):
 
         #This needs to relate to the town names excel, so the "names" of the nations are related to the capital
@@ -224,6 +212,7 @@ def translate_names(df_in):
                     df_affix = df_affix.append({"name": k+" "+location, "tag": "N", "origin": i}, ignore_index=True)
         print(df_affix)
         return df_affix
+
     def standarise_names(df_standard):
         print("This function will standardise the name tags")
         df = pd.read_excel("names_merged.xlsx")
@@ -633,7 +622,6 @@ def read_category_names(df_category, key, origins, gender):
         print(df_category)
         return df_category
 
-
 def read_wiki_names():
     total_names = 0
     valid_names = {}
@@ -723,7 +711,8 @@ def generate_city_input():
     print("This function has not been implemented yet")
 
 def form_files(data):
-    #Aims to create a SQL version of the dataframe
+    #Aims to create an SQL version of the dataframe
+    data.to_sql("")
     data.to_excel("npcs.xlsx", index=False)
     data.to_csv("npcs.csv", index=False)
     print("Not implemented yet")
