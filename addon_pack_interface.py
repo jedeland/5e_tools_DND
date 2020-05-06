@@ -8,18 +8,29 @@ def npc_options():
         df_arg = pd.read_excel("names_merged.xlsx")
         print("Loading NPC options....")
         culture_list = pd.unique(df_arg["origin"])
+        culture_list = culture_list.tolist()
+        print(culture_list, len(culture_list), type(culture_list))
 
-        print(culture_list, len(culture_list))
-        africa = culture_list.choose(0, 2, 8, 69)
-        arabia =  culture_list[3, 4, 6, 27, 31, 35, 38, 63, 64]
-        asia = culture_list[14, 16, 25, 34, 30, 35, 37:39, 47, 48, 51, 56, 67, 68]
-        europe = culture_list.pop(0, 2, 3, 8, 69 ,14, 16, 25, 34, 30, 35, 37, 38, 39, 47, 48, 51, 56, 67, 68)
+        af_num = [0, 2, 8, 69]
+        africa = [culture_list[g] for g in af_num]
+
+        arb_num = [3, 4, 6, 27, 31, 35, 38, 63, 64]
+        arabia = [culture_list[v] for v in arb_num]
+        as_num = [14, 16, 25, 34, 30, 35, 37, 38, 39, 47, 48, 51, 56, 67, 68]
+        asia = [culture_list[p] for p in as_num]
+        for number, origin in enumerate(culture_list, start=0):
+            print(number, " ", origin)
+        euro_num = [1, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 23, 25, 26, 27, 28, 29,
+                    31, 32, 33, 36, 38, 40, 41, 42, 43, 44, 45, 46, 49, 50, 52, 53, 54, 55, 56, 57, 58, 59,
+                    60, 61, 62, 63, 64, 65]
+        europe = [culture_list[n] for n in euro_num]
         print(europe)
 
 
 
         #Assigns cultural lists to regions
         regions = {"Africa": africa, "Europe": europe,"Near East": arabia, "Asia": asia}
+        print(regions)
         print("Type the number of NPC's you wish to create: ")
         npc_num = None
         while npc_num is None:
