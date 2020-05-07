@@ -216,13 +216,18 @@ def translate_names(df_in):
     def standarise_names(df_standard):
         print("This function will standardise the name tags")
         df = pd.read_excel("names_merged.xlsx")
-        name_dict = {"Arabic": "Arabia", "French": "France", "Spanish": "Spain", "Indian": "India", "Finnish": "Finland", "Riyadh": "Arabia", "Montenegrin":"Balkan",
+        name_dict = {"Arabic": "Arabia", "Arabia/Persia": "Arabia", "French": "France", "Spanish": "Spain", "Indian": "India", "Finnish": "Finland", "Riyadh": "Arabia", "Montenegrin":"Balkan",
                      "Turkish": "Turkey", "Swedish": "Sweden", "German": "Germany", "Georgian": "Georgia", "Japanese": "Japan", "USA": "England", "English":"England", "Great Briton": "England",
                      "Estonian": "Estonia", "Baghdad": "Arabia", "Vienna": "Germany", "Zurich": "Swiss", "Berlin": "Germany", "Amsterdam": "Dutch", "Paris": "France", "Rome": "Italy", "Lisbon": "Portugal",
                      "Stockholm": "Sweden", "Oslo": "Norway", "Norwegian": "Norway", "London": "England", "Portuguese": "Portugal", "Irish": "Celtic", "Scottish Gaelic": "Celtic", "Welsh": "Celtic", "Serbo": "Balkan", "Germanyic": "German",
                      "Madrid": "Spain", "Brussels": "Belgium", "Bengali": "India", "Punjabi": "India", "Iranian": "Persian", "Hindi": "India", "Cornish": "Celtic", "Catalan": "Spain", "Bosnian": "Balkan", "Slovene": "Balkan",
-                     "Serbia": "Balkan", "Serbian": "Balkan", "Afrikaans": "Dutch", "Belarusian": "Russian", "Chichewa": "Bantu", "Galician": "Spain", "Hiligaynon": "Philippines", "Ilocano": "Philippines", "Kapampangan": "Philippines",
-                     "Tagalog": "Philippines", "Telugu": "India", "Maltese": "Malta"}
+                     "Serbia": "Balkan", "Serbian": "Balkan", "Afrikaans": "Dutch", "Belarusian": "Russia", "Chichewa": "Bantu", "Galician": "Spain", "Hiligaynon": "Philippines", "Ilocano": "Philippines", "Kapampangan": "Philippines",
+                     "Tagalog": "Philippines", "Telugu": "India", "Maltese": "Malta", "Armenian": "Armenia", "Azerbaijani": "Azerbaijan", "Bulgarian": "Bulgaria", "Bosnia and Herzegovina" : "Balkan",
+                     "Croatia": "Balkan", "Croatian": "Balkan", "Danish": "Denmark", "Faroese": "Norway", "Germanyy": "Germany", "Great Britain": "England", "Hungarian": "Hungary", "Korean": "Korea", "Italian": "Italy",
+                     "India/Sri Lanka": "India", "Icelandic": "Iceland", "Latvian": "Latvia", "Lithuanian": "Lithuania", "Macedonian": "Macedonia", "Kosovo": "Balkan", "Montenegro": "Balkan", "Polish": "Poland", "Romanian": "Romania",
+                     "Tamil": "India", "Ukrainian": "Ukraine", "Vietnamese": "Vietnam", "Albanian": "Albania", "Belarus": "Russia", "Russian": "Russia", "Kazakhstan/Uzbekistan": "Kazakhstan", "Amharic": "Ethiopia",
+                     "Bosniak": "Balkan", "Balkann": "Balkan", "Slovak": "Slovakia", "Slovakiaia": "Slovakia", "Filipino": "Philippines", "Greek": "Greece", "Chinese": "China", "Sinhalese": "Srilanka", "Ireland": "Celtic",
+                     "Hebrew": "Israel", "Yiddish": "Israel", "Scottish": "Celtic", "Tatar": "Kazakhstan", "Norman": "French", "Occitan": "French", "Breton":"French", "Cebuano": "Philippines", "Moldova": "Romania"}
         for k, v in name_dict.items():
             try:
                 df_standard["origin"] = df_standard["origin"].str.replace(k, v)
@@ -235,6 +240,7 @@ def translate_names(df_in):
     df_in = translate_to_latin(df_in)
     df_in = assign_possible_family_affix(df_in)
     standarise_names(df_in)
+
     return df_in
 
 def find_latin_name(page, link):
@@ -310,6 +316,7 @@ def splice_names():
     df_full["name"] = df_full["name"].str.replace("[", "")
     df_full = df_full.sort_values(["origin"])
     df_full.dropna(axis=0, how='any', thresh=None, subset=["name"], inplace=True)
+    df_full = translate_names(df_full)
 
 
     print(df_full)
@@ -720,11 +727,9 @@ def form_files(data):
     #data.to_sql()
 
 
+#splice_names()
 
 
 
-df = splice_names()
-df.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
-print(df)
 
 
