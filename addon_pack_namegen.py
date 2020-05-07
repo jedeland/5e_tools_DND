@@ -227,7 +227,8 @@ def translate_names(df_in):
                      "India/Sri Lanka": "India", "Icelandic": "Iceland", "Latvian": "Latvia", "Lithuanian": "Lithuania", "Macedonian": "Macedonia", "Kosovo": "Balkan", "Montenegro": "Balkan", "Polish": "Poland", "Romanian": "Romania",
                      "Tamil": "India", "Ukrainian": "Ukraine", "Vietnamese": "Vietnam", "Albanian": "Albania", "Belarus": "Russia", "Russian": "Russia", "Kazakhstan/Uzbekistan": "Kazakhstan", "Amharic": "Ethiopia",
                      "Bosniak": "Balkan", "Balkann": "Balkan", "Slovak": "Slovakia", "Slovakiaia": "Slovakia", "Filipino": "Philippines", "Greek": "Greece", "Chinese": "China", "Sinhalese": "Srilanka", "Ireland": "Celtic",
-                     "Hebrew": "Israel", "Yiddish": "Israel", "Scottish": "Celtic", "Tatar": "Kazakhstan", "Norman": "French", "Occitan": "French", "Breton":"French", "Cebuano": "Philippines", "Moldova": "Romania"}
+                     "Hebrew": "Israel", "Yiddish": "Israel", "Scottish": "Celtic", "Tatar": "Kazakhstan", "Norman": "France", "Occitan": "France", "Breton":"France", "Cebuano": "Philippines", "Moldova": "Romania",
+                     "Nepali": "India", "Urdu": "Pakistani", "Yoruba": "African"}
         for k, v in name_dict.items():
             try:
                 df_standard["origin"] = df_standard["origin"].str.replace(k, v)

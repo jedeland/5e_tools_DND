@@ -9,7 +9,17 @@ def npc_options():
         print("Loading NPC options....")
         culture_list = pd.unique(df_arg["origin"])
         culture_list = culture_list.tolist()
-        #do_enum(culture_list)
+        do_enum(culture_list)
+        non_relevant = []
+        for i in culture_list:
+            df_temp = df_arg.loc[df_arg["origin"] == i]
+            print(df_temp)
+            if any(df_temp["tag"] != "N"):
+                print("This dataframe has regular names")
+            else:
+                non_relevant.append(i)
+                print("This dataframe has no regular names")
+
 
         af_num = [0, 2, 8, 64]
         africa = [culture_list[g] for g in af_num]
@@ -21,6 +31,7 @@ def npc_options():
                     31, 32, 35, 39, 40, 41, 42, 43, 44, 45, 49, 50, 51, 53, 54, 55, 56, 57, 58, 59,
                     60]
         europe = [culture_list[n] for n in euro_num]
+        
         #Assigns cultural lists to regions
         regions = {"Africa": africa, "Europe": europe,"Near East": arabia, "Asia": asia}
 
@@ -68,9 +79,7 @@ def show_npc(df, nations, num_npcs):
     print("Taking random value from data, returning {0} NPC names from {1}".format(num_npcs, nations))
 
     df = df.loc[df["origin"] == nations]
-    print(df)
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
-    print(rand_name, rand_surname)
     for i in range(num_npcs):
         print("NPC: {0}".format(np.random.choice(rand_name["name"].values, 1) + " " + np.random.choice(rand_surname["name"].values,1)))
     #print(df)
