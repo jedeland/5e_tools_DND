@@ -101,8 +101,7 @@ def show_npc(df, nations, num_npcs):
     for i in range(num_npcs):
         name = str(np.random.choice(rand_name["name"], 1) + " " + np.random.choice(rand_surname["name"],1))
         name = str(name.title())
-        name = name.strip()
-        print(type(name), name)
+        name = re.sub(r'[^\w\s]', '', name)
         print("NPC: {0}".format(name))
     #print(df)
 
