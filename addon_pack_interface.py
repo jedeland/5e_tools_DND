@@ -99,7 +99,11 @@ def show_npc(df, nations, num_npcs):
     df = df.loc[df["origin"] == nations]
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     for i in range(num_npcs):
-        print("NPC: {0}".format(np.random.choice(rand_name["name"].values, 1) + " " + np.random.choice(rand_surname["name"].values,1)))
+        name = str(np.random.choice(rand_name["name"], 1) + " " + np.random.choice(rand_surname["name"],1))
+        name = str(name.title())
+        name = name.strip()
+        print(type(name), name)
+        print("NPC: {0}".format(name))
     #print(df)
 
 def do_enum(args):
