@@ -244,6 +244,7 @@ def translate_names(df_in):
 
     return df_in
 
+
 def find_latin_name(page, link):
     name = ""
     possible_tags = ["headword-tr manual-tr tr Latn", "headword-tr tr Latn"]

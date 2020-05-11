@@ -11,6 +11,10 @@ def npc_options():
         culture_list = culture_list.tolist()
         do_enum(culture_list)
         non_relevant = []
+        af_num = [0, 8]
+        for i in af_num:
+            df = df_arg[i]
+            print(pd.unique(df["tag"]))
         for i in culture_list:
             df_temp = df_arg.loc[df_arg["origin"] == i]
             print(df_temp)
@@ -21,7 +25,7 @@ def npc_options():
                 print("This dataframe has no regular names")
 
 
-        af_num = [0, 2, 8, 64]
+
         africa = [culture_list[g] for g in af_num]
         arb_num = [3, 4, 6, 30, 34, 37, 59]
         arabia = [culture_list[v] for v in arb_num]
@@ -31,7 +35,22 @@ def npc_options():
                     31, 32, 35, 39, 40, 41, 42, 43, 44, 45, 49, 50, 51, 53, 54, 55, 56, 57, 58, 59,
                     60]
         europe = [culture_list[n] for n in euro_num]
-        
+        union_list = [africa, arabia, asia, europe]
+        drop_list = []
+        for i in union_list:
+            print(i)
+            for item in i:
+                if item in non_relevant:
+                    #drop_list.append(item)
+                    i.remove(item)
+                else:
+                    pass
+            print(i)
+        print(drop_list, non_relevant)
+        print(africa, arabia, asia, europe)
+
+
+
         #Assigns cultural lists to regions
         regions = {"Africa": africa, "Europe": europe,"Near East": arabia, "Asia": asia}
 
