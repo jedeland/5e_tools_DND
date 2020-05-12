@@ -12,7 +12,7 @@ def npc_options():
         do_enum(culture_list)
         non_relevant = []
 
-
+        bad_boy_list = []
         for i in culture_list:
             df_temp = df_arg.loc[df_arg["origin"] == i]
             print(df_temp)
@@ -20,17 +20,30 @@ def npc_options():
                 print("This dataframe has regular names")
             else:
                 non_relevant.append(i)
+                bad_boy_list.append(i)
                 print("This dataframe has no regular names")
                 print(pd.unique(df_temp["tag"]))
+
+        for g in culture_list:
+            df_temp_g = df_arg.loc[df_arg["origin"] == g]
+            print(df_temp_g)
+            if any(df_temp["tag"] == "N"):
+                print("This DF contains last names")
+            else:
+                print("This DF contains no last names")
+
 
         af_num = [0, 8]
         africa = [culture_list[g] for g in af_num]
         arb_num = [3, 4, 6, 29, 33, 36, 57]
+        arb_tag = ['Arabia', 'Armenia', 'Azerbaijan', 'Israel', 'Persian', 'Kazakhstan', 'Turkey']
         arabia = [culture_list[v] for v in arb_num]
         as_num = [14, 16, 32, 28, 33, 35, 36, 37, 45, 46, 50, 60]
+        as_tag = ['Philippines', 'China', 'India', 'Persian', 'Japan', 'Kazakhstan', 'Korea', 'Pakistani', 'Srilanka', 'Vietnam']
         asia = [culture_list[p] for p in as_num]
-        euro_num = [1, 4, 5, 6, 7, 9, 10, 11, 12, 13, 15, 17, 18, 19, 20, 21, 22, 23,24, 25, 26, 27, 28, 30,
-                    31, 34, 38, 39, 40, 41, 42, 43, 44, 45, 47, 48, 49, 51, 52, 53, 54, 55, 56, 57, 58, 60]
+        euro_num = ['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
+                    'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
+                    'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine']
         europe = [culture_list[n] for n in euro_num]
         union_list = [arabia, asia, europe]
         drop_list = []
@@ -46,8 +59,8 @@ def npc_options():
                     pass
 
         print(drop_list, non_relevant)
-        print(arabia, asia, europe)
-
+        #print(arabia, asia, europe)
+        print(bad_boy_list)
 
 
         #Assigns cultural lists to regions
@@ -99,7 +112,10 @@ def show_npc(df, nations, num_npcs):
     df = df.loc[df["origin"] == nations]
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     for i in range(num_npcs):
-        name = str(np.random.choice(rand_name["name"], 1) + " " + np.random.choice(rand_surname["name"],1))
+        f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
+        print(f_name)
+
+        name = str(f_name + " " + l_name)
         name = str(name.title())
         name = re.sub(r'[^\w\s]', '', name)
         print("NPC: {0}".format(name))
