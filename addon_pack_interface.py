@@ -11,8 +11,6 @@ def npc_options():
         culture_list = culture_list.tolist()
         do_enum(culture_list)
         non_relevant = []
-
-        bad_boy_list = []
         for i in culture_list:
             df_temp = df_arg.loc[df_arg["origin"] == i]
             print(df_temp)
@@ -20,7 +18,7 @@ def npc_options():
                 print("This dataframe has regular names")
             else:
                 non_relevant.append(i)
-                bad_boy_list.append(i)
+
                 print("This dataframe has no regular names")
                 print(pd.unique(df_temp["tag"]))
         non_relevant_last = []
@@ -31,7 +29,7 @@ def npc_options():
                 print("This DF contains last names")
             else:
                 non_relevant_last.append(g)
-                bad_boy_list.append(g)
+
                 print("This DF contains no last names")
 
 
@@ -65,7 +63,9 @@ def npc_options():
         #print(arabia, asia, europe)
         #print(non_relevant_last, bad_boy_list)
         #Clean dataframe to remove "does not exist" issues
-        create_duplicate_names(df_arg, non_relevant_last, non_relevant)
+        df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
+        temp = df_arg[(df_arg["origin"] == "Slovenia")]
+        print(pd.unique(temp["tag"]))
         #Assigns cultural lists to regions
         regions = {"Europe": europe,"Near East": arabia, "Asia": asia}
 
@@ -116,7 +116,6 @@ def show_npc(df, nations, num_npcs):
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     for i in range(num_npcs):
         f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
-        print(f_name)
 
         name = str(f_name + " " + l_name)
         name = str(name.title())
@@ -135,11 +134,15 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
         add_last_names.remove("Unisex")
     print("Names to remove or add first names to: ", remove_or_add)
     last_name_donor = ["Germany", "Dutch", "Norway", "Balkan"]
-    for i in range(len(add_last_names) - 1):
-        df_temp = df.loc[(df_temp["origin"] == last_name_donor[i]) & (df_temp["tag"] == "N")]
+    for i in range(len(add_last_names)):
+        #print(i)
+        df_temp = df[(df["origin"] == last_name_donor[i]) & (df["tag"] == "N")]
         print(df_temp)
-        df_temp = df_temp["origin"].str.replace(last_name_donor[i], add_last_names[i])
-        df.append(df_temp, ignore_index= True)
+        df_temp["origin"] = df_temp["origin"].str.replace(last_name_donor[i], add_last_names[i])
+        print(df_temp.tail(10))
+        df.append(df_temp, ignore_index=True)
+        print(pd.unique(df_temp["tag"]))
+    return df
 
 
 def npc_data_exists(exists):
