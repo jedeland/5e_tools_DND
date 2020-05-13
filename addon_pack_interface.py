@@ -129,6 +129,7 @@ def do_enum(args):
 
 def create_duplicate_names(df, add_last_names, remove_or_add):
     print("Dataframe argument: ", df)
+    df_out = pd.DataFrame()
     print("Names to add last names to: ", add_last_names)
     if "Unisex" in add_last_names:
         add_last_names.remove("Unisex")
@@ -138,11 +139,13 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
         #print(i)
         df_temp = df[(df["origin"] == last_name_donor[i]) & (df["tag"] == "N")]
         print(df_temp)
-        df_temp["origin"] = df_temp["origin"].str.replace(last_name_donor[i], add_last_names[i])
-        print(df_temp.tail(10))
-        df.append(df_temp, ignore_index=True)
-        print(pd.unique(df_temp["tag"]))
-    return df
+        df_x = df_temp.copy() #Supresses copy warning, otherwise useless
+        df_x["origin"] = df_x["origin"].replace(str(last_name_donor[i]), str(add_last_names[i]))
+        print(df_x.tail(10))
+        frames = [df, df_x]
+        df_out = pd.concat(frames, ignore_index=True)
+
+    return df_out
 
 
 def npc_data_exists(exists):
