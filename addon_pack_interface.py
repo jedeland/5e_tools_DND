@@ -23,13 +23,15 @@ def npc_options():
                 bad_boy_list.append(i)
                 print("This dataframe has no regular names")
                 print(pd.unique(df_temp["tag"]))
-
+        non_relevant_last = []
         for g in culture_list:
             df_temp_g = df_arg.loc[df_arg["origin"] == g]
             print(df_temp_g)
-            if any(df_temp["tag"] == "N"):
+            if any(df_temp_g["tag"] == "N"):
                 print("This DF contains last names")
             else:
+                non_relevant_last.append(g)
+                bad_boy_list.append(g)
                 print("This DF contains no last names")
 
 
@@ -41,28 +43,29 @@ def npc_options():
         as_num = [14, 16, 32, 28, 33, 35, 36, 37, 45, 46, 50, 60]
         as_tag = ['Philippines', 'China', 'India', 'Persian', 'Japan', 'Kazakhstan', 'Korea', 'Pakistani', 'Srilanka', 'Vietnam']
         asia = [culture_list[p] for p in as_num]
-        euro_num = ['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
+        euro_tag = ['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
                     'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
                     'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine']
-        europe = [culture_list[n] for n in euro_num]
+        europe = euro_tag
         union_list = [arabia, asia, europe]
+        union_text_list = [arb_tag, as_tag, euro_tag]
         drop_list = []
         for i in union_list:
 
             for item in i:
                 df_temp = df_arg.loc[df_arg["origin"] == item]
-                print(df_temp)
+                #print(df_temp)
                 if len(pd.unique(df_temp["tag"])) == 1:
                     drop_list.append(item)
                     i.remove(item)
                 else:
                     pass
 
-        print(drop_list, non_relevant)
+        #print(drop_list, non_relevant)
         #print(arabia, asia, europe)
-        print(bad_boy_list)
-
-
+        #print(non_relevant_last, bad_boy_list)
+        #Clean dataframe to remove "does not exist" issues
+        create_duplicate_names(df_arg, non_relevant_last, non_relevant)
         #Assigns cultural lists to regions
         regions = {"Europe": europe,"Near East": arabia, "Asia": asia}
 
@@ -124,6 +127,19 @@ def show_npc(df, nations, num_npcs):
 def do_enum(args):
     for number, origin in enumerate(args, start=1):
         print(number, " ", origin)
+
+def create_duplicate_names(df, add_last_names, remove_or_add):
+    print("Dataframe argument: ", df)
+    print("Names to add last names to: ", add_last_names)
+    if "Unisex" in add_last_names:
+        add_last_names.remove("Unisex")
+    print("Names to remove or add first names to: ", remove_or_add)
+    last_name_donor = ["Germany", "Dutch", "Norway", "Balkan"]
+    for i in range(len(add_last_names) - 1):
+        df_temp = df.loc[(df_temp["origin"] == last_name_donor[i]) & (df_temp["tag"] == "N")]
+        print(df_temp)
+        df_temp = df_temp["origin"].str.replace(last_name_donor[i], add_last_names[i])
+        df.append(df_temp, ignore_index= True)
 
 
 def npc_data_exists(exists):
