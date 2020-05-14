@@ -34,6 +34,7 @@ def npc_options():
 
 
         af_num = [0, 8]
+        af_tag = ["African"]
         africa = [culture_list[g] for g in af_num]
         arb_num = [3, 4, 6, 29, 33, 36, 57]
         arb_tag = ['Arabia', 'Armenia', 'Azerbaijan', 'Israel', 'Persian', 'Kazakhstan', 'Turkey']
@@ -130,7 +131,14 @@ def do_enum(args):
 def create_duplicate_names(df, add_last_names, remove_or_add):
     print("Dataframe argument: ", df)
 
-    print("Names to add last names to: ", add_last_names)
+    print("Names to add last names to, please implement these names in the addon_pack_namegen.py file if any adequate data sources are found: ", add_last_names)
+    #https://fr.wiktionary.org/wiki/Cat%C3%A9gorie:Pr%C3%A9noms_masculins_en_pirah%C3%A3 - Native american
+    #https://fr.wiktionary.org/wiki/Annexe:Liste_de_pr%C3%A9noms_b%C3%A9t%C3%A9 - African
+    #https://en.wikipedia.org/wiki/Category:Yoruba_given_names - African
+    url_dict = {"African": "https://fr.wiktionary.org/wiki/Annexe:Liste_de_pr%C3%A9noms_b%C3%A9t%C3%A9", "Yoruba": "https://en.wikipedia.org/wiki/Category:Yoruba_given_names",
+                "Ethiopia": "https://en.wikipedia.org/wiki/Category:Ethiopian_given_names"}
+    name_fin = ["Zobe", "Yinka", "Zewde"]
+    df = addon_pack_namegen.add_stragglers(df, url_dict, name_fin)
     if "Unisex" in add_last_names:
         add_last_names.remove("Unisex")
     print("Names to remove or add first names to: ", remove_or_add)
@@ -145,7 +153,6 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
         frames = [df, df_x]
         df = pd.concat(frames, ignore_index=True)
         print(df)
-
     return df
 
 

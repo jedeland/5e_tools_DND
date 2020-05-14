@@ -395,7 +395,54 @@ def make_cross_compatible(new_df):
     new_df["tag"] = new_df["tag"].str.replace("1M", "?M").replace("?M", "WM")  # Weighted Male - most likely to be male
     new_df["tag"] = new_df["tag"].str.replace("?", "NN")  # name is neutral, non last name
 
+def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only applicable locations are gender neutral
+    print("Adding stragglers, see addon_pack_interface.create_duplicate_names() for more details")
+    files = file_arg.values()
+    origin = list(file_arg.keys())
+    i = 0
+    for file_url in files:
+        file = requests.get(file_url)
+        print(file_url)
+        if str(file) == "<Response [404]>":
+            pass
+        elif str(file) == "<Response [200]>":
+            soup = BeautifulSoup(file.content, "lxml")
+            lst_tag = soup.find_all("li")
+            for item in lst_tag:
+                # print(article)
+                # print(file_url)
+                item_txt = item.string
+                origins = origin[i]
+                if item_txt is None:
+                    # print(item.text)
+                    item_split = item.text.split(" ")
+                    item_txt = item_split[0]
+                    item_txt = re.sub(r"([A-Z])", r" \1", item_txt).split()
+                    item_txt = item_txt[0]
+                    item_txt = item_txt.strip()
+                print(item.string)
+                print("Divided text: ", item_txt)
+                #if item_txt == name_div[i - 1]:  # First female entry
+                #    divide = True
+                if item_txt == name_fin[i]:  # Last acceptable entry
+                    adder = str(item_txt)
+                    df = df.append({"name": adder, "tag": "NN", "origin": origins},
+                                   ignore_index=True)
+                    break
+                if item_txt is not None:
+                    adder = str(item_txt)
+                    parts = re.split(r'[;,\s]\s*', adder)  # removes any double names that are not hyphinated
+                    print(parts)
+                    adder = parts[0]
+                    if not adder.strip():
+                        print("Not Found")
+                        pass
+                    print(adder)
 
+                    df = df.append({"name": adder, "tag": "NN", "origin": origins},
+                                       ignore_index=True)
+        i += 1
+    return df
 
 def check_if_exists():
     outcome = False
@@ -459,9 +506,6 @@ def soup_names():
             df_csv, df_xlsx= pd.read_csv("npcs.csv"), pd.read_excel("npcs.xlsx")
             file_list = [df_csv, df_xlsx]
             #print("Starting the soup is recommended before taking the test\nIf you wish to skip this step please ensure that everything is working in order...")
-
-            #test_result = start_tests(file_list, nation_abrev)
-            #print("Test result: ", test_result)
 
             #If you decide you need to add new names, please ensure you have added the following things
             #1. The nations name, relative to the wikipedia article, for instance https://en.wiktionary.org/wiki/Appendix:Russian_given_names
