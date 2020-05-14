@@ -9,7 +9,7 @@ def npc_options():
         print("Loading NPC options....")
         culture_list = pd.unique(df_arg["origin"])
         culture_list = culture_list.tolist()
-        do_enum(culture_list)
+        #do_enum(culture_list)
         non_relevant = []
         for i in culture_list:
             df_temp = df_arg.loc[df_arg["origin"] == i]
@@ -42,11 +42,11 @@ def npc_options():
         arb_tag = ['Arabia', 'Armenia', 'Azerbaijan', 'Israel', 'Persian', 'Kazakhstan', 'Turkey']
         arabia = [culture_list[v] for v in arb_num]
         as_num = [14, 16, 32, 28, 33, 35, 36, 37, 45, 46, 50, 60]
-        as_tag = ['Philippines', 'China', 'India', 'Persian', 'Japan', 'Kazakhstan', 'Korea', 'Pakistani', 'Srilanka', 'Vietnam']
+        as_tag = sorted(['Philippines', 'China', 'India', 'Persian', 'Japan', 'Kazakhstan', 'Korea', 'Pakistani', 'Srilanka', 'Vietnam', "Hawaiian"])
         asia = [culture_list[p] for p in as_num]
-        euro_tag = ['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
+        euro_tag = sorted(['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
                     'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
-                    'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine']
+                    'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine'])
         europe = euro_tag
         union_list = [arabia, asia, europe]
         union_text_list = [af_tag, arb_tag, as_tag, euro_tag]
@@ -70,7 +70,7 @@ def npc_options():
         temp = df_arg[(df_arg["origin"] == "Ethiopia")]
         print(pd.unique(temp["tag"]))
         #Assigns cultural lists to regions
-        regions = {"African": af_tag, "Europe": europe,"Near East": arabia, "Asia": asia}
+        regions = {"African": af_tag, "Europe": europe,"Near East": arabia, "Asia": as_tag}
 
         print("Type the number of NPC's you wish to create: ")
         npc_num = None
@@ -138,8 +138,9 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
     #https://fr.wiktionary.org/wiki/Annexe:Liste_de_pr%C3%A9noms_b%C3%A9t%C3%A9 - African
     #https://en.wikipedia.org/wiki/Category:Yoruba_given_names - African
     url_dict = {"African": "https://fr.wiktionary.org/wiki/Annexe:Liste_de_pr%C3%A9noms_b%C3%A9t%C3%A9", "Yoruba": "https://en.wikipedia.org/wiki/Category:Yoruba_given_names",
-                "Ethiopia": "https://en.wikipedia.org/wiki/Category:Ethiopian_given_names"}
-    name_fin = ["Zobe", "Yinka", "Zewde"]
+                "Ethiopia": "https://en.wikipedia.org/wiki/Category:Ethiopian_given_names", "Hawaiian": "https://en.wiktionary.org/wiki/Category:Hawaiian_male_given_names",
+                "Hawf": "https://en.wiktionary.org/w/index.php?title=Category:Hawaiian_female_given_names&pageuntil=POLI%CA%BBAHU%0APoli%CA%BBahu#mw-pages"}
+    name_fin = ["Zobe", "Yinka", "Zewde", "ʻŌpūnui", "Piʻilani"]
     df = addon_pack_namegen.add_stragglers(df, url_dict, name_fin)
     if "Unisex" in add_last_names:
         add_last_names.remove("Unisex")

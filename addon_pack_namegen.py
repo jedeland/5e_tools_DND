@@ -399,6 +399,7 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
     print("Adding stragglers, see addon_pack_interface.create_duplicate_names() for more details")
     files = file_arg.values()
     origin = list(file_arg.keys())
+    gender = ["NN", "NN", "NN", "M", "F"]
     i = 0
     for file_url in files:
         file = requests.get(file_url)
@@ -416,7 +417,9 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
                 item_txt = re.sub(r'[^\w\s]', '', str(item_txt))
                 origins = origin[i]
                 if origins == "Yoruba":
-                    origins == "African"
+                    origins = "African"
+                if origins == "Hawf":
+                    origins = "Hawaiian"
                 if item_txt is None:
                     # print(item.text)
                     item_split = item.text.split(" ")
@@ -424,14 +427,14 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
                     item_txt = re.sub(r"([A-Z])", r" \1", item_txt).split()
                     item_txt = item_txt[0]
                     item_txt = item_txt.strip()
-                #print(item.string)
+                #print(item.text)
                 #print("Divided text: ", item_txt)
                 #if item_txt == name_div[i - 1]:  # First female entry
                 #    divide = True
                 if item_txt == name_fin[i]:  # Last acceptable entry
                     adder = str(item_txt)
 
-                    df = df.append({"name": adder, "tag": "NN", "origin": origins},
+                    df = df.append({"name": adder, "tag": gender[i], "origin": origins},
                                    ignore_index=True)
                     break
                 if item_txt is not None and str(item_txt) != "None":
@@ -442,9 +445,9 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
                     if not adder.strip():
                         print("Not Found")
                         pass
-                    print("Adding... ", adder)
+                    print("Adding... ", adder, " - Origin: {}".format(origins))
 
-                    df = df.append({"name": adder, "tag": "NN", "origin": origins},
+                    df = df.append({"name": adder, "tag": gender[i], "origin": origins},
                                        ignore_index=True)
         i += 1
     return df
