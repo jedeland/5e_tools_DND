@@ -402,17 +402,21 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
     i = 0
     for file_url in files:
         file = requests.get(file_url)
-        print(file_url)
+        #print(file_url)
         if str(file) == "<Response [404]>":
             pass
         elif str(file) == "<Response [200]>":
+            print("Starting up Beautiful Soup, adding leftover names, this may take some time ...")
             soup = BeautifulSoup(file.content, "lxml")
             lst_tag = soup.find_all("li")
             for item in lst_tag:
                 # print(article)
                 # print(file_url)
                 item_txt = item.string
+                item_txt = re.sub(r'[^\w\s]', '', str(item_txt))
                 origins = origin[i]
+                if origins == "Yoruba":
+                    origins == "African"
                 if item_txt is None:
                     # print(item.text)
                     item_split = item.text.split(" ")
@@ -420,24 +424,25 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
                     item_txt = re.sub(r"([A-Z])", r" \1", item_txt).split()
                     item_txt = item_txt[0]
                     item_txt = item_txt.strip()
-                print(item.string)
-                print("Divided text: ", item_txt)
+                #print(item.string)
+                #print("Divided text: ", item_txt)
                 #if item_txt == name_div[i - 1]:  # First female entry
                 #    divide = True
                 if item_txt == name_fin[i]:  # Last acceptable entry
                     adder = str(item_txt)
+
                     df = df.append({"name": adder, "tag": "NN", "origin": origins},
                                    ignore_index=True)
                     break
-                if item_txt is not None:
+                if item_txt is not None and str(item_txt) != "None":
                     adder = str(item_txt)
                     parts = re.split(r'[;,\s]\s*', adder)  # removes any double names that are not hyphinated
-                    print(parts)
+                    #print(parts)
                     adder = parts[0]
                     if not adder.strip():
                         print("Not Found")
                         pass
-                    print(adder)
+                    print("Adding... ", adder)
 
                     df = df.append({"name": adder, "tag": "NN", "origin": origins},
                                        ignore_index=True)
