@@ -35,15 +35,11 @@ def npc_options():
                 #print("This DF contains no last names")
 
 
-        af_num = [0, 8]
         af_tag = ["African", "Ethiopia"]
-        africa = [culture_list[g] for g in af_num]
-        arb_num = [3, 4, 6, 29, 33, 36, 57]
         arb_tag = ['Arabia', 'Armenia', 'Azerbaijan', 'Israel', 'Persian', 'Kazakhstan', 'Turkey']
-        arabia = [culture_list[v] for v in arb_num]
-        as_num = [14, 16, 32, 28, 33, 35, 36, 37, 45, 46, 50, 60]
+        arabia = arb_tag
         as_tag = sorted(['Philippines', 'China', 'India', 'Persian', 'Japan', 'Kazakhstan', 'Korea', 'Pakistani', 'Srilanka', 'Vietnam', "Hawaiian"])
-        asia = [culture_list[p] for p in as_num]
+        asia = as_tag
         euro_tag = sorted(['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
                     'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
                     'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine'])
@@ -97,22 +93,67 @@ def npc_options():
                     group_culture = False
             except:
                 print("There was an error, please ensure the input corresponds to yes or no")
-        culture_list = pd.unique(df_arg["origin"])
+
         origin_list = list(regions.keys())
-        if group_culture is True or npc_num == 1:
-            print("Please select the NPC('s) culture region")
-            do_enum(regions)
-            choice = int(input("Number: ")) #Ensures input is int
-            dict_arg = origin_list[choice-1] #Lists start at 0
-            regions_refined = regions.get(dict_arg)
-            do_enum(regions_refined)
-            choice = int(input("Number: "))
-            selected_nation = regions_refined[choice-1]
+        if group_culture is True or int(npc_num) == 1:
+            selected_nation = select_group(origin_list, regions)
             show_npc(df_arg, selected_nation, npc_num)
+        elif group_culture is False:
+            print("Please type the number of different NPC groups you wish to create, each with their own culture")
+            group_iter = int(input("Groups: "))
+            npc_out = divide_npc_multiculture(npc_num, group_iter)
+            print("Group sizes are", npc_out)
+            for i in npc_out:
+                selected_nation = select_group(origin_list, regions)
+                show_npc(df_arg, selected_nation, npc_num)
+            #print(groupings)
+
+
+
+
+
     else:
         npc_data_exists(False)
 
+
+def select_group(origin_list, regions):
+    print("Please select the NPC('s) culture region")
+    do_enum(regions)
+    choice = int(input("Number: "))  # Ensures input is int
+    dict_arg = origin_list[choice - 1]  # Lists start at 0
+    regions_refined = regions.get(dict_arg)
+    do_enum(regions_refined)
+    choice = int(input("Number: "))
+    selected_nation = regions_refined[choice - 1]
+    return selected_nation
+
+
+def divide_npc_multiculture(npc_num, group_iter):
+    print("NPC Total: {}".format(npc_num))
+    groupings = []
+    npc_calc = npc_num
+    for i in range(group_iter):
+        try:
+
+            print("Please type the size of Group {}".format(i + 1))
+            size_arg = input("Size: ")
+            npc_calc = npc_calc - int(size_arg)
+            if npc_calc >= 0:
+
+                groupings.append(int(size_arg))
+                print("{} NPC's remaining".format(npc_calc))
+            elif npc_calc < 0:
+                print("\n\n\nOne of your groups is invalid, restarting selection"
+                      "\nPlease ensure that your groups do not exceed the NPC total of {0}".format(npc_num))
+                divide_npc_multiculture(npc_num, group_iter)
+
+        except:
+            print("There are still NPC's remaining, please ensure your groups fill the NPC requirements")
+    return groupings
+
+
 def show_npc(df, nations, num_npcs):
+    #Add information about gender of NPC, as some languages are hard to see the difference between
     print("Taking random value from data, returning {0} NPC names from {1}".format(num_npcs, nations))
 
     df = df.loc[df["origin"] == nations]
