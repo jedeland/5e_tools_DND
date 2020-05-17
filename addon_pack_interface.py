@@ -104,6 +104,7 @@ def npc_options():
             npc_out = divide_npc_multiculture(npc_num, group_iter)
             print("Group sizes are", npc_out)
             for i in npc_out:
+                print("Selecting NPC's for the Group with size {}".format(npc_out))
                 selected_nation = select_group(origin_list, regions)
                 show_npc(df_arg, selected_nation, npc_num)
             #print(groupings)
@@ -157,15 +158,38 @@ def show_npc(df, nations, num_npcs):
     print("Taking random value from data, returning {0} NPC names from {1}".format(num_npcs, nations))
 
     df = df.loc[df["origin"] == nations]
+    print(df)
+    df_num = df["name"].str.contains("[0-9]+", regex=True) #Simple way to filter out any results with numbers in
+    df = df[~df_num]
+    print(df)
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     for i in range(num_npcs):
-        f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
-
+        #f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
+        #Verifies if names are made up of char's
+        f_name, l_name = check_names(rand_name, rand_surname)
         name = str(f_name + " " + l_name)
         name = str(name.title())
+        #Investigate numeric names in arabic name list
+        print(name)
         name = re.sub(r'[^\w\s]', '', name)
         print("NPC: {0}".format(name))
     #print(df)
+
+def check_names(first, last):
+    f_name, l_name = np.random.choice(first["name"], 1), np.random.choice(last["name"], 1)
+    valid_f = re.findall('[0-9+]', str(f_name))
+    valid_l = re.findall('[0-9+]', str(l_name))
+    if valid_f:
+        first.drop()
+        f_name = np.random.choice(first["name"], 1)
+    elif valid_l:
+        f_name, l_name = np.random.choice(first["name"], 1), np.random.choice(last["name"], 1)
+    else:
+        return f_name, l_name
+
+
+
+
 
 def do_enum(args):
     for number, origin in enumerate(args, start=1):
