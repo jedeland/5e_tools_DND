@@ -156,43 +156,29 @@ def divide_npc_multiculture(npc_num, group_iter):
 def show_npc(df, nations, num_npcs):
     #Add information about gender of NPC, as some languages are hard to see the difference between
     print("Taking random value from data, returning {0} NPC names from {1}".format(num_npcs, nations))
-
     df = df.loc[df["origin"] == nations]
-    print(df)
     df_num = df["name"].str.contains("[0-9]+", regex=True) #Simple way to filter out any results with numbers in
-    df = df[~df_num]
-    print(df)
+    df = df[~df_num] #Returns all non-valid results, aka ones that dont fit the regex pattern
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     for i in range(num_npcs):
-        #f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
+        f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
         #Verifies if names are made up of char's
-        f_name, l_name = check_names(rand_name, rand_surname)
         name = str(f_name + " " + l_name)
         name = str(name.title())
-        #Investigate numeric names in arabic name list
-        print(name)
+        #Investigate numeric names in arabic name list, should of been fixed using the str.contains line above
+        #print(name)
         name = re.sub(r'[^\w\s]', '', name)
         print("NPC: {0}".format(name))
     #print(df)
 
-def check_names(first, last):
-    f_name, l_name = np.random.choice(first["name"], 1), np.random.choice(last["name"], 1)
-    valid_f = re.findall('[0-9+]', str(f_name))
-    valid_l = re.findall('[0-9+]', str(l_name))
-    if valid_f:
-        first.drop()
-        f_name = np.random.choice(first["name"], 1)
-    elif valid_l:
-        f_name, l_name = np.random.choice(first["name"], 1), np.random.choice(last["name"], 1)
-    else:
-        return f_name, l_name
+
 
 
 
 
 
 def do_enum(args):
-    for number, origin in enumerate(args, start=1):
+    for number, origin in enumerate(args, start=1): #cleaner that using enumerate constantly
         print(number, " ", origin)
 
 def create_duplicate_names(df, add_last_names, remove_or_add):
@@ -202,6 +188,8 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
     #https://fr.wiktionary.org/wiki/Cat%C3%A9gorie:Pr%C3%A9noms_masculins_en_pirah%C3%A3 - Native american
     #https://fr.wiktionary.org/wiki/Annexe:Liste_de_pr%C3%A9noms_b%C3%A9t%C3%A9 - African
     #https://en.wikipedia.org/wiki/Category:Yoruba_given_names - African
+    #The URL's below are ones that where non valid, but i found over time new information to make them usable, add any other non valid files here, this could be done in the namegen file
+    #But since it is so few results currently it seems like a waste to restart the entire creation process
     url_dict = {"African": "https://fr.wiktionary.org/wiki/Annexe:Liste_de_pr%C3%A9noms_b%C3%A9t%C3%A9", "Yoruba": "https://en.wikipedia.org/wiki/Category:Yoruba_given_names",
                 "Ethiopia": "https://en.wikipedia.org/wiki/Category:Ethiopian_given_names", "Hawaiian": "https://en.wiktionary.org/wiki/Category:Hawaiian_male_given_names",
                 "Hawf": "https://en.wiktionary.org/w/index.php?title=Category:Hawaiian_female_given_names&pageuntil=POLI%CA%BBAHU%0APoli%CA%BBahu#mw-pages"}
@@ -210,15 +198,17 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
     if "Unisex" in add_last_names:
         add_last_names.remove("Unisex")
     print("Lists to remove or add first names to, if has not already been done via\nadd_stragglers(): ", remove_or_add)
+    #Add new elemnt to last_name_donor if the add_last_names list expands, uses and copies pre existing last names for values without last names
     last_name_donor = ["Germany", "Dutch", "Norway", "Balkan"]
     for i in range(len(add_last_names)):
-        #print(i)
+
         df_temp = df[(df["origin"] == last_name_donor[i]) & (df["tag"] == "N")]
-        #print(df_temp)
         df_x = df_temp.copy() #Supresses copy warning, otherwise useless
+        #Replaces value I with value I from both lists, for instance if I = 0 then the copied Germany values will be replaced with Austria
         df_x["origin"] = df_x["origin"].replace(str(last_name_donor[i]), str(add_last_names[i]))
         #print(df_x.tail(10))
         frames = [df, df_x]
+        #Merges copied values into existing dataframes
         df = pd.concat(frames, ignore_index=True)
         #print(df)
     return df
