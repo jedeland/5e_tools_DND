@@ -165,10 +165,14 @@ def show_npc(df, nations, num_npcs):
     gender_tags, neutral_genders = { "WM": ["Male", "Female"], "WF": ["Female", "Male"]},  ["Female", "Male"]
     for i in range(num_npcs):
         #Return information on the gender of the targets
-        f_df, l_df = np.random.choice(rand_name, 1), np.random.choice(rand_surname,1)
-        f_name, l_name = f_df["name"], l_df["name"]
-        f_gender = f_df["tag"]
-        #Case NN, WF, WM
+        f_name, l_name = np.random.choice(rand_name["name"].values, 1), np.random.choice(rand_surname["name"].values,1)
+        f_name = re.sub(r'[^\w\s]', '', str(f_name))
+        print(str(f_name))
+        f_gender = rand_name.loc[rand_name["name"] == str(f_name)]
+        print(f_gender)
+        f_gender = f_gender["tag"].values
+        print(f_gender)
+        #Cases NN, WF, WM
         f_gender = find_gender(f_gender, gender_tags, neutral_genders)
         #Verifies if names are made up of char's
         gender = str(f_gender)
@@ -183,9 +187,9 @@ def show_npc(df, nations, num_npcs):
 
 def find_gender(f_gender, gender_tags, neutral_genders):
     rand_num = random.randint(0, 100)
-    if rand_num < 70 & f_gender in gender_tags.keys():
+    if rand_num < 70 and f_gender in gender_tags.keys():
         f_gender = gender_tags.get(f_gender[0])
-    elif rand_num >= 70 & f_gender in gender_tags.keys():
+    elif rand_num >= 70 and f_gender in gender_tags.keys():
         f_gender = gender_tags.get(f_gender[1])
     elif f_gender == "NN":
         f_gender = neutral_genders[random.randint(0, 1)]
