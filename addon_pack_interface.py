@@ -106,7 +106,7 @@ def npc_options():
             for i in npc_out:
                 print("Selecting NPC's for the Group with size {}".format(npc_out))
                 selected_nation = select_group(origin_list, regions)
-                show_npc(df_arg, selected_nation, npc_num)
+                show_npc(df_arg, selected_nation, int(i))
             #print(groupings)
 
 
@@ -161,14 +161,17 @@ def show_npc(df, nations, num_npcs):
     df = df[~df_num] #Returns all non-valid results, aka ones that dont fit the regex pattern
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     for i in range(num_npcs):
-        f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
+        #Return information on the gender of the targets
+        f_df, l_df = np.random.choice(rand_name, 1), np.random.choice(rand_surname,1)
+        f_name, l_name = f_df["name"], l_df["name"]
+        f_gender = f_df
         #Verifies if names are made up of char's
         name = str(f_name + " " + l_name)
         name = str(name.title())
         #Investigate numeric names in arabic name list, should of been fixed using the str.contains line above
         #print(name)
         name = re.sub(r'[^\w\s]', '', name)
-        print("NPC: {0}".format(name))
+        print("{0} NPC: {1}".format(gender, name))
     #print(df)
 
 
