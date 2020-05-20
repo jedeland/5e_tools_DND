@@ -1,3 +1,5 @@
+import random
+
 import pandas as pd; import numpy as np
 import requests; import os; import re; import addon_pack_namegen
 
@@ -160,12 +162,16 @@ def show_npc(df, nations, num_npcs):
     df_num = df["name"].str.contains("[0-9]+", regex=True) #Simple way to filter out any results with numbers in
     df = df[~df_num] #Returns all non-valid results, aka ones that dont fit the regex pattern
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
+    gender_tags, neutral_genders = { "WM": ["Male", "Female"], "WF": ["Female", "Male"]},  ["Female", "Male"]
     for i in range(num_npcs):
         #Return information on the gender of the targets
         f_df, l_df = np.random.choice(rand_name, 1), np.random.choice(rand_surname,1)
         f_name, l_name = f_df["name"], l_df["name"]
-        f_gender = f_df
+        f_gender = f_df["tag"]
+        #Case NN, WF, WM
+        f_gender = find_gender(f_gender, gender_tags, neutral_genders)
         #Verifies if names are made up of char's
+        gender = str(f_gender)
         name = str(f_name + " " + l_name)
         name = str(name.title())
         #Investigate numeric names in arabic name list, should of been fixed using the str.contains line above
@@ -175,9 +181,19 @@ def show_npc(df, nations, num_npcs):
     #print(df)
 
 
-
-
-
+def find_gender(f_gender, gender_tags, neutral_genders):
+    rand_num = random.randint(0, 100)
+    if rand_num < 70 & f_gender in gender_tags.keys():
+        f_gender = gender_tags.get(f_gender[0])
+    elif rand_num >= 70 & f_gender in gender_tags.keys():
+        f_gender = gender_tags.get(f_gender[1])
+    elif f_gender == "NN":
+        f_gender = neutral_genders[random.randint(0, 1)]
+    elif f_gender == "M":
+        f_gender = "Male"
+    elif f_gender == "F":
+        f_gender = "Female"
+    return f_gender
 
 
 def do_enum(args):
