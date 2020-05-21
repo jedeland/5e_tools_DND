@@ -4,6 +4,24 @@ import pandas as pd; import numpy as np
 import requests; import os; import re; import addon_pack_namegen
 
 from unidecode import unidecode
+
+jobs = """
+Baker; Brewer; Butcher; Distiller; Farmer; Fisherman; Fruit Picker; Gatherer; Grocer; Peasant; Miller; Shepherd; Smoker; Falconer; Farrier; Groom; Houndsman; Stablehand; Artist; 
+Jester; Minstrel; Performer; Crier; Envoy; Herald; Messenger;
+Architect; Carpenter; Cooper; Mason; Painter; Roofer; Shipbuilder; Thatcher; Wheelwright; Atilliator (Crossbow Maker); Bookbinder; Bowyer; Brazier; 
+Candlemaker; Cobbler; Currier; Draper; Dyer; Fletcher; Furrier; Glassblower; Jeweller; Knitter; Leatherworker; Potter; Roper; Sailmaker; Sewer; Sculptor; 
+Shoemaker (Cordwainer); Smelter; Smith (Blacksmith, Swordsmith, Armoursmith, Goldsmith, Silversmith); Spinner; Tailor; Tanner; Weaver; Woodcarver (Woodcrafter);
+Calligrapher; Cartographer; Librarian; Printer; Scholar; Scribe; Tutor;
+Chef; Cook; Innkeeper; Scullion; Servant; Wench; Whore (Escort);
+Banker (Moneylender); Baron; Guard; Inquisitor; Judge; Knight; Lawyer; Marshal; Priest (Canon); Reeve; Sexton; Sheriff; Taxer; Theologian; Warden;
+Miner; Woodcutter; Alchemist; Apothecary; Cultist; Herbalist; Physician; Shaman; Soothsayer; Street Magician; Surgeon; Wiseman; Witch;
+Archer; Barber; Beggar; Bottler; Charcoal Burner; Ditcher; Drayman; Ewerer (Water Boiler); Executioner; Gardener; 
+Gamekeeper; Hunter; Mercenary; Mercer; Navigator; Night Soil Man; Ranger; Sailor; Shoveler; Thief; Merchant
+"""
+
+
+
+
 def npc_options():
     if os.path.exists("names_merged.xlsx"):
         npc_data_exists(True)
@@ -165,15 +183,13 @@ def show_npc(df, nations, num_npcs):
     gender_tags, neutral_genders = { "WM": ["Male", "Female"], "WF": ["Female", "Male"]},  ["Female", "Male"]
     for i in range(num_npcs):
         #Return information on the gender of the targets
-        f_name, l_name = np.random.choice(rand_name["name"].values, 1), np.random.choice(rand_surname["name"].values,1)
-        f_name = re.sub(r'[^\w\s]', '', str(f_name))
-        print(str(f_name))
-        f_gender = rand_name.loc[rand_name["name"] == str(f_name)]
-        print(f_gender)
+        f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
+        gender_name = re.sub(r'[^\w\s]', '', str(f_name))
+        f_gender = rand_name.loc[rand_name["name"] == str(gender_name)]
         f_gender = f_gender["tag"].values
-        print(f_gender)
+        f_gender = re.sub(r'[^\w\s]', '', str(f_gender))
         #Cases NN, WF, WM
-        f_gender = find_gender(f_gender, gender_tags, neutral_genders)
+        f_gender = find_gender(str(f_gender), gender_tags, neutral_genders)
         #Verifies if names are made up of char's
         gender = str(f_gender)
         name = str(f_name + " " + l_name)
@@ -191,7 +207,7 @@ def find_gender(f_gender, gender_tags, neutral_genders):
         f_gender = gender_tags.get(f_gender[0])
     elif rand_num >= 70 and f_gender in gender_tags.keys():
         f_gender = gender_tags.get(f_gender[1])
-    elif f_gender == "NN":
+    elif "NN" in f_gender:#Strange issue with newly added files, adding the tag "NN NN"
         f_gender = neutral_genders[random.randint(0, 1)]
     elif f_gender == "M":
         f_gender = "Male"
