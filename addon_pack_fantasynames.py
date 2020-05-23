@@ -58,12 +58,13 @@ def create_names():
     df = df.rename(columns={"result":"name"})
     df.describe()
     print('Example of names to be cleaned:')
-
+    #df = df.drop(df[df["option"] == "Clan"])
 
     print('Max name size: {}'.format(df['name'].map(len).max()))
     print("--\n")
 
     races = list(pd.unique(df["race"]))
+    origins = list(pd.unique(df["option"]))
     data_dict = {}
     for r in races:
         data_dict[r] = {}
@@ -89,7 +90,17 @@ def create_names():
         compile_model(model=current_model,
                       hyperparams={"lr":0.003, "loss": "categorical_crossentropy", "batch_size":32},
                       history=history, training_infos=training_infos)
-        train_model(current_model, x, y, training_infos, history, 5)
+        train_model(current_model, x, y, training_infos, history, 50)
+        print("Printing {} names".format(g))
+        for i in range(100):
+            generate_name(
+                model=current_model,
+                trainset_infos=train_info,
+                #         sequence_length=trainset_infos['length_of_sequence'],
+                train_util=train_util,
+                #         padding_start=padding_start,
+                #         padding_end=padding_end,
+                name_max_length=25)
     print("Did that work?")
 
 def training_data(target_group, data_dict, len_sequence):
@@ -145,7 +156,7 @@ def model_start(trainset_infos, lstm_units):
     }
     history = {
         'loss': np.array([]),
-        'acc': np.array([]),
+        'accuracy': np.array([]),
         'hyperparams': []
     }
     model.summary()
@@ -158,6 +169,74 @@ def compile_model(model, hyperparams, history, training_infos):
 
     return None
 
-def 
+def train_model(model, x, y, training_infos, history, epochs_to_add = 50):
+
+    #history["acc"] = history.pop("accuracy")
+    #history["hyperparams"] = history.pop("hyperparams")
+    old_loss = training_infos['loss']
+    old_acc = training_infos['acc']
+    # Extract hyperparams to fit the model
+    hyperparams = history['hyperparams'][-1][1]
+
+    # Train the model
+    training_model = model.fit(
+        x, y,
+        batch_size=hyperparams['batch_size'],
+        initial_epoch=training_infos['total_epochs'],
+        epochs=training_infos['total_epochs'] + epochs_to_add
+    )
+
+    # Update history
+    for key, val in training_model.history.items():
+
+        history[key] = np.append(history[key], val)
+
+    # Update the training session info
+    training_infos['total_epochs'] += epochs_to_add
+    training_infos['loss'] = history['loss'][-1]
+    training_infos['acc'] = history['accuracy'][-1]
+
+    return None
+
+def generate_name(
+        model, trainset_infos, train_util,
+        name_max_length = 25
+        ):
+    dict_size = trainset_infos["number_of_chars"]
+    seq_len = trainset_infos["length_of_sequence"]
+    index_to_char = train_util["i2c"]
+    char_to_index = train_util["c2i"]
+    padd_start = trainset_infos["padding_start"]
+    generated_name = padd_start * (seq_len + name_max_length)
+    probability = 1
+    gap = 0
+    for i in range(name_max_length):
+        x_char = generated_name[i:i+seq_len]
+        x_cat = np.array([[utils.to_categorical(char_to_index[c], dict_size) for c in x_char]])
+        p = model.predict(x_cat)
+        best_char, best_char_prob = index_to_char[np.argmax(p)], np.max(p)
+
+        new_char_index = np.random.choice(range(dict_size), p = p.ravel())
+        new_char_prob = p[0][new_char_index]
+
+        new_char = index_to_char[new_char_index]
+        generated_name = generated_name[:seq_len+i] + new_char + generated_name[seq_len+i+1:]
+        probability *= new_char_prob
+        gap += best_char_prob-new_char_prob
+        # print(
+        #     'i={} new_char: {} ({:.3f}) [best:  {} ({:.3f}), diff: {:.3f}, prob: {:.3f}, gap: {:.3f}]'.format(
+        #         i, new_char,new_char_prob,
+        #         best_char,best_char_prob,
+        #         best_char_prob - new_char_prob,
+        #         probability,gap
+        #     ))
+        if new_char == trainset_infos['padding_end']:
+            break
+    generated_name = generated_name.strip("#*")
+    print(generated_name)
+    #print('{} (probs: {:.6f}, gap: {:.6f})'.format(generated_name, probability, gap))
+    return generated_name, {'probability': probability, 'gap': gap}
+
+
 
 create_names()
