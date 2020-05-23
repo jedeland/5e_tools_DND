@@ -58,13 +58,19 @@ def create_names():
     df = df.rename(columns={"result":"name"})
     df.describe()
     print('Example of names to be cleaned:')
-    #df = df.drop(df[df["option"] == "Clan"])
+    df = df.loc[~(df["option"] == "Clan")]
+    df = df.loc[~(df["option"] == "Virtue")]
+    df = df.loc[~(df["option"] == "Duergar Clan")]
+    df = df.loc[~(df["option"] == "Family")]
+
+    #"Virtue", "Duergar Clan", "Family"])]
 
     print('Max name size: {}'.format(df['name'].map(len).max()))
     print("--\n")
 
     races = list(pd.unique(df["race"]))
     origins = list(pd.unique(df["option"]))
+    print(origins)
     data_dict = {}
     for r in races:
         data_dict[r] = {}
@@ -85,12 +91,12 @@ def create_names():
 
     for g in races:
         x, y, train_util, train_info = training_data(g, data_dict, 3)
-        print(train_util)
+        #print(train_util)
         current_model, training_infos, history =model_start(train_info, 128)
         compile_model(model=current_model,
                       hyperparams={"lr":0.003, "loss": "categorical_crossentropy", "batch_size":32},
                       history=history, training_infos=training_infos)
-        train_model(current_model, x, y, training_infos, history, 50)
+        train_model(current_model, x, y, training_infos, history, 70)
         print("Printing {} names".format(g))
         for i in range(100):
             generate_name(
@@ -100,7 +106,7 @@ def create_names():
                 train_util=train_util,
                 #         padding_start=padding_start,
                 #         padding_end=padding_end,
-                name_max_length=25)
+                name_max_length=15)
     print("Did that work?")
 
 def training_data(target_group, data_dict, len_sequence):
@@ -165,11 +171,11 @@ def compile_model(model, hyperparams, history, training_infos):
     optimizer  = Adam(lr=hyperparams["lr"])
     model.compile(loss=hyperparams["loss"], optimizer = optimizer, metrics = ["accuracy"])
     history["hyperparams"].append((training_infos["total_epochs"], hyperparams))
-    print("\n\n\n", "History of params", history["hyperparams"])
+    #print("\n\n\n", "History of params", history["hyperparams"])
 
     return None
 
-def train_model(model, x, y, training_infos, history, epochs_to_add = 50):
+def train_model(model, x, y, training_infos, history, epochs_to_add = 70):
 
     #history["acc"] = history.pop("accuracy")
     #history["hyperparams"] = history.pop("hyperparams")
@@ -233,7 +239,7 @@ def generate_name(
         if new_char == trainset_infos['padding_end']:
             break
     generated_name = generated_name.strip("#*")
-    print(generated_name)
+    print(generated_name.title())
     #print('{} (probs: {:.6f}, gap: {:.6f})'.format(generated_name, probability, gap))
     return generated_name, {'probability': probability, 'gap': gap}
 
