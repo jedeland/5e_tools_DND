@@ -36,7 +36,8 @@ def find_names():
 
 
 
-    #Json data instead; https://github.com/TheGiddyLimit/TheGiddyLimit.github.io/blob/master/data/names.json - https://datatofish.com/load-json-pandas-dataframe/
+    #Json data instead; with written consent from TheGiddyLimit on 23/5/20
+    #https://github.com/TheGiddyLimit/TheGiddyLimit.github.io/blob/master/data/names.json - https://datatofish.com/load-json-pandas-dataframe/
     #Because of how the PDF is set out, the names need to be split - No longer using the PDF time for more webscraping !
 
 
