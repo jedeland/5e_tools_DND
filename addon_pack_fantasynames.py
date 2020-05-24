@@ -58,10 +58,13 @@ def create_names():
     df = df.rename(columns={"result":"name"})
     df.describe()
     print('Example of names to be cleaned:')
-    df = df.loc[~(df["option"] == "Clan")]
+    #df = df.loc[~(df["option"] == "Clan")]
     df = df.loc[~(df["option"] == "Virtue")]
     df = df.loc[~(df["option"] == "Duergar Clan")]
-    df = df.loc[~(df["option"] == "Family")]
+    #df = df.loc[~(df["option"] == "Family")]
+    # option_names = ['Female', 'Male', 'Child', 'Female Adult', 'Male Adult']
+    # for i in option_names:
+    #     df = df.loc[~(df["option"] == i)]
 
     #"Virtue", "Duergar Clan", "Family"])]
 
@@ -88,18 +91,23 @@ def create_names():
             print('  - char_to_num: {}'.format(v['char_to_num']))
             print('  - ix_to_char: {}'.format(v['ix_to_char']))
             print('######################')
-
+    names_dict = {}
     for g in races:
+
         x, y, train_util, train_info = training_data(g, data_dict, 3)
         #print(train_util)
-        current_model, training_infos, history =model_start(train_info, 128)
+        current_model, training_infos, history =model_start(train_info, 178) #Original used 128, 256 is too slow
         compile_model(model=current_model,
                       hyperparams={"lr":0.003, "loss": "categorical_crossentropy", "batch_size":32},
                       history=history, training_infos=training_infos)
-        train_model(current_model, x, y, training_infos, history, 70)
+        train_model(current_model, x, y, training_infos, history, 2200) #Epochs after 2000 seem efficient
         print("Printing {} names".format(g))
-        for i in range(100):
-            generate_name(
+        name_list = []
+        name_list = set(name_list)
+        i = 0
+        vowels = "aeiou"
+        while i < 950:
+            name = generate_name(
                 model=current_model,
                 trainset_infos=train_info,
                 #         sequence_length=trainset_infos['length_of_sequence'],
@@ -107,7 +115,20 @@ def create_names():
                 #         padding_start=padding_start,
                 #         padding_end=padding_end,
                 name_max_length=15)
+            if len(name) >= 3 and int(name.lower().count("z")) < 4:
+
+                vow_check = [vow for vow in name.lower() if vow in vowels]
+                if len(vow_check) >= 1:
+                    name_list.add(name.title())
+            i += 1
+        print(i)
+        print(len(name_list))
+        name_list = sorted(name_list)
+        names_dict.update({g: list(name_list)})
+        print(names_dict)
+
     print("Did that work?")
+    return names_dict
 
 def training_data(target_group, data_dict, len_sequence):
     print(target_group)
@@ -175,7 +196,7 @@ def compile_model(model, hyperparams, history, training_infos):
 
     return None
 
-def train_model(model, x, y, training_infos, history, epochs_to_add = 70):
+def train_model(model, x, y, training_infos, history, epochs_to_add = 100):
 
     #history["acc"] = history.pop("accuracy")
     #history["hyperparams"] = history.pop("hyperparams")
@@ -241,7 +262,7 @@ def generate_name(
     generated_name = generated_name.strip("#*")
     print(generated_name.title())
     #print('{} (probs: {:.6f}, gap: {:.6f})'.format(generated_name, probability, gap))
-    return generated_name, {'probability': probability, 'gap': gap}
+    return generated_name #, {'probability': probability, 'gap': gap}
 
 
 
