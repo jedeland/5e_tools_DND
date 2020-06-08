@@ -209,9 +209,9 @@ def find_gender(f_gender, gender_tags, neutral_genders):
         f_gender = gender_tags.get(f_gender[1])
     elif "NN" in f_gender:#Strange issue with newly added files, adding the tag "NN NN"
         f_gender = neutral_genders[random.randint(0, 1)]
-    elif f_gender == "M":
+    elif "M" in f_gender:
         f_gender = "Male"
-    elif f_gender == "F":
+    elif "F" in f_gender:
         f_gender = "Female"
     return f_gender
 
