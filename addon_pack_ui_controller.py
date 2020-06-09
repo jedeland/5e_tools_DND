@@ -24,6 +24,7 @@ class MainWindow(QMainWindow):
         #mutate_action = QAction()
 
         self.status.showMessage("Data loaded")
+        self.create_grid_layout()
 
     def create_menu(self):
         mainMenu = self.menuBar()
@@ -38,6 +39,23 @@ class MainWindow(QMainWindow):
 
         mutateAction = QAction("Mutate Monster", toolMenu)
         toolMenu.addAction(mutateAction)
+        generateNames = QAction("Generate NPCs", toolMenu)
+        toolMenu.addAction(generateNames)
+        frameStyle = QFrame.Sunken | QFrame.Panel
+        self.integerLabel = QLabel()
+        self.integerLabel.setFrameStyle(frameStyle)
+        self.integerButton = QPushButton("QInputDialog.get&Integer()")
+
+    def create_grid_layout(self):
+        self.group_box = QGroupBox("Please choose the number of NPCs")
+        self.group_box.setFont(QFont("Leto", 11))
+        grid_layout = QGridLayout()
+        grid_layout.addWidget(self.integerButton, 0, 0)
+
+        text, ok = QInputDialog.getInt(self, "NPC Generator Options",
+                                      "Number of NPCs:", 10, 0, 100, 1)
+        if ok and text:
+            self.integerLabel.setText("%d%%" % text)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
