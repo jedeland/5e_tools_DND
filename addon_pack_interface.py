@@ -64,8 +64,15 @@ def npc_options():
                     'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
                     'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine'])
         europe = euro_tag
-        union_list = [arabia, asia, europe]
-        union_text_list = [af_tag, arb_tag, as_tag, euro_tag]
+        df_fantasy = pd.read_csv("fantasy.csv")
+        df_arg = pd.concat([df_arg, df_fantasy])
+        fantasy_tag = sorted(["Tiefling", "Half-Orc", "Halfling", "Gnome", "Elf", "Dwarf", "Dragonborn"])
+        fantasy = fantasy_tag
+        print(df_arg)
+        print(pd.unique(df_arg["origin"]))
+        #Fantasy genders are assorted into NN and N
+        union_list = [arabia, asia, europe, fantasy]
+        union_text_list = [af_tag, arb_tag, as_tag, euro_tag, fantasy_tag]
         drop_list = []
         for i in union_list:
 
@@ -86,7 +93,7 @@ def npc_options():
         temp = df_arg[(df_arg["origin"] == "Ethiopia")]
         print(pd.unique(temp["tag"]))
         #Assigns cultural lists to regions
-        regions = {"African": af_tag, "Europe": europe,"Near East": arabia, "Asia": as_tag}
+        regions = {"African": af_tag, "Europe": europe,"Near East": arabia, "Asia": as_tag, "Experimental: Fantasy": fantasy_tag}
 
         print("Type the number of NPC's you wish to create: ")
         npc_num = None
@@ -175,12 +182,13 @@ def divide_npc_multiculture(npc_num, group_iter):
 
 def show_npc(df, nations, num_npcs):
     #Add information about gender of NPC, as some languages are hard to see the difference between
-    print("Taking random value from data, returning {0} NPC names from {1}".format(num_npcs, nations))
+    print("Taking random value from data, returning {0} NPC names from {1} culture group".format(num_npcs, nations))
     df = df.loc[df["origin"] == nations]
     df_num = df["name"].str.contains("[0-9]+", regex=True) #Simple way to filter out any results with numbers in
     df = df[~df_num] #Returns all non-valid results, aka ones that dont fit the regex pattern
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     gender_tags, neutral_genders = { "WM": ["Male", "Female"], "WF": ["Female", "Male"]},  ["Female", "Male"]
+    pyside_df = pd.DataFrame(columns=["NPC Data"])
     for i in range(num_npcs):
         #Return information on the gender of the targets
         f_name, l_name = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1)
@@ -198,6 +206,9 @@ def show_npc(df, nations, num_npcs):
         #print(name)
         name = re.sub(r'[^\w\s]', '', name)
         print("{0} NPC: {1}".format(gender, name))
+        pyside_arg = {"NPC Data":"{0} NPC: {1}".format(gender, name)}
+        pyside_df.append(pyside_arg, ignore_index=True)
+    return pyside_df
     #print(df)
 
 
@@ -250,6 +261,14 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
         #Merges copied values into existing dataframes
         df = pd.concat(frames, ignore_index=True)
         #print(df)
+        #print(pd.unique(df.columns))
+        #for g in df.columns:
+            #print(pd.unique(df[g]))
+    df = df.drop(columns=['Unnamed: 0'])
+    #print(df)
+    #New dataframe is called to replace old dataframe that
+    df.to_excel("names_merged.xlsx", index=False)
+
     return df
 
 
