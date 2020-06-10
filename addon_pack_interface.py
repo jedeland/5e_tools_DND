@@ -26,14 +26,14 @@ def npc_options():
     if os.path.exists("names_merged.xlsx"):
         npc_data_exists(True)
         df_arg = pd.read_excel("names_merged.xlsx")
-        print(df_arg)
+        #print(df_arg)
         #Use this to reset fantasy tags to reapply with console
-        try:
-            df_arg = df_arg.drop(df_arg[(df_arg["origin"] == "Tiefling") |  (df_arg["origin"] == "Half-Orc")
-                                        | (df_arg["origin"] == "Halfling") | (df_arg["origin"] == "Gnome")
-                                        | (df_arg["origin"] == "Elf") | (df_arg["origin"] == "Dwarf") | (df_arg["origin"] == "Dragonborn")].index)
-        except:
-            pass
+        # try:
+        #     df_arg = df_arg.drop(df_arg[(df_arg["origin"] == "Tiefling") |  (df_arg["origin"] == "Half-Orc")
+        #                                 | (df_arg["origin"] == "Halfling") | (df_arg["origin"] == "Gnome")
+        #                                 | (df_arg["origin"] == "Elf") | (df_arg["origin"] == "Dwarf") | (df_arg["origin"] == "Dragonborn")].index)
+        # except:
+        #     pass
 
         print("Loading NPC options....")
         culture_list = pd.unique(df_arg["origin"])
@@ -73,15 +73,16 @@ def npc_options():
                     'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
                     'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine'])
         europe = euro_tag
-        df_fantasy = pd.read_csv("fantasy.csv")
-        df_arg = pd.concat([df_arg, df_fantasy])
+
+        #df_fantasy = pd.read_csv("fantasy.csv")
+        #df_arg = pd.concat([df_arg, df_fantasy])
         fantasy_tag = sorted(["Tiefling", "Half-Orc", "Halfling", "Gnome", "Elf", "Dwarf", "Dragonborn"])
         fantasy = fantasy_tag
-        print(df_arg)
-        print(pd.unique(df_arg["origin"]))
+        #print(df_arg)
+        #print(pd.unique(df_arg["origin"]))
         #Fantasy genders are assorted into NN and N
         union_list = [arabia, asia, europe, fantasy]
-        union_text_list = [af_tag, arb_tag, as_tag, euro_tag, fantasy_tag]
+        #union_text_list = [af_tag, arb_tag, as_tag, euro_tag, fantasy_tag]
         drop_list = []
         for i in union_list:
 
@@ -95,21 +96,19 @@ def npc_options():
                     pass
         #print("Printing Drop List: ", drop_list)
 
-        #print(drop_list, non_relevant)
-        #print(arabia, asia, europe)
-        #print(non_relevant_last, bad_boy_list)
+
         #Clean dataframe to remove "does not exist" issues
         if not drop_list:
-            print("List is empty, no need to add any new names")
-            print(df_arg[df_arg.duplicated(subset=None, keep="first")])
+            print("All entries are complete, no need to add any new names")
+            #print(df_arg[df_arg.duplicated(subset=None, keep="first")])
             df_duplicates = df_arg.duplicated()
-            print(df_duplicates)
+            #print(df_duplicates)
             if df_duplicates.size >= 1:
                 df_arg.drop_duplicates(keep="first", inplace=True)
-                print(df_arg)
+                #print(df_arg)
                 df_arg.to_excel("names_merged.xlsx", index=False)
             #df_arg = df_arg.drop_duplicates(keep="first")
-            print(pd.unique(df_arg["origin"]))
+            #print(pd.unique(df_arg["origin"]))
         else:
             df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
             temp = df_arg[(df_arg["origin"] == "Ethiopia")]
@@ -131,7 +130,7 @@ def npc_options():
                 print("There was an error, please ensure the input is a valid number")
         print("Are the NPC's the same culture as each other? [y/n]")
         group_culture = None
-        yes_list, no_list = ["y", "yeh", "yes", "yep"], ["n", "no", "nah", "nope"]
+        yes_list, no_list = ["y", "yeh", "yes", "yep", "ye"], ["n", "no", "nah", "nope"]
         while group_culture is None:
             try:
                 group_culture = input("")
