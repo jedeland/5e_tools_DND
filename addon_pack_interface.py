@@ -26,6 +26,15 @@ def npc_options():
     if os.path.exists("names_merged.xlsx"):
         npc_data_exists(True)
         df_arg = pd.read_excel("names_merged.xlsx")
+        print(df_arg)
+        #Use this to reset fantasy tags to reapply with console
+        try:
+            df_arg = df_arg.drop(df_arg[(df_arg["origin"] == "Tiefling") |  (df_arg["origin"] == "Half-Orc")
+                                        | (df_arg["origin"] == "Halfling") | (df_arg["origin"] == "Gnome")
+                                        | (df_arg["origin"] == "Elf") | (df_arg["origin"] == "Dwarf") | (df_arg["origin"] == "Dragonborn")].index)
+        except:
+            pass
+
         print("Loading NPC options....")
         culture_list = pd.unique(df_arg["origin"])
         culture_list = culture_list.tolist()
@@ -84,14 +93,28 @@ def npc_options():
                     i.remove(item)
                 else:
                     pass
+        #print("Printing Drop List: ", drop_list)
 
         #print(drop_list, non_relevant)
         #print(arabia, asia, europe)
         #print(non_relevant_last, bad_boy_list)
         #Clean dataframe to remove "does not exist" issues
-        df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
-        temp = df_arg[(df_arg["origin"] == "Ethiopia")]
-        print(pd.unique(temp["tag"]))
+        if not drop_list:
+            print("List is empty, no need to add any new names")
+            print(df_arg[df_arg.duplicated(subset=None, keep="first")])
+            df_duplicates = df_arg.duplicated()
+            print(df_duplicates)
+            if df_duplicates.size >= 1:
+                df_arg.drop_duplicates(keep="first", inplace=True)
+                print(df_arg)
+                df_arg.to_excel("names_merged.xlsx", index=False)
+            #df_arg = df_arg.drop_duplicates(keep="first")
+            print(pd.unique(df_arg["origin"]))
+        else:
+            df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
+            temp = df_arg[(df_arg["origin"] == "Ethiopia")]
+            print(pd.unique(temp["tag"]))
+
         #Assigns cultural lists to regions
         regions = {"African": af_tag, "Europe": europe,"Near East": arabia, "Asia": as_tag, "Experimental: Fantasy": fantasy_tag}
 
