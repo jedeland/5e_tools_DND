@@ -35,7 +35,7 @@ def npc_options():
         # except:
         #     pass
 
-        print("Loading NPC options....")
+        print("Loading NPC options ...")
         culture_list = pd.unique(df_arg["origin"])
         culture_list = culture_list.tolist()
         #do_enum(culture_list)
@@ -99,7 +99,7 @@ def npc_options():
 
         #Clean dataframe to remove "does not exist" issues
         if not drop_list:
-            print("All entries are complete, no need to add any new names")
+            print("All entries are complete, no need to add any new names ...")
             #print(df_arg[df_arg.duplicated(subset=None, keep="first")])
             df_duplicates = df_arg.duplicated()
             #print(df_duplicates)
@@ -110,6 +110,7 @@ def npc_options():
             #df_arg = df_arg.drop_duplicates(keep="first")
             #print(pd.unique(df_arg["origin"]))
         else:
+            print("There are names missing, adding new names using BS4, this may take a minute ...")
             df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
             temp = df_arg[(df_arg["origin"] == "Ethiopia")]
             print(pd.unique(temp["tag"]))
