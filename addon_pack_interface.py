@@ -24,140 +24,146 @@ Gamekeeper; Hunter; Mercenary; Mercer; Navigator; Night Soil Man; Ranger; Sailor
 
 def npc_options():
     if os.path.exists("names_merged.xlsx"):
-        npc_data_exists(True)
-        df_arg = pd.read_excel("names_merged.xlsx")
-        #print(df_arg)
-        #Use this to reset fantasy tags to reapply with console
-        # try:
-        #     df_arg = df_arg.drop(df_arg[(df_arg["origin"] == "Tiefling") |  (df_arg["origin"] == "Half-Orc")
-        #                                 | (df_arg["origin"] == "Halfling") | (df_arg["origin"] == "Gnome")
-        #                                 | (df_arg["origin"] == "Elf") | (df_arg["origin"] == "Dwarf") | (df_arg["origin"] == "Dragonborn")].index)
-        # except:
-        #     pass
+        console_running = True
+        while console_running is True:
+            npc_data_exists(True)
+            df_arg = pd.read_excel("names_merged.xlsx")
+            #print(df_arg)
+            #Use this to reset fantasy tags to reapply with console
+            # try:
+            #     df_arg = df_arg.drop(df_arg[(df_arg["origin"] == "Tiefling") |  (df_arg["origin"] == "Half-Orc")
+            #                                 | (df_arg["origin"] == "Halfling") | (df_arg["origin"] == "Gnome")
+            #                                 | (df_arg["origin"] == "Elf") | (df_arg["origin"] == "Dwarf") | (df_arg["origin"] == "Dragonborn")].index)
+            # except:
+            #     pass
 
-        print("Loading NPC options ...")
-        culture_list = pd.unique(df_arg["origin"])
-        culture_list = culture_list.tolist()
-        #do_enum(culture_list)
-        non_relevant = []
-        for i in culture_list:
-            df_temp = df_arg.loc[df_arg["origin"] == i]
-            #print(df_temp)
-            if any(df_temp["tag"] != "N"):
-                pass
-                #print("This dataframe has regular names")
-            else:
-                non_relevant.append(i)
-
-                #print("This dataframe has no regular names")
-                #print(pd.unique(df_temp["tag"]))
-        non_relevant_last = []
-        for g in culture_list:
-            df_temp_g = df_arg.loc[df_arg["origin"] == g]
-            #print(df_temp_g)
-            if any(df_temp_g["tag"] == "N"):
-                pass
-                #print("This DF contains last names")
-            else:
-                non_relevant_last.append(g)
-
-                #print("This DF contains no last names")
-
-
-        af_tag = ["African", "Ethiopia"]
-        arb_tag = ['Arabia', 'Armenia', 'Azerbaijan', 'Israel', 'Persian', 'Kazakhstan', 'Turkey']
-        arabia = arb_tag
-        as_tag = sorted(['Philippines', 'China', 'India', 'Persian', 'Japan', 'Kazakhstan', 'Korea', 'Pakistani', 'Srilanka', 'Vietnam', "Hawaiian"])
-        asia = as_tag
-        euro_tag = sorted(['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
-                    'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
-                    'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine'])
-        europe = euro_tag
-
-        #df_fantasy = pd.read_csv("fantasy.csv")
-        #df_arg = pd.concat([df_arg, df_fantasy])
-        fantasy_tag = sorted(["Tiefling", "Half-Orc", "Halfling", "Gnome", "Elf", "Dwarf", "Dragonborn"])
-        fantasy = fantasy_tag
-        #print(df_arg)
-        #print(pd.unique(df_arg["origin"]))
-        #Fantasy genders are assorted into NN and N
-        union_list = [arabia, asia, europe, fantasy]
-        #union_text_list = [af_tag, arb_tag, as_tag, euro_tag, fantasy_tag]
-        drop_list = []
-        for i in union_list:
-
-            for item in i:
-                df_temp = df_arg.loc[df_arg["origin"] == item]
+            print("Loading NPC options ...")
+            culture_list = pd.unique(df_arg["origin"])
+            culture_list = culture_list.tolist()
+            #do_enum(culture_list)
+            non_relevant = []
+            for i in culture_list:
+                df_temp = df_arg.loc[df_arg["origin"] == i]
                 #print(df_temp)
-                if len(pd.unique(df_temp["tag"])) == 1:
-                    drop_list.append(item)
-                    i.remove(item)
-                else:
+                if any(df_temp["tag"] != "N"):
                     pass
-        #print("Printing Drop List: ", drop_list)
-
-
-        #Clean dataframe to remove "does not exist" issues
-        if not drop_list:
-            print("All entries are complete, no need to add any new names ...")
-            #print(df_arg[df_arg.duplicated(subset=None, keep="first")])
-            df_duplicates = df_arg.duplicated()
-            #print(df_duplicates)
-            if df_duplicates.size >= 1:
-                df_arg.drop_duplicates(keep="first", inplace=True)
-                #print(df_arg)
-                df_arg.to_excel("names_merged.xlsx", index=False)
-            #df_arg = df_arg.drop_duplicates(keep="first")
-            #print(pd.unique(df_arg["origin"]))
-        else:
-            print("There are names missing, adding new names using BS4, this may take a minute ...")
-            df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
-            temp = df_arg[(df_arg["origin"] == "Ethiopia")]
-            print(pd.unique(temp["tag"]))
-
-        #Assigns cultural lists to regions
-        regions = {"African": af_tag, "Europe": europe,"Near East": arabia, "Asia": as_tag, "Experimental: Fantasy": fantasy_tag}
-
-        print("Type the number of NPC's you wish to create: ")
-        npc_num = None
-        while npc_num is None:
-            try:
-                num_arg = int(input(""))
-                if num_arg >= 101 or num_arg <= 0:
-                    print("The program can only create less than 100 NPC's, try again")
+                    #print("This dataframe has regular names")
                 else:
-                    npc_num = num_arg
-            except:
-                print("There was an error, please ensure the input is a valid number")
-        print("Are the NPC's the same culture as each other? [y/n]")
-        group_culture = None
-        yes_list, no_list = ["y", "yeh", "yes", "yep", "ye"], ["n", "no", "nah", "nope"]
-        while group_culture is None:
-            try:
-                group_culture = input("")
-                if group_culture.lower() in yes_list:
-                    print("Creating NPC's with the same culture")
-                    group_culture = True
-                elif group_culture.lower() in no_list:
-                    print("Creating NPC's with different cultures")
-                    group_culture = False
-            except:
-                print("There was an error, please ensure the input corresponds to yes or no")
+                    non_relevant.append(i)
 
-        origin_list = list(regions.keys())
-        if group_culture is True or int(npc_num) == 1:
-            selected_nation = select_group(origin_list, regions)
-            show_npc(df_arg, selected_nation, npc_num)
-        elif group_culture is False:
-            print("Please type the number of different NPC groups you wish to create, each with their own culture")
-            group_iter = int(input("Groups: "))
-            npc_out = divide_npc_multiculture(npc_num, group_iter)
-            print("Group sizes are", npc_out)
-            for i in npc_out:
-                print("Selecting NPC's for the Group with size {}".format(npc_out))
+                    #print("This dataframe has no regular names")
+                    #print(pd.unique(df_temp["tag"]))
+            non_relevant_last = []
+            for g in culture_list:
+                df_temp_g = df_arg.loc[df_arg["origin"] == g]
+                #print(df_temp_g)
+                if any(df_temp_g["tag"] == "N"):
+                    pass
+                    #print("This DF contains last names")
+                else:
+                    non_relevant_last.append(g)
+
+                    #print("This DF contains no last names")
+
+
+            africa = ["African", "Ethiopia"]
+            arb_tag = ['Arabia', 'Armenia', 'Azerbaijan', 'Israel', 'Persian', 'Kazakhstan', 'Turkey']
+            arabia = arb_tag
+            asia = sorted(['Philippines', 'China', 'India', 'Persian', 'Japan', 'Kazakhstan', 'Korea', 'Pakistani', 'Srilanka', 'Vietnam', "Hawaiian"])
+            europe = sorted(['Albania', 'Armenia', 'Austria', 'Azerbaijan', 'Balkan', 'Basque', 'Russia', 'Belgium', 'France', 'Bulgaria', 'Celtic', 'Czech', 'Denmark', 'Dutch', 'East Frisia', 'England',
+                        'Estonia', 'Norway', 'Finland', 'Georgia', 'Germany', 'Greece', 'Hungary', 'Iceland', 'Italy', 'Latin', 'Latvia', 'Lithuania',
+                        'Luxembourg', 'Macedonia', 'Malta', 'Romania', 'Poland', 'Portugal', 'Scandinavian', 'Slavic', 'Slovakia', 'Slovenia', 'Spain', 'Sweden', 'Swiss', 'Turkey', 'Ukraine'])
+
+            #df_fantasy = pd.read_csv("fantasy.csv")
+            #df_arg = pd.concat([df_arg, df_fantasy])
+            fantasy = sorted(["Tiefling", "Half-Orc", "Halfling", "Gnome", "Elf", "Dwarf", "Dragonborn"])
+            #print(df_arg)
+            #print(pd.unique(df_arg["origin"]))
+            #Fantasy genders are assorted into NN and N
+            union_list = [arabia, asia, europe, fantasy]
+            #union_text_list = [af_tag, arb_tag, as_tag, euro_tag, fantasy_tag]
+            drop_list = []
+            for i in union_list:
+
+                for item in i:
+                    df_temp = df_arg.loc[df_arg["origin"] == item]
+                    #print(df_temp)
+                    if len(pd.unique(df_temp["tag"])) == 1:
+                        drop_list.append(item)
+                        i.remove(item)
+                    else:
+                        pass
+            #print("Printing Drop List: ", drop_list)
+
+
+            #Clean dataframe to remove "does not exist" issues
+            if not drop_list:
+                print("All entries are complete, no need to add any new names ...")
+                #print(df_arg[df_arg.duplicated(subset=None, keep="first")])
+                df_duplicates = df_arg.duplicated()
+                #print(df_duplicates)
+                if df_duplicates.size >= 1:
+                    df_arg.drop_duplicates(keep="first", inplace=True)
+                    #print(df_arg)
+                    df_arg.to_excel("names_merged.xlsx", index=False)
+                #df_arg = df_arg.drop_duplicates(keep="first")
+                #print(pd.unique(df_arg["origin"]))
+            else:
+                print("There are names missing, adding new names using BS4, this may take a minute ...")
+                df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
+                temp = df_arg[(df_arg["origin"] == "Ethiopia")]
+                print(pd.unique(temp["tag"]))
+            #Used later to ensure there is always a quit option
+            yes_list, no_list, quit_list = ["y", "yeh", "yes", "yep", "ye"], ["n", "no", "nah", "nope"], ["q", "quit", "exit"]
+            #Assigns cultural lists to regions
+
+            regions = {"African": africa, "Europe": europe,"Near East": arabia, "Asia": asia, "Experimental: Fantasy": fantasy}
+
+            print("Type the number of NPC's you wish to create: ")
+            npc_num = None
+            while npc_num is None:
+                try:
+                    num_arg = int(input(""))
+                    if num_arg >= 101 or num_arg <= 0:
+                        print("The program can only create between 1 and 100 npc's, please ensure you type a number between these two values, try again")
+                    else:
+                        npc_num = num_arg
+                except:
+                    print("There was an error, please ensure the input is a valid number")
+
+            print("Are the NPC's the same culture as each other? [y/n/q]")
+            group_culture = None
+
+            while group_culture is None:
+                try:
+                    group_culture = input("")
+                    if group_culture.lower() in yes_list:
+                        print("Creating NPC's with the same culture")
+                        group_culture = True
+                    elif group_culture.lower() in no_list:
+                        print("Creating NPC's with different cultures")
+                        group_culture = False
+                    elif group_culture.lower() in quit_list:
+                        console_running = False
+                except:
+                    print("There was an error, please ensure the input corresponds to yes or no")
+
+            origin_list = list(regions.keys())
+            if group_culture is True or int(npc_num) == 1:
                 selected_nation = select_group(origin_list, regions)
-                show_npc(df_arg, selected_nation, int(i))
-            #print(groupings)
+                show_npc(df_arg, selected_nation, npc_num)
+            elif group_culture is False:
+                print("Please type the number of different NPC groups you wish to create, each with their own culture")
+                group_iter = int(input("Groups: "))
+                npc_out = divide_npc_multiculture(npc_num, group_iter)
+                print("Group sizes are", npc_out)
+                for i in npc_out:
+                    print("Selecting NPC's for the Group with size {}".format(npc_out))
+                    selected_nation = select_group(origin_list, regions)
+                    show_npc(df_arg, selected_nation, int(i))
+                #print(groupings)
+
+        print("Program Exited")
 
 
 
@@ -165,6 +171,7 @@ def npc_options():
 
     else:
         npc_data_exists(False)
+
 
 
 def select_group(origin_list, regions):
