@@ -1,9 +1,12 @@
 import random
+import sys
 
 import pandas as pd; import numpy as np
 import requests; import os; import re; import addon_pack_namegen
 
 from unidecode import unidecode
+
+import addon_pack_ui_controller
 
 jobs = """
 Baker; Brewer; Butcher; Distiller; Farmer; Fisherman; Fruit Picker; Gatherer; Grocer; Peasant; Miller; Shepherd; Smoker; Falconer; Farrier; Groom; Houndsman; Stablehand; Artist; 
@@ -124,14 +127,17 @@ def npc_options():
             while npc_num is None:
                 try:
                     num_arg = int(input(""))
-                    if num_arg >= 101 or num_arg <= 0:
+                    if str(num_arg).lower() in quit_list:
+                        npc_num = num_arg
+                        console_running = False
+                    elif num_arg >= 101 or num_arg <= 0:
                         print("The program can only create between 1 and 100 npc's, please ensure you type a number between these two values, try again")
                     else:
                         npc_num = num_arg
                 except:
                     print("There was an error, please ensure the input is a valid number")
 
-            print("Are the NPC's the same culture as each other? [y/n/q]")
+            print("Are the NPC's the same culture as each other? [y/n]")
             group_culture = None
 
             while group_culture is None:
@@ -151,7 +157,9 @@ def npc_options():
             origin_list = list(regions.keys())
             if group_culture is True or int(npc_num) == 1:
                 selected_nation = select_group(origin_list, regions)
-                show_npc(df_arg, selected_nation, npc_num)
+                out_df = show_npc(df_arg, selected_nation, npc_num)
+                show_table(out_df)
+                print(out_df)
             elif group_culture is False:
                 print("Please type the number of different NPC groups you wish to create, each with their own culture")
                 group_iter = int(input("Groups: "))
@@ -160,8 +168,11 @@ def npc_options():
                 for i in npc_out:
                     print("Selecting NPC's for the Group with size {}".format(npc_out))
                     selected_nation = select_group(origin_list, regions)
-                    show_npc(df_arg, selected_nation, int(i))
+                    out_df = show_npc(df_arg, selected_nation, int(i))
+                    show_table(out_df)
+                print(out_df)
                 #print(groupings)
+            console_running = False
 
         print("Program Exited")
 
@@ -172,6 +183,12 @@ def npc_options():
     else:
         npc_data_exists(False)
 
+
+def show_table(out_df):
+    app = addon_pack_ui_controller.QApplication(sys.argv)
+    window = addon_pack_ui_controller.MainWindow(out_df)
+    window.show()
+    app.exec_()
 
 
 def select_group(origin_list, regions):
@@ -237,7 +254,8 @@ def show_npc(df, nations, num_npcs):
         name = re.sub(r'[^\w\s]', '', name)
         print("{0} NPC: {1}".format(gender, name))
         pyside_arg = {"NPC Data":"{0} NPC: {1}".format(gender, name)}
-        pyside_df.append(pyside_arg, ignore_index=True)
+
+        pyside_df = pyside_df.append(pyside_arg, ignore_index=True)
     return pyside_df
     #print(df)
 
