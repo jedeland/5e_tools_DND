@@ -102,7 +102,11 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.setCentralWidget(self.table)
 
-
+#Alternative paths to GUI seem to be as follows:
+#Make a web app that displays the data
+#Make a temporary CSV / Excel file that displays the data
+#Make a temporary google sheet that holds the data for a set amount of time
+#Use QGrid
 
 
 # app=QApplication(sys.argv)

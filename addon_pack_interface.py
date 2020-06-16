@@ -32,6 +32,7 @@ def npc_options():
             while console_running is True:
                 npc_data_exists(True)
                 df_arg = pd.read_excel("names_merged.xlsx")
+                print(df_arg, pd.unique(df_arg["origin"]))
                 #print(df_arg)
                 #Use this to reset fantasy tags to reapply with console
                 # try:
@@ -109,8 +110,10 @@ def npc_options():
                         df_arg.to_excel("names_merged.xlsx", index=False)
                     #df_arg = df_arg.drop_duplicates(keep="first")
                     #print(pd.unique(df_arg["origin"]))
-                else:
+                elif len(drop_list) > 0:
                     print("There are names missing, adding new names using BS4, this may take a minute ...")
+                    print(drop_list)
+                    print(non_relevant)
                     df_arg = create_duplicate_names(df_arg, non_relevant_last, non_relevant)
                     temp = df_arg[(df_arg["origin"] == "Ethiopia")]
                     print(pd.unique(temp["tag"]))
@@ -162,7 +165,7 @@ def npc_options():
                     print("Creating temporary excel file, set to user downloads")
                     #Source of code snippet found here - https://www.reddit.com/r/learnpython/comments/4dfh1i/how_to_get_the_downloads_folder_path_on_windows/
                     out_df.to_excel("generated-names.xlsx")
-                    #os.remove("generated-names.xlsx")
+                    os.remove("generated-names.xlsx")
                     print(out_df)
                 elif group_culture is False:
                     print("Please type the number of different NPC groups you wish to create, each with their own culture")
@@ -177,7 +180,7 @@ def npc_options():
                     print("Creating temporary excel file, set to user downloads")
                     #Source of code snippet found here - https://www.reddit.com/r/learnpython/comments/4dfh1i/how_to_get_the_downloads_folder_path_on_windows/
                     out_df.to_excel("generated-names-multiple.xlsx")
-                    #os.remove("generated-names-multiple.xlsx")
+                    os.remove("generated-names-multiple.xlsx")
                     print(out_df)
                     #print(groupings)
                 console_running = False
@@ -265,7 +268,7 @@ def show_npc(df, nations, num_npcs):
         #print(name)
         name = re.sub(r'[^\w\s]', '', name)
         print("{0} NPC: {1}".format(gender, name))
-        pyside_arg = {"Gender":"{0}", "Name": "{1}", "Job": "{2}".format(gender, name, job)}
+        pyside_arg = {"Gender":"{:0:}", "Name": "{1}", "Job": "".format(gender, name)}
 
         pyside_df = pyside_df.append(pyside_arg, ignore_index=True)
     return pyside_df

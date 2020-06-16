@@ -1,4 +1,5 @@
-import pandas as pd; import numpy as np
+import pandas as pd
+import numpy as np
 import requests; import os; import re
 from bs4 import BeautifulSoup
 from transliterate import translit, detect_language; import time
@@ -311,6 +312,7 @@ def splice_names():
     df = form_international_names()
     df_bs4 = soup_names()
     df_surnames = soup_surnames()
+
     frames = [df, df_bs4, df_surnames]
     df_full = pd.concat(frames, ignore_index=True)
     df_full["name"] = df_full["name"].str.replace("\w{L}+", "")
@@ -450,8 +452,7 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
                     df = df.append({"name": adder, "tag": gender[i], "origin": origins},
                                        ignore_index=True)
         i += 1
-    fantasy_df = pd.read_csv("fantasy.csv")
-    df = pd.concat([df, fantasy_df])
+
     print(df)
     return df
 
@@ -784,7 +785,7 @@ def form_files(data):
     #data.to_sql()
 
 
-#splice_names()
+
 
 
 
