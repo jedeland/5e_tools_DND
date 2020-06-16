@@ -215,7 +215,7 @@ def translate_names(df_in):
 
     def standarise_names(df_standard):
         print("This function will standardise the name tags")
-        df = pd.read_excel("names_merged.xlsx")
+        #df = pd.read_excel("names_merged.xlsx")
         name_dict = {"Arabic": "Arabia", "Arabia/Persia": "Arabia", "French": "France", "Spanish": "Spain", "Indian": "India", "Finnish": "Finland", "Riyadh": "Arabia", "Montenegrin":"Balkan",
                      "Turkish": "Turkey", "Swedish": "Sweden", "German": "Germany", "Georgian": "Georgia", "Japanese": "Japan", "USA": "England", "English":"England", "Great Briton": "England",
                      "Estonian": "Estonia", "Baghdad": "Arabia", "Vienna": "Germany", "Zurich": "Swiss", "Berlin": "Germany", "Amsterdam": "Dutch", "Paris": "France", "Rome": "Italy", "Lisbon": "Portugal",
@@ -373,7 +373,7 @@ def form_international_names(): #add npc_df as argument
             for p in range(len(text_temp)):
                 if text_temp[p] != "0":
                     origins = new_cols[p+2] #The +2 Counteracts the slice action
-                    print(text_arg, origins, "\n", new_cols)
+                    #print(text_arg, origins, "\n", new_cols)
                     print("Testing aspects:", len(text_arg), len(new_cols))
                     new_df = new_df.append({"name": text_arg[0], "tag": text_arg[1], "origin": origins}, ignore_index=True)
                     #By placing the DF assignment here the file should create multiple versions of the same name with individual origins assigned to them, which will speed up later search functions
@@ -450,6 +450,9 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
                     df = df.append({"name": adder, "tag": gender[i], "origin": origins},
                                        ignore_index=True)
         i += 1
+    fantasy_df = pd.read_csv("fantasy.csv")
+    df = pd.concat([df, fantasy_df])
+    print(df)
     return df
 
 def check_if_exists():
