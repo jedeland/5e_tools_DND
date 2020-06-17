@@ -191,7 +191,7 @@ def npc_options():
         else:
             npc_data_exists(False)
 
-    except:
+    except FileNotFoundError:
         print("The file may be corrupted, creating new file ...")
         npc_data_exists(False)
 
@@ -203,6 +203,8 @@ def show_table(out_df):
     window.resize(1200, 800)
     window.show()
     app.exec_()
+
+
 
 
 def select_group(origin_list, regions):
@@ -268,9 +270,14 @@ def show_npc(df, nations, num_npcs):
         #print(name)
         name = re.sub(r'[^\w\s]', '', name)
         print("{0} NPC: {1}".format(gender, name))
+
         pyside_arg = {"Gender":"{:0:}", "Name": "{1}", "Job": "".format(gender, name)}
 
         pyside_df = pyside_df.append(pyside_arg, ignore_index=True)
+
+        pyside_arg = {"NPC Data":"{0} NPC: {1}".format(gender, name)}
+        pyside_df.append(pyside_arg, ignore_index=True)
+
     return pyside_df
     #print(df)
 
@@ -313,8 +320,9 @@ def create_duplicate_names(df, add_last_names, remove_or_add):
     print("Lists to remove or add first names to, if has not already been done via\nadd_stragglers(): ", remove_or_add)
     #Add new elemnt to last_name_donor if the add_last_names list expands, uses and copies pre existing last names for values without last names
     last_name_donor = ["Germany", "Dutch", "Norway", "Balkan"]
+    print(len(add_last_names), add_last_names)
     for i in range(len(add_last_names)):
-
+        print(i, last_name_donor[i])
         df_temp = df[(df["origin"] == last_name_donor[i]) & (df["tag"] == "N")]
         df_x = df_temp.copy() #Supresses copy warning, otherwise useless
         #Replaces value I with value I from both lists, for instance if I = 0 then the copied Germany values will be replaced with Austria
