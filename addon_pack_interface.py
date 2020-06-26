@@ -32,7 +32,7 @@ def npc_options():
             while console_running is True:
                 npc_data_exists(True)
                 df_arg = pd.read_excel("names_merged.xlsx")
-                print(df_arg, pd.unique(df_arg["origin"]))
+                #print(df_arg, pd.unique(df_arg["origin"]))
                 #print(df_arg)
                 #Use this to reset fantasy tags to reapply with console
                 # try:
@@ -136,27 +136,27 @@ def npc_options():
                         else:
                             npc_num = num_arg
                     except:
-                        print("There was an error, please ensure the input is a valid number")
+                        print("There was an error, please ensure the input is a valid whole number")
 
                 print("Are the NPC's the same culture as each other? [y/n]")
-                group_culture = None
+                single_culture = None
 
-                while group_culture is None:
+                while single_culture is None:
                     try:
-                        group_culture = input("")
-                        if group_culture.lower() in yes_list:
+                        single_culture = input("")
+                        if single_culture.lower() in yes_list:
                             print("Creating NPC's with the same culture")
-                            group_culture = True
-                        elif group_culture.lower() in no_list:
+                            single_culture = True
+                        elif single_culture.lower() in no_list:
                             print("Creating NPC's with different cultures")
-                            group_culture = False
-                        elif group_culture.lower() in quit_list:
+                            single_culture = False
+                        elif single_culture.lower() in quit_list:
                             console_running = False
                     except:
                         print("There was an error, please ensure the input corresponds to yes or no")
 
                 origin_list = list(regions.keys())
-                if group_culture is True or int(npc_num) == 1:
+                if single_culture is True or int(npc_num) == 1:
                     selected_nation = select_group(origin_list, regions)
                     out_df = show_npc(df_arg, selected_nation, npc_num)
 
@@ -167,16 +167,19 @@ def npc_options():
                     out_df.to_excel("generated-names.xlsx")
                     os.remove("generated-names.xlsx")
                     print(out_df)
-                elif group_culture is False:
+                elif single_culture is False:
+
                     print("Please type the number of different NPC groups you wish to create, each with their own culture")
                     group_iter = int(input("Groups: "))
-                    npc_out = divide_npc_multiculture(npc_num, group_iter)
-                    print("Group sizes are", npc_out)
-                    for i in npc_out:
-                        print("Selecting NPC's for the Group with size {}".format(npc_out))
-                        selected_nation = select_group(origin_list, regions)
-                        out_df = show_npc(df_arg, selected_nation, int(i))
-                        #show_table(out_df)
+                    npc_out = 0
+                    while group_iter != npc_out:
+                        npc_out = divide_npc_multiculture(npc_num, group_iter)
+                        print("Group sizes are", npc_out)
+                        for i in npc_out:
+                            print("Selecting NPC's for the Group with size {}".format(npc_out))
+                            selected_nation = select_group(origin_list, regions)
+                            out_df = show_npc(df_arg, selected_nation, int(i))
+                            #show_table(out_df)
                     print("Creating temporary excel file, set to user downloads")
                     #Source of code snippet found here - https://www.reddit.com/r/learnpython/comments/4dfh1i/how_to_get_the_downloads_folder_path_on_windows/
                     out_df.to_excel("generated-names-multiple.xlsx")
@@ -220,10 +223,12 @@ def select_group(origin_list, regions):
 
 
 def divide_npc_multiculture(npc_num, group_iter):
+
     print("NPC Total: {}".format(npc_num))
     groupings = []
     npc_calc = npc_num
     for i in range(group_iter):
+        print(groupings)
         try:
 
             print("Please type the size of Group {}".format(i + 1))
@@ -233,11 +238,12 @@ def divide_npc_multiculture(npc_num, group_iter):
 
                 groupings.append(int(size_arg))
                 print("{} NPC's remaining".format(npc_calc))
+                print(groupings)
             elif npc_calc < 0:
                 print("\n\n\nOne of your groups is invalid, restarting selection"
                       "\nPlease ensure that your groups do not exceed the NPC total of {0}".format(npc_num))
-                divide_npc_multiculture(npc_num, group_iter)
-
+                #divide_npc_multiculture(npc_num, group_iter)
+            print(groupings)
         except:
             print("There are still NPC's remaining, please ensure your groups fill the NPC requirements")
     return groupings
@@ -256,6 +262,7 @@ def show_npc(df, nations, num_npcs):
         #Return information on the gender of the targets
         job_choice = jobs.split(";")
         f_name, l_name, job = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1), np.random.choice(job_choice, 1)
+        job = re.sub(r'[^\w\s]', '', str(job))
         gender_name = re.sub(r'[^\w\s]', '', str(f_name))
         f_gender = rand_name.loc[rand_name["name"] == str(gender_name)]
         f_gender = f_gender["tag"].values
@@ -271,7 +278,7 @@ def show_npc(df, nations, num_npcs):
         name = re.sub(r'[^\w\s]', '', name)
         print("{0} NPC: {1}".format(gender, name))
 
-        pyside_arg = {"Gender":"{:0:}", "Name": "{1}", "Job": "".format(gender, name)}
+        pyside_arg = {"Gender":"{}".format(gender), "Name": "{}".format(name), "Job": "{}".format(str(job))}
 
         pyside_df = pyside_df.append(pyside_arg, ignore_index=True)
 
