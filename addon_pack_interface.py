@@ -21,7 +21,8 @@ Miner; Woodcutter; Alchemist; Apothecary; Cultist; Herbalist; Physician; Shaman;
 Archer; Barber; Beggar; Bottler; Charcoal Burner; Ditcher; Drayman; Ewerer (Water Boiler); Executioner; Gardener; 
 Gamekeeper; Hunter; Mercenary; Mercer; Navigator; Night Soil Man; Ranger; Sailor; Shoveler; Thief; Merchant
 """
-
+job_cleaned = re.sub("\n", "", jobs)
+job_choice = job_cleaned.split(";")
 
 
 
@@ -143,15 +144,17 @@ def npc_options():
 
                 while single_culture is None:
                     try:
-                        single_culture = input("")
-                        if single_culture.lower() in yes_list:
+                        culture_arg = input("")
+                        if culture_arg.lower() in yes_list:
                             print("Creating NPC's with the same culture")
                             single_culture = True
-                        elif single_culture.lower() in no_list:
+                        elif culture_arg.lower() in no_list:
                             print("Creating NPC's with different cultures")
                             single_culture = False
-                        elif single_culture.lower() in quit_list:
+                        elif culture_arg.lower() in quit_list:
                             console_running = False
+                        else:
+                            print("There was an error, please ensure the input corresponds to yes or no")
                     except:
                         print("There was an error, please ensure the input corresponds to yes or no")
 
@@ -168,24 +171,24 @@ def npc_options():
                     os.remove("generated-names.xlsx")
                     print(out_df)
                 elif single_culture is False:
-
+                    # TODO: Fix the loops so that multiple groups can be used in tandem, Try to place loop inside of a function, that then calls the divide_npc_multiculture function
                     print("Please type the number of different NPC groups you wish to create, each with their own culture")
-                    group_iter = int(input("Groups: "))
-                    npc_out = 0
-                    while group_iter != npc_out:
-                        npc_out = divide_npc_multiculture(npc_num, group_iter)
-                        print("Group sizes are", npc_out)
-                        for i in npc_out:
-                            print("Selecting NPC's for the Group with size {}".format(npc_out))
-                            selected_nation = select_group(origin_list, regions)
-                            out_df = show_npc(df_arg, selected_nation, int(i))
-                            #show_table(out_df)
-                    print("Creating temporary excel file, set to user downloads")
-                    #Source of code snippet found here - https://www.reddit.com/r/learnpython/comments/4dfh1i/how_to_get_the_downloads_folder_path_on_windows/
-                    out_df.to_excel("generated-names-multiple.xlsx")
-                    os.remove("generated-names-multiple.xlsx")
-                    print(out_df)
-                    #print(groupings)
+                    non_single_culture(npc_num)
+
+                    # while group_iter != npc_out:
+                    #     npc_out = divide_npc_multiculture(npc_num, group_iter)
+                    #     print("Group sizes are", npc_out)
+                    #     for i in npc_out:
+                    #         print("Selecting NPC's for the Group with size {}".format(npc_out))
+                    #         selected_nation = select_group(origin_list, regions)
+                    #         out_df = show_npc(df_arg, selected_nation, int(i))
+                    #         #show_table(out_df)
+                    # print("Creating temporary excel file, set to user downloads")
+                    # #Source of code snippet found here - https://www.reddit.com/r/learnpython/comments/4dfh1i/how_to_get_the_downloads_folder_path_on_windows/
+                    # #out_df.to_excel("generated-names-multiple.xlsx")
+                    # #os.remove("generated-names-multiple.xlsx")
+                    # print(out_df)
+                    # #print(groupings)
                 console_running = False
 
             print("Program Exited")
@@ -198,6 +201,30 @@ def npc_options():
         print("The file may be corrupted, creating new file ...")
         npc_data_exists(False)
 
+
+def non_single_culture(npc_num):
+    group_iter = int(input("Groups: "))
+    print("Groups amount to ", group_iter)
+    groups = []
+    print("NPC Total: {}".format(npc_num))
+    npc_calc = npc_num
+    i = 0
+    while i <= group_iter - 1:
+        try:
+            print("Please type the size of Group {}".format(i + 1))
+            size_arg = input("Size: ")
+            npc_calc = npc_calc - int(size_arg)
+            print("NPC's Remaining: {}".format(npc_calc))
+            if npc_calc >= 0:
+                i += 1
+                #print(i)
+            elif npc_calc < 0:
+                print("Too many NPC's, ensure your input does not exceed the maximum")
+                npc_calc = npc_calc + int(size_arg)
+                print("NPC's Remaining: {}".format(npc_calc))
+
+        except:
+            pass
 
 
 def show_table(out_df):
@@ -242,10 +269,12 @@ def divide_npc_multiculture(npc_num, group_iter):
             elif npc_calc < 0:
                 print("\n\n\nOne of your groups is invalid, restarting selection"
                       "\nPlease ensure that your groups do not exceed the NPC total of {0}".format(npc_num))
-                #divide_npc_multiculture(npc_num, group_iter)
-            print(groupings)
+                divide_npc_multiculture(npc_num, group_iter)
+
         except:
             print("There are still NPC's remaining, please ensure your groups fill the NPC requirements")
+
+    #Play around with the idea that groupings should equal length of npc groups
     return groupings
 
 
@@ -253,14 +282,15 @@ def show_npc(df, nations, num_npcs):
     #Add information about gender of NPC, as some languages are hard to see the difference between
     print("Taking random value from data, returning {0} NPC names from {1} culture group".format(num_npcs, nations))
     df = df.loc[df["origin"] == nations]
-    df_num = df["name"].str.contains("[0-9]+", regex=True) #Simple way to filter out any results with numbers in
+    df_num = df["name"].str.contains("[0-9]+", regex=True, na=False) #Simple way to filter out any results with numbers in
     df = df[~df_num] #Returns all non-valid results, aka ones that dont fit the regex pattern
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     gender_tags, neutral_genders = { "WM": ["Male", "Female"], "WF": ["Female", "Male"]},  ["Female", "Male"]
     pyside_df = pd.DataFrame(columns=["Gender", "Name", "Job"])
     for i in range(num_npcs):
         #Return information on the gender of the targets
-        job_choice = jobs.split(";")
+
+
         f_name, l_name, job = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1), np.random.choice(job_choice, 1)
         job = re.sub(r'[^\w\s]', '', str(job))
         gender_name = re.sub(r'[^\w\s]', '', str(f_name))
