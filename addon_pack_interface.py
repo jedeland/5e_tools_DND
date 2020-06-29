@@ -13,7 +13,7 @@ Baker; Brewer; Butcher; Distiller; Farmer; Fisherman; Fruit Picker; Gatherer; Gr
 Jester; Minstrel; Performer; Crier; Envoy; Herald; Messenger;
 Architect; Carpenter; Cooper; Mason; Painter; Roofer; Shipbuilder; Thatcher; Wheelwright; Atilliator (Crossbow Maker); Bookbinder; Bowyer; Brazier; 
 Candlemaker; Cobbler; Currier; Draper; Dyer; Fletcher; Furrier; Glassblower; Jeweller; Knitter; Leatherworker; Potter; Roper; Sailmaker; Sewer; Sculptor; 
-Shoemaker (Cordwainer); Smelter; Smith (Blacksmith, Swordsmith, Armoursmith, Goldsmith, Silversmith); Spinner; Tailor; Tanner; Weaver; Woodcarver (Woodcrafter);
+Shoemaker; Cordwainer; Smelter; Smith; Blacksmith; Swordsmith; Armoursmith; Goldsmith; Silversmith; Spinner; Tailor; Tanner; Weaver; Woodcarver; Woodcrafter;
 Calligrapher; Cartographer; Librarian; Printer; Scholar; Scribe; Tutor;
 Chef; Cook; Innkeeper; Scullion; Servant; Wench; Whore (Escort);
 Banker (Moneylender); Baron; Guard; Inquisitor; Judge; Knight; Lawyer; Marshal; Priest (Canon); Reeve; Sexton; Sheriff; Taxer; Theologian; Warden;
@@ -23,6 +23,7 @@ Gamekeeper; Hunter; Mercenary; Mercer; Navigator; Night Soil Man; Ranger; Sailor
 """
 job_cleaned = re.sub("\n", "", jobs)
 job_choice = job_cleaned.split(";")
+yes_list, no_list, quit_list = ["y", "yeh", "yes", "yep", "ye"], ["n", "no", "nah", "nope"], ["q", "quit", "exit"]
 
 
 
@@ -119,7 +120,6 @@ def npc_options():
                     temp = df_arg[(df_arg["origin"] == "Ethiopia")]
                     print(pd.unique(temp["tag"]))
                 #Used later to ensure there is always a quit option
-                yes_list, no_list, quit_list = ["y", "yeh", "yes", "yep", "ye"], ["n", "no", "nah", "nope"], ["q", "quit", "exit"]
                 #Assigns cultural lists to regions
 
                 regions = {"African": africa, "Europe": europe,"Near East": arabia, "Asia": asia, "Experimental: Fantasy": fantasy}
@@ -171,10 +171,10 @@ def npc_options():
                     os.remove("generated-names.xlsx")
                     print(out_df)
                 elif single_culture is False:
-                    # TODO: Fix the loops so that multiple groups can be used in tandem, Try to place loop inside of a function, that then calls the divide_npc_multiculture function
                     print("Please type the number of different NPC groups you wish to create, each with their own culture")
-                    non_single_culture(npc_num)
+                    non_single_culture(df_arg, origin_list, regions, npc_num)
 
+                    # Previous implementation
                     # while group_iter != npc_out:
                     #     npc_out = divide_npc_multiculture(npc_num, group_iter)
                     #     print("Group sizes are", npc_out)
@@ -202,7 +202,7 @@ def npc_options():
         npc_data_exists(False)
 
 
-def non_single_culture(npc_num):
+def non_single_culture(df_arg, origin_list, regions, npc_num):
     group_iter = int(input("Groups: "))
     print("Groups amount to ", group_iter)
     groups = []
@@ -215,16 +215,37 @@ def non_single_culture(npc_num):
             size_arg = input("Size: ")
             npc_calc = npc_calc - int(size_arg)
             print("NPC's Remaining: {}".format(npc_calc))
-            if npc_calc >= 0:
+            if npc_calc > 0:
                 i += 1
+                groups.append(size_arg)
                 #print(i)
             elif npc_calc < 0:
                 print("Too many NPC's, ensure your input does not exceed the maximum")
                 npc_calc = npc_calc + int(size_arg)
                 print("NPC's Remaining: {}".format(npc_calc))
-
+            elif npc_calc == 0 and i < group_iter-1:
+                print("You have reached the maximum NPC limit, without filling out all of your groups, would you like to continue anyway? [y/n]")
+                user_in = input("")
+                if user_in.lower() in yes_list:
+                    groups.append(size_arg)
+                    break
+                elif user_in.lower() in no_list:
+                    pass
         except:
             pass
+    print(groups)
+    frames = []
+    for g in range(len(groups)):
+
+
+        print("Selecting NPC's for Group {0} with size {1}".format(g+1, groups[g]))
+        selected_nation = select_group(origin_list, regions)
+        out_df = show_npc(df_arg, selected_nation, int(groups[g]))
+        frames.append(out_df)
+        #show_table(out_df)
+    for k in frames:
+        print(k)
+
 
 
 def show_table(out_df):
