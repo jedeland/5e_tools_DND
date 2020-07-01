@@ -178,22 +178,24 @@ def npc_options():
                     print("Would you like to download the names as a file [y/n]? This will be stored in your Downloads under {}".format(os.path.join( os.getenv('USERPROFILE'), 'Downloads')))
                     deciding = True
                     while deciding:
-                        try:
                             download_arg = input("")
                             if download_arg.lower() in yes_list:
                                 print("Downloading Excel file")
                                 from datetime import datetime
                                 now = datetime.now()
                                 date_string = now.strftime("%d-%m-%Y-%H%M")
-                                print("Still working here")
                                 print(r"Argument: {0}\fluffys_generated_names_{1}.xlsx".format(os.path.join( os.getenv('USERPROFILE'), 'Downloads'), date_string))
-                                writer = pd.ExcelWriter(r'{0}\fluffys_generated_names_{1}.xlsx'.format(os.path.join( os.getenv('USERPROFILE'), 'Downloads'), date_string), engine='xlsxwriter')
-                                print(writer)
-                                print(groups)
-                                print(type(groups))
+                                argument = r"{0}\fluffys_generated_names_{1}.xlsx".format(os.path.join( os.getenv('USERPROFILE'), 'Downloads'), date_string)
+                                writer = pd.ExcelWriter(argument, engine='xlsxwriter')
+
+                                g = 0
                                 for x in groups:
-                                    print(pd.unique(x["origin"]))
-                                    x.to_excel(writer, sheet_name="{} names".format(pd.unique(x["origin"])))
+                                    g += 1
+                                    print(x)
+                                    x.to_excel(writer, sheet_name="Group {} names".format(g))
+                                writer.save()
+                                print("Done")
+                                os.system('start "excel" {}'.format(argument))
                                 deciding = False
                             elif download_arg.lower() in no_list:
                                 print("Skipping Download")
@@ -203,9 +205,6 @@ def npc_options():
                                 break
                             else:
                                 print("There was an error, please ensure the input corresponds to yes or no")
-                        except Exception as e:
-                            print("There was an error, please ensure the input corresponds to yes or no")
-                            print(e)
 
                     # Previous implementation
                     # while group_iter != npc_out:
