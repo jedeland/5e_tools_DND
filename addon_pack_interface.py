@@ -29,6 +29,7 @@ yes_list, no_list, quit_list = ["y", "yeh", "yes", "yep", "ye"], ["n", "no", "na
 
 def npc_options():
     try:
+        #TODO: Implement way to read from SQL instead of XLSX, as the constant interaction can lead to corruption
         if os.path.exists("names_merged.xlsx"):
             console_running = True
             while console_running is True:
@@ -172,7 +173,39 @@ def npc_options():
                     print(out_df)
                 elif single_culture is False:
                     print("Please type the number of different NPC groups you wish to create, each with their own culture")
-                    non_single_culture(df_arg, origin_list, regions, npc_num)
+                    groups = non_single_culture(df_arg, origin_list, regions, npc_num)
+
+                    print("Would you like to download the names as a file [y/n]? This will be stored in your Downloads under {}".format(os.path.join( os.getenv('USERPROFILE'), 'Downloads')))
+                    deciding = True
+                    while deciding:
+                        try:
+                            download_arg = input("")
+                            if download_arg.lower() in yes_list:
+                                print("Downloading Excel file")
+                                from datetime import datetime
+                                now = datetime.now()
+                                date_string = now.strftime("%d-%m-%Y-%H%M")
+                                print("Still working here")
+                                print(r"Argument: {0}\fluffys_generated_names_{1}.xlsx".format(os.path.join( os.getenv('USERPROFILE'), 'Downloads'), date_string))
+                                writer = pd.ExcelWriter(r'{0}\fluffys_generated_names_{1}.xlsx'.format(os.path.join( os.getenv('USERPROFILE'), 'Downloads'), date_string), engine='xlsxwriter')
+                                print(writer)
+                                print(groups)
+                                print(type(groups))
+                                for x in groups:
+                                    print(pd.unique(x["origin"]))
+                                    x.to_excel(writer, sheet_name="{} names".format(pd.unique(x["origin"])))
+                                deciding = False
+                            elif download_arg.lower() in no_list:
+                                print("Skipping Download")
+                                deciding = False
+                            elif download_arg.lower() in quit_list:
+                                console_running = False
+                                break
+                            else:
+                                print("There was an error, please ensure the input corresponds to yes or no")
+                        except Exception as e:
+                            print("There was an error, please ensure the input corresponds to yes or no")
+                            print(e)
 
                     # Previous implementation
                     # while group_iter != npc_out:
@@ -215,7 +248,7 @@ def non_single_culture(df_arg, origin_list, regions, npc_num):
             size_arg = input("Size: ")
             npc_calc = npc_calc - int(size_arg)
             print("NPC's Remaining: {}".format(npc_calc))
-            if npc_calc > 0:
+            if npc_calc >= 0 and int(size_arg) > 0:
                 i += 1
                 groups.append(size_arg)
                 #print(i)
@@ -230,7 +263,10 @@ def non_single_culture(df_arg, origin_list, regions, npc_num):
                     groups.append(size_arg)
                     break
                 elif user_in.lower() in no_list:
+                    npc_calc = npc_calc + int(size_arg)
                     pass
+            else:
+                print("Please ensure your input is a number")
         except:
             pass
     print(groups)
@@ -240,11 +276,14 @@ def non_single_culture(df_arg, origin_list, regions, npc_num):
 
         print("Selecting NPC's for Group {0} with size {1}".format(g+1, groups[g]))
         selected_nation = select_group(origin_list, regions)
+        #TODO: Add version of show NPC's where the origin is displayed
         out_df = show_npc(df_arg, selected_nation, int(groups[g]))
+
         frames.append(out_df)
         #show_table(out_df)
     for k in frames:
         print(k)
+    return frames
 
 
 
@@ -260,15 +299,21 @@ def show_table(out_df):
 
 def select_group(origin_list, regions):
     print("Please select the NPC('s) culture region")
-    do_enum(regions)
-    choice = int(input("Number: "))  # Ensures input is int
-    dict_arg = origin_list[choice - 1]  # Lists start at 0
-    regions_refined = regions.get(dict_arg)
-    do_enum(regions_refined)
-    choice = int(input("Number: "))
-    selected_nation = regions_refined[choice - 1]
-    return selected_nation
+    uncompleted = True
+    while uncompleted:
+        try:
+            do_enum(regions)
+            choice = int(input("Number: "))  # Ensures input is int
+            dict_arg = origin_list[choice - 1]  # Lists start at 0
+            regions_refined = regions.get(dict_arg)
 
+            do_enum(regions_refined)
+            choice = int(input("Number: "))
+            selected_nation = regions_refined[choice - 1]
+            uncompleted = False
+            return selected_nation
+        except:
+            print("Please ensure your selection is a valid number")
 
 def divide_npc_multiculture(npc_num, group_iter):
 
