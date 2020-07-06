@@ -177,6 +177,7 @@ def npc_options():
 
                     print("Would you like to download the names as a file [y/n]? This will be stored in your Downloads under {}".format(os.path.join( os.getenv('USERPROFILE'), 'Downloads')))
                     deciding = True
+                    #TODO: Add an option to use a CSV file format, as more people have word documents and it may be objectively better than Excel
                     while deciding:
                             download_arg = input("")
                             if download_arg.lower() in yes_list:
@@ -359,13 +360,26 @@ def show_npc(df, nations, num_npcs):
         f_name, l_name, job = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1), np.random.choice(job_choice, 1)
         job = re.sub(r'[^\w\s]', '', str(job))
         gender_name = re.sub(r'[^\w\s]', '', str(f_name))
+        try:
+            new = re.findall('[A-Z][^A-Z]*', gender_name)
+            if len(new) > 1:
+                gender_name = "-".join(new)
+            else:
+                gender_name = "".join(new)
+        except:
+            pass
         f_gender = rand_name.loc[rand_name["name"] == str(gender_name)]
+        print(str(f_name))
+        print("Found gender is " + f_gender)
         f_gender = f_gender["tag"].values
+        print(f_gender)
         f_gender = re.sub(r'[^\w\s]', '', str(f_gender))
         #Cases NN, WF, WM
         f_gender = find_gender(str(f_gender), gender_tags, neutral_genders)
+        print("Found gender is " + f_gender)
         #Verifies if names are made up of char's
         gender = str(f_gender)
+        print(gender)
         name = str(f_name + " " + l_name)
         name = str(name.title())
         #Investigate numeric names in arabic name list, should of been fixed using the str.contains line above
