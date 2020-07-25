@@ -353,49 +353,65 @@ def show_npc(df, nations, num_npcs):
     rand_name, rand_surname = df.loc[df["tag"] != "N"], df.loc[df["tag"] == "N"]
     gender_tags, neutral_genders = { "WM": ["Male", "Female"], "WF": ["Female", "Male"]},  ["Female", "Male"]
     pyside_df = pd.DataFrame(columns=["Gender", "Name", "Job"])
+    npc_division = round(num_npcs / 2)
+    print("Num is ", npc_division)
+    over_num, counter = npc_division + npc_division, 0
+
     for i in range(num_npcs):
-        #Return information on the gender of the targets
-
-
-        f_name, l_name, job = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],1), np.random.choice(job_choice, 1)
-        job = re.sub(r'[^\w\s]', '', str(job))
-        gender_name = re.sub(r'[^\w\s]', '', str(f_name))
-        try:
-            new = re.findall('[A-Z][^A-Z]*', gender_name)
-            if len(new) > 1:
-                gender_name = "-".join(new)
-            else:
-                gender_name = "".join(new)
-        except:
-            pass
-        f_gender = rand_name.loc[rand_name["name"] == str(gender_name)]
-        print(str(f_name))
-        print("Found gender is " + f_gender)
-        f_gender = f_gender["tag"].values
-        print(f_gender)
-        f_gender = re.sub(r'[^\w\s]', '', str(f_gender))
-        #Cases NN, WF, WM
-        f_gender = find_gender(str(f_gender), gender_tags, neutral_genders)
-        print("Found gender is " + f_gender)
-        #Verifies if names are made up of char's
-        gender = str(f_gender)
-        print(gender)
-        name = str(f_name + " " + l_name)
-        name = str(name.title())
-        #Investigate numeric names in arabic name list, should of been fixed using the str.contains line above
-        #print(name)
-        name = re.sub(r'[^\w\s]', '', name)
-        print("{0} NPC: {1}".format(gender, name))
-
-        pyside_arg = {"Gender":"{}".format(gender), "Name": "{}".format(name), "Job": "{}".format(str(job))}
-
-        pyside_df = pyside_df.append(pyside_arg, ignore_index=True)
-
-        pyside_arg = {"NPC Data":"{0} NPC: {1}".format(gender, name)}
-        pyside_df.append(pyside_arg, ignore_index=True)
-
+        if counter % 2 == 0:
+            counter += 1
+            rand_name = df.loc[(df["tag"] == "M") | (df["tag"] == "NN") | (df["tag"] == "WM")]
+            pyside_df = append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname)
+        else:
+            counter += 1
+            rand_name = df.loc[(df["tag"] == "F") | (df["tag"] == "NN") | (df["tag"] == "WF")]
+            pyside_df = append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname)
+    print(pyside_df)
     return pyside_df
-    #print(df)
+
+
+
+
+
+
+
+def append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname):
+    f_name, l_name, job = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],
+                                                                                   1), np.random.choice(
+        job_choice, 1)
+    job = re.sub(r'[^\w\s]', '', str(job))
+    gender_name = re.sub(r'[^\w\s]', '', str(f_name))
+    try:
+        new = re.findall('[A-Z][^A-Z]*', gender_name)
+        if len(new) > 1:
+            gender_name = "-".join(new)
+        else:
+            gender_name = "".join(new)
+    except:
+        pass
+    f_gender = rand_name.loc[rand_name["name"] == str(gender_name)]
+    f_gender = f_gender["tag"].values
+    f_gender = re.sub(r'[^\w\s]', '', str(f_gender))
+    # name_group = re.findall('[A-Z][^A-Z]*', str(l_name))
+    # if len(name_group) > 1:
+    #     print(name_group)
+    #     l_name = "-".join(name_group)
+    # Cases NN, WF, WM
+    f_gender = find_gender(str(f_gender), gender_tags, neutral_genders)
+    print(f_gender)
+    # Verifies if names are made up of char's
+    gender = str(f_gender)
+    name = str(f_name + " " + l_name)
+    name = str(name.title())
+    # Investigate numeric names in arabic name list, should of been fixed using the str.contains line above
+    # print(name)
+    name = re.sub(r'[^\w\s-]', '', name)
+    print("{0} NPC: {1}".format(gender, name))
+    pyside_arg = {"Gender": "{}".format(gender), "Name": "{}".format(name), "Job": "{}".format(str(job))}
+    pyside_df = pyside_df.append(pyside_arg, ignore_index=True)
+    #pyside_arg = {"NPC Data": "{0} NPC: {1}".format(gender, name)}
+    #pyside_df = pyside_df.append(pyside_arg, ignore_index=True)
+    return pyside_df
 
 
 def find_gender(f_gender, gender_tags, neutral_genders):
@@ -471,4 +487,6 @@ def npc_data_exists(exists):
               "Creating new file, this may take a while....")
         df = addon_pack_namegen.splice_names()
         npc_options()
+
+
 npc_options()
