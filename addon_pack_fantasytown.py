@@ -1,4 +1,5 @@
 import random
+import country_converter as coco
 from geopy import geocoders
 import pandas as pd;
 import numpy as np;
@@ -56,21 +57,26 @@ def find_names():
 def create_names():
     df = find_names()
     names = pd.unique(df["timezone"])
-    region = []
+    tags = pd.unique(df["country_code"])
+    print(tags)
+    print(df["country_code"])
+    country_names = {}
+    for tag in tags:
+        country_names[tag] = coco.convert(names=tag, to="name_short")
+    print(country_names)
     gn = geocoders
-    for name in names:
-        region.append(name.split(r"/")[1])
-        print(region)
-        place = gn.geocode(name)
-        print(place)
 
-    region = set(region)
-    region = list(region)
-    print(region)
-    df_fantasy = pd.DataFrame(columns=["Name", "Result"])
-    for g in names:
-        df_temp = df[df["timezone"] == g]
+    names = pd.unique(df["timezone"])
+    df_fantasy = pd.DataFrame(columns=["name", "result", "capital", "country"])
+    for f in names:
+        df_temp = df[df["timezone"] == f]
+        for k, v in df_temp.iterrows():
+            print(k, v)
+            timezone = v["timezone"].split(r"/")[0]
+
+            df_fantasy = df_fantasy.append({"name": v["name"], "result": v["asciiname"], "capital": timezone, "country": country_names.get(v["country_code"])}, ignore_index=True)
         print(df_temp)
+    print(df_fantasy)
 
 
 
