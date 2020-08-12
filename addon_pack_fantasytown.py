@@ -112,7 +112,7 @@ def create_names():
         try:
             data_dict[r] = {}
             data_dict[r]["country"] = r
-            data_dict[r]["name_list"] = df[df["country"] == r]["name"]
+            data_dict[r]["name_list"] = df[df["country"] == r]["result"]
             data_dict[r]["char_list"] = sorted(list(set(data_dict[r]["name_list"].str.cat() + "*")))
             data_dict[r]["char_to_num"] = {ch: i for i, ch in enumerate(data_dict[r]["char_list"])}
             data_dict[r]["ix_to_char"] = {i: ch for i, ch in enumerate(data_dict[r]["char_list"])}
@@ -138,7 +138,7 @@ def create_names():
         compile_model(model=current_model,
                       hyperparams={"lr": 0.003, "loss": "categorical_crossentropy", "batch_size": 32},
                       history=history, training_infos=training_infos)
-        train_model(current_model, x, y, training_infos, history, 2200)  # Epochs after 2000 seem efficient
+        train_model(current_model, x, y, training_infos, history, 1200)  # Epochs after 2000 seem efficient
         print("Printing {} names".format(g))
         name_list = []
         name_list = set(name_list)
