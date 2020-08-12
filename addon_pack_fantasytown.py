@@ -72,11 +72,15 @@ def create_names():
         df_temp = df[df["timezone"] == f]
         for k, v in df_temp.iterrows():
             print(k, v)
-            timezone = v["timezone"].split(r"/")[0]
+            timezone = v["timezone"].split(r"/")[1]
 
             df_fantasy = df_fantasy.append({"name": v["name"], "result": v["asciiname"], "capital": timezone, "country": country_names.get(v["country_code"])}, ignore_index=True)
+            print("DF fantasy ", df_fantasy)
         print(df_temp)
     print(df_fantasy)
+    #print(input(""))
+    df = df_fantasy
+    print(df)
 
 
 
@@ -84,13 +88,12 @@ def create_names():
     # https://towardsdatascience.com/generating-pok%C3%A9mon-names-using-rnns-f41003143333
     print("Attempting to create new names using previous names")
     padd_start, padd_end = "#", "*"
-    df["result"] = df["result"].map(lambda n: padd_start + n + padd_end)
-    df = df.rename(columns={"result": "name"})
+    df["result"] = df["result"].map(lambda n: str(padd_start) + str(n) + str(padd_end))
     df.describe()
     print('Example of names to be cleaned:')
     # df = df.loc[~(df["option"] == "Clan")]
-    df = df.loc[~(df["option"] == "Virtue")]
-    df = df.loc[~(df["option"] == "Duergar Clan")]
+    # df = df.loc[~(df["option"] == "Virtue")]
+    # df = df.loc[~(df["option"] == "Duergar Clan")]
     # df = df.loc[~(df["option"] == "Family")]
     # option_names = ['Female', 'Male', 'Child', 'Female Adult', 'Male Adult']
     # for i in option_names:
@@ -98,31 +101,36 @@ def create_names():
 
     # "Virtue", "Duergar Clan", "Family"])]
 
-    print('Max name size: {}'.format(df['name'].map(len).max()))
+    #print('Max name size: {}'.format(df['name'].map(len).max()))
     print("--\n")
 
-    races = list(pd.unique(df["race"]))
-    origins = list(pd.unique(df["option"]))
+    nationality = list(pd.unique(df["country"]))
+    origins = list(pd.unique(df["capital"]))
     print(origins)
     data_dict = {}
-    for r in races:
-        data_dict[r] = {}
-        data_dict[r]["race"] = r
-        data_dict[r]["name_list"] = df[df["race"] == r]["name"]
-        data_dict[r]["char_list"] = sorted(list(set(data_dict[r]["name_list"].str.cat() + "*")))
-        data_dict[r]["char_to_num"] = {ch: i for i, ch in enumerate(data_dict[r]["char_list"])}
-        data_dict[r]["ix_to_char"] = {i: ch for i, ch in enumerate(data_dict[r]["char_list"])}
+    for r in nationality:
+        try:
+            data_dict[r] = {}
+            data_dict[r]["country"] = r
+            data_dict[r]["name_list"] = df[df["country"] == r]["name"]
+            data_dict[r]["char_list"] = sorted(list(set(data_dict[r]["name_list"].str.cat() + "*")))
+            data_dict[r]["char_to_num"] = {ch: i for i, ch in enumerate(data_dict[r]["char_list"])}
+            data_dict[r]["ix_to_char"] = {i: ch for i, ch in enumerate(data_dict[r]["char_list"])}
 
-        for k, v in data_dict.items():
-            print('group: {}'.format(k))
-            print('  - number of names: {} ({}, ...)'.format(len(v['name_list']), v['name_list'][:5].tolist()))
-            print('  - number of chars: {}'.format(len(v['char_list'])))
-            print('  - chars: {}'.format(v['char_list']))
-            print('  - char_to_num: {}'.format(v['char_to_num']))
-            print('  - ix_to_char: {}'.format(v['ix_to_char']))
-            print('######################')
+            for k, v in data_dict.items():
+                print('group: {}'.format(k))
+                print('  - number of names: {} ({}, ...)'.format(len(v['name_list']), v['name_list'][:5].tolist()))
+                print('  - number of chars: {}'.format(len(v['char_list'])))
+                print('  - chars: {}'.format(v['char_list']))
+                print('  - char_to_num: {}'.format(v['char_to_num']))
+                print('  - ix_to_char: {}'.format(v['ix_to_char']))
+                print('######################')
+        except:
+            pass
     names_dict = {}
-    for g in races:
+    print("Data dict = ", data_dict, " Type =", type(data_dict))
+    for g in nationality:
+        print(g)
 
         x, y, train_util, train_info = training_data(g, data_dict, 3)
         # print(train_util)
@@ -163,6 +171,7 @@ def create_names():
 
 def training_data(target_group, data_dict, len_sequence):
     print(target_group)
+    print(data_dict)
     train_names = data_dict[target_group]["name_list"].tolist()
     padd_start, padd_end = train_names[0][0], train_names[0][
         -1]  # First element of list, with first and last character id'd
