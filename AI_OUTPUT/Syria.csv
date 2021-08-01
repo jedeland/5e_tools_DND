@@ -1,0 +1,401 @@
+,Name,Origin
+0,  Aa Hah,Syria
+1,  Akharim,Syria
+2,  Al Aaw At Bus,Syria
+3,  Al Bahluliyat,Syria
+4,  Al Jawbat Bus,Syria
+5,  Al Ma`Af,Syria
+6,  An Nasr,Syria
+7,  Arnaz,Syria
+8,  As Sab` Biyah,Syria
+9,  As Sukhnah,Syria
+10,  Ashab,Syria
+11,  Ayn Al Atari`,Syria
+12,  Babqurtal Ata,Syria
+13,  Batna,Syria
+14,  Hajar Al Busa,Syria
+15,  Kala',Syria
+16,  Kana,Syria
+17,  Swadidah,Syria
+18,  Tamr,Syria
+19,  Unayn,Syria
+20,  Usyya,Syria
+21, 'Arab,Syria
+22, -Lhin,Syria
+23, -Wwrdda,Syria
+24, Abyad,Syria
+25, Adad,Syria
+26, Al-Hmidiya,Syria
+27, Al-Hmidiyah,Syria
+28, Al-Hmidiyar,Syria
+29, Al-Hmidiyatayn,Syria
+30, Arnabaghirah,Syria
+31, Arnabaghirbat ,Syria
+32, Arnabah,Syria
+33, Arnaz,Syria
+34, Ashabah,Syria
+35, Aswad,Syria
+36, Aswadidah,Syria
+37, Awaj,Syria
+38, Awbj,Syria
+39, B-Smwdi,Syria
+40, B-Toisrin,Syria
+41, Bab,Syria
+42, Bahlula,Syria
+43, Bahluliya,Syria
+44, Bahluliyah,Syria
+45, Bahluliyar,Syria
+46, Bahluliyat Al ,Syria
+47, Bahluliyat Tin,Syria
+48, Bashan Nashahb,Syria
+49, Batna,Syria
+50, Bayda,Syria
+51, Bbyda,Syria
+52, Biyah,Syria
+53, Burghal,Syria
+54, Burghaya,Syria
+55, Burghayikh,Syria
+56, Busa Al-Hmidiy,Syria
+57, Busah,Syria
+58, Busayfir,Syria
+59, Busayfirah,Syria
+60, Busayr `Atiya,Syria
+61, Busayr `Atiyah,Syria
+62, Busayr `Atiyar,Syria
+63, Busayrah,Syria
+64, Busayya,Syria
+65, Busb Al-Hmidiy,Syria
+66, Busra As Sab` ,Syria
+67, Busra As Saghi,Syria
+68, Busra As Sana,Syria
+69, Busra As Sawda,Syria
+70, Busra As Sukhn,Syria
+71, Busra As Surah,Syria
+72, Busra As Susa ,Syria
+73, Busra Ash Shah,Syria
+74, Busra Ash Sham,Syria
+75, Busra Ashah,Syria
+76, Busra Ashannaf,Syria
+77, Busra Ashayikh,Syria
+78, Dah,Syria
+79, Edaya,Syria
+80, Eppo,Syria
+81, Fat,Syria
+82, Fatayn,Syria
+83, Furqlus,Syria
+84, Ghizlaniya,Syria
+85, Gl Ashayikh,Syria
+86, Glizlaniyah,Syria
+87, Ha',Syria
+88, Hab,Syria
+89, Habah,Syria
+90, Hafir,Syria
+91, Hafirah,Syria
+92, Hajar Al 'Arab,Syria
+93, Hajar Al Abyad,Syria
+94, Hajar Al Jagni,Syria
+95, Hajar Al Janud,Syria
+96, Hajar Al Mash ,Syria
+97, Hajar Al Musha,Syria
+98, Hamascus,Syria
+99, Hamidiyah,Syria
+100, Hamidiyatayn,Syria
+101, Hamr,Syria
+102, Hamra',Syria
+103, Hasakah,Syria
+104, Hasikah,Syria
+105, Hisya,Syria
+106, Infah,Syria
+107, Jala',Syria
+108, Jalakhan Nu`Ma,Syria
+109, Jalakharib,Syria
+110, Jalakhid,Syria
+111, Janudiyah,Syria
+112, Janusa Al-Hmid,Syria
+113, Jaramalinfah,Syria
+114, Jaramanamascus,Syria
+115, Jaramascus,Syria
+116, Jaraqib,Syria
+117, Jarniyah,Syria
+118, Jarniyar,Syria
+119, Jarrab,Syria
+120, Jarrah,Syria
+121, Jarratmisrin,Syria
+122, Jarratmisrin A,Syria
+123, Jawa,Syria
+124, Jawad,Syria
+125, Jawadidah,Syria
+126, Jawadif,Syria
+127, Jawbat Al Atar,Syria
+128, Jawbat An Nu`M,Syria
+129, Jawbat Ashanna,Syria
+130, Jfrnhab,Syria
+131, Jirah Ash Shah,Syria
+132, Jirniyah,Syria
+133, Jlnas Sab` Biy,Syria
+134, Juraytan,Syria
+135, Laha,Syria
+136, Lfah,Syria
+137, Liyah,Syria
+138, M `Atramaliyah,Syria
+139, Ma`Arrah,Syria
+140, Ma`Azzah,Syria
+141, Ma`Dan,Syria
+142, Ma`Lula,Syria
+143, Mash Shambal,Syria
+144, Mashah,Syria
+145, Mashaya,Syria
+146, Mashayikh,Syria
+147, Mish,Syria
+148, Ml`Dan,Syria
+149, Mlshayikh,Syria
+150, Ms`Dan,Syria
+151, Mssaf,Syria
+152, Musa Al-Hmidiy,Syria
+153, Musah,Syria
+154, Musayfir,Syria
+155, Musayfirah,Syria
+156, Musayfirah As ,Syria
+157, Musayfirah Ash,Syria
+158, Musayr Hamidiy,Syria
+159, Musayr `Atiya,Syria
+160, Musayr `Atiyah,Syria
+161, Musayrah,Syria
+162, Musayrah Ashab,Syria
+163, Musayya,Syria
+164, Mushab,Syria
+165, Mushabaghirbat,Syria
+166, Mushabah,Syria
+167, Mushabiyah,Syria
+168, Mushah,Syria
+169, Mushahba,Syria
+170, Mushan,Syria
+171, Mushan Arnabag,Syria
+172, Mushan Arnaz,Syria
+173, Mushan Nu`Mana,Syria
+174, Mushannafsah,Syria
+175, Mushaya,Syria
+176, Mushayikh,Syria
+177, Nabah,Syria
+178, Najar Al 'Arab,Syria
+179, Nash Shahba,Syria
+180, Nash Sham,Syria
+181, Nashannaf,Syria
+182, Nashayikh,Syria
+183, Nasrin,Syria
+184, Qabw,Syria
+185, Qahtan,Syria
+186, Qaryat An Nu`M,Syria
+187, Qbbtaniyah,Syria
+188, Qin,Syria
+189, R Al Ma`Lula,Syria
+190, Rah,Syria
+191, Raslaniyah,Syria
+192, Ratmisrin,Syria
+193, Rawda,Syria
+194, Rin,Syria
+195, Saghirah,Syria
+196, Sanamaynat Ras,Syria
+197, Sawda,Syria
+198, Sawdah,Syria
+199, Sukhnah,Syria
+200, T Bryatayn,Syria
+201, Takh,Syria
+202, Takharib,Syria
+203, Tamr,Syria
+204, Tinaf,Syria
+205, Tinafsah,Syria
+206, Tinah,Syria
+207, Us A  Ab Al Ma,Syria
+208, Wab,Syria
+209, Was,Syria
+210, Wataynat Tinah,Syria
+211, Watda,Syria
+212, Wb`Tbinnish,Syria
+213, Yan,Syria
+214, Zah,Syria
+215, ` Arnabam,Syria
+216, `Atiyah,Syria
+217, `Atrah,Syria
+218, `Rtin,Syria
+219,' Al-Hmidiyah,Syria
+220,' Bab,Syria
+221,'Ayn An Nasr,Syria
+222,- Uwayda,Syria
+223,-Hmin-Inyatayna,Syria
+224,-Huin,Syria
+225,-Huinah,Syria
+226,-Murah,Syria
+227,-Musah,Syria
+228,-Rim,Syria
+229,-Wda,Syria
+230,-Wdah,Syria
+231,-Wdi,Syria
+232,-Woraslan,Syria
+233,-Wortsdah,Syria
+234,-Woudaya,Syria
+235,-Wouds,Syria
+236,-Wouss,Syria
+237,-Wuran,Syria
+238,-Wus,Syria
+239,Ar Raslan,Syria
+240,B Sgghibinah,Syria
+241,Bahlula,Syria
+242,Ban,Syria
+243,Brah,Syria
+244,Bruhmaha,Syria
+245,Busah,Syria
+246,Busra As Susa A,Syria
+247,Busra As Susayy,Syria
+248,Busra Ash Shama,Syria
+249,Busra Ash Shamb,Syria
+250,Busra Ashan Arn,Syria
+251,D Aswad,Syria
+252,D Aswadif,Syria
+253,Edaya,Syria
+254,Edda,Syria
+255,Eddya,Syria
+256,Eddyaa,Syria
+257,Edyya,Syria
+258,F Bab,Syria
+259,F Bayda,Syria
+260,F Bdtniyah,Syria
+261,F Burghayikh,Syria
+262,F Musah,Syria
+263,F Saghib,Syria
+264,F Saghirbah,Syria
+265,F Sdahiyah,Syria
+266,F- Uwayda,Syria
+267,Fa ,Syria
+268,Faqib,Syria
+269,Fepdrahluliyar,Syria
+270,Feppo,Syria
+271,Fg Sab` Biyah,Syria
+272,Fh Ash Shambal,Syria
+273,Fin,Syria
+274,Fir,Syria
+275,Firah,Syria
+276,Fl Iabiyah,Syria
+277,Fqin,Syria
+278,Fr Mushab,Syria
+279,Fr Takh,Syria
+280,Fs Takh,Syria
+281,Fus,Syria
+282,Ghirah As Suray,Syria
+283,Ghirah Ashabagh,Syria
+284,H Daya,Syria
+285,H Diyah,Syria
+286,Hdad,Syria
+287,Hdrah,Syria
+288,Hnad,Syria
+289,Hrim,Syria
+290,Irah,Syria
+291,Irin,Syria
+292,J Busah,Syria
+293,Kah,Syria
+294,Khan Nashannaf,Syria
+295,Khid,Syria
+296,L Bab,Syria
+297,L Mushan,Syria
+298,M `Atra,Syria
+299,N Arnabaghirah,Syria
+300,N Arnabah,Syria
+301,N Arnaz,Syria
+302,N Bshabaghir,Syria
+303,N Mlshab,Syria
+304,N Nabk,Syria
+305,N Nash Shahba,Syria
+306,N Nash Sham,Syria
+307,N Nash Shambal,Syria
+308,N Nashahba,Syria
+309,N Nashayikh,Syria
+310,N Nasr,Syria
+311,N Nu`Man,Syria
+312,N Nu`Mana,Syria
+313,N Nu`Manamaynat,Syria
+314,N Nu`Manat Al A,Syria
+315,N Nu`Manat Al M,Syria
+316,N Nu`Manat Busr,Syria
+317,N Nu`Manat Rawd,Syria
+318,N Us,Syria
+319,Nar Al Mushaya,Syria
+320,Nash Shahba,Syria
+321,Niyah,Syria
+322,Qib,Syria
+323,Qis,Syria
+324,R Al 'Arab,Syria
+325,R Al Jarrah,Syria
+326,R Al Ma`Dan,Syria
+327,R Bab,Syria
+328,R Bahlula,Syria
+329,R Bahluliyah,Syria
+330,R Bahluliyar,Syria
+331,R Batna,Syria
+332,R Bayda,Syria
+333,R Laha,Syria
+334,R Musa Al-Hmidi,Syria
+335,R Musah,Syria
+336,R Musayfirah,Syria
+337,R Musayr `Atiya,Syria
+338,R Musayya,Syria
+339,R Mushay,Syria
+340,R Mushaya,Syria
+341,R Saghibin,Syria
+342,R Sawda,Syria
+343,R Takh,Syria
+344,R Takhari`,Syria
+345,R Tamr,Syria
+346,R Tamra',Syria
+347,R `Atiyah,Syria
+348,Rarlinfah,Syria
+349,Ri`,Syria
+350,Rib,Syria
+351,Rin,Syria
+352,Rin Al 'Arab,Syria
+353,Rin Al Janudiya,Syria
+354,Rin Al Ma`Arrat,Syria
+355,Rin At Burghal,Syria
+356,Riqah,Syria
+357,Rish,Syria
+358,Riw,Syria
+359,Riyah,Syria
+360,S Sala',Syria
+361,S Susayya,Syria
+362,S-Suwayda,Syria
+363,Shaya,Syria
+364,Snaf,Syria
+365,U Ah,Syria
+366,Ukhnah,Syria
+367,Unaynat Tinaf,Syria
+368,W Dah,Syria
+369,W Datayn,Syria
+370,W Daya,Syria
+371,Wad,Syria
+372,Wadidah,Syria
+373,Wadif,Syria
+374,Wadiyah,Syria
+375,Wdah,Syria
+376,Wddhabah,Syria
+377,Wddhabiyah,Syria
+378,Wddiyah,Syria
+379,Wdih,Syria
+380,Wiyah,Syria
+381,Y Arnaz,Syria
+382,Yn Al Atarib,Syria
+383,Yn Ashah,Syria
+384,Ynat Al 'Arab,Syria
+385,Ynat Al Atarim,Syria
+386,Ynat Al Batna,Syria
+387,Ynat Al Ma`Arra,Syria
+388,Ynat Ash Shamba,Syria
+389,Ynat Raslaniyah,Syria
+390,Ynat Raslaniyar,Syria
+391,Ynat Rawda,Syria
+392,Yr Hasakah,Syria
+393,` Biyah,Syria
+394,` Himyan,Syria
+395,` Rin,Syria
+396,` Riyah,Syria
+397,` Win,Syria
+398,` Wiyah,Syria
+399,` Yiyah,Syria

@@ -1,0 +1,712 @@
+,Name,Origin
+0, Cice,Croatia
+1, Graca,Croatia
+2, Grgevac,Croatia
+3, Iranji Stupnik,Croatia
+4, Jakovec,Croatia
+5, Jankovec,Croatia
+6, Jelog,Croatia
+7, Mina,Croatia
+8, Mravica,Croatia
+9, Ne Melka,Croatia
+10, Ostra,Croatia
+11, Ostrnavac,Croatia
+12, Stano,Croatia
+13, Sumi,Croatia
+14, Sutli,Croatia
+15, Tanje,Croatia
+16, U Sutli,Croatia
+17, Umi,Croatia
+18,-Grabor,Croatia
+19,-Graborska,Croatia
+20,-Grac,Croatia
+21,-Grad,Croatia
+22,-Grad Podcrkave,Croatia
+23,-Grad Podgora,Croatia
+24,-Gradac,Croatia
+25,-Gradiskovigrad,Croatia
+26,-Igrad,Croatia
+27,-Stupnik,Croatia
+28,-Tano,Croatia
+29,-Trina,Croatia
+30,-Usko Podhum,Croatia
+31,A -Ja,Croatia
+32,A Greda,Croatia
+33,A Provac,Croatia
+34,A-Grad,Croatia
+35,Aaa Vodinci,Croatia
+36,Aapac,Croatia
+37,Abaca,Croatia
+38,Abor,Croatia
+39,Aca,Croatia
+40,Ace,Croatia
+41,Acec,Croatia
+42,Acreti Peta Nov,Croatia
+43,Acuran,Croatia
+44,Ada,Croatia
+45,Adac,Croatia
+46,Adin,Croatia
+47,Adobota,Croatia
+48,Aeovci,Croatia
+49,Aeuc,Croatia
+50,Afanje,Croatia
+51,Aga,Croatia
+52,Agana,Croatia
+53,Agani,Croatia
+54,Aisavci,Croatia
+55,Ajevo,Croatia
+56,Ajlovinjec,Croatia
+57,Ajnica,Croatia
+58,Ajrpnic,Croatia
+59,Aka,Croatia
+60,Akovac,Croatia
+61,Akovar,Croatia
+62,Akovci,Croatia
+63,Akvicica,Croatia
+64,Alci,Croatia
+65,Alj,Croatia
+66,Alja,Croatia
+67,Alovac,Croatia
+68,Alovaca,Croatia
+69,Amina,Croatia
+70,Aminja,Croatia
+71,Anice,Croatia
+72,Anj,Croatia
+73,Anje,Croatia
+74,Aogoznja,Croatia
+75,Apres,Croatia
+76,Arena,Croatia
+77,Arigora,Croatia
+78,Arija Gomina,Croatia
+79,Arsko,Croatia
+80,Arvolovac,Croatia
+81,Aska Vodincinac,Croatia
+82,Aste,Croatia
+83,Astel Norica,Croatia
+84,Astel Novo,Croatia
+85,Astenj,Croatia
+86,Astin Na Gomina,Croatia
+87,Atar Podvina,Croatia
+88,Atinec,Croatia
+89,Aunja,Croatia
+90,Ava,Croatia
+91,Avica,Croatia
+92,Avina,Croatia
+93,Avle,Croatia
+94,Avskoreno,Croatia
+95,Azdavac,Croatia
+96,Azdnac,Croatia
+97,Azina,Croatia
+98,Bahavica,Croatia
+99,Barda,Croatia
+100,Bbrnji Mika Var,Croatia
+101,Belicevec,Croatia
+102,Bged Vodnja Stu,Croatia
+103,Bizovac,Croatia
+104,Bjeljci,Croatia
+105,Blato,Croatia
+106,Bneti Mari,Croatia
+107,Brdovec,Croatia
+108,Bregrad,Croatia
+109,Cacina,Croatia
+110,Canac,Croatia
+111,Cani,Croatia
+112,Cdrnji Mihovlje,Croatia
+113,Cegoslav,Croatia
+114,Cegoslavci,Croatia
+115,Cegoslavonska,Croatia
+116,Cegoslavorsko,Croatia
+117,Cegovac,Croatia
+118,Cegovacko,Croatia
+119,Cegovar,Croatia
+120,Cegovica Bistav,Croatia
+121,Cegovici,Croatia
+122,Celj,Croatia
+123,Celji,Croatia
+124,Cenje Brdo,Croatia
+125,Cepi,Croatia
+126,Cfilice,Croatia
+127,Cgcina,Croatia
+128,Ciba,Croatia
+129,Cibac,Croatia
+130,Cinac,Croatia
+131,Cinjica,Croatia
+132,Cistrica,Croatia
+133,Cistrinci,Croatia
+134,Civljani,Croatia
+135,Civljevci,Croatia
+136,Cjeseta Novi Vi,Croatia
+137,Cjica,Croatia
+138,Ckdraga,Croatia
+139,Ckntingrad,Croatia
+140,Cko,Croatia
+141,Covljanec,Croatia
+142,Cska,Croatia
+143,Cstir,Croatia
+144,Cstrina,Croatia
+145,Cternik,Croatia
+146,Cvckovinja Grad,Croatia
+147,Darda,Croatia
+148,Darje,Croatia
+149,Davonska,Croatia
+150,Dcegovac,Croatia
+151,Dfadicina Maros,Croatia
+152,Dgoviticina,Croatia
+153,Dhum,Croatia
+154,Dijelovica,Croatia
+155,Djanci,Croatia
+156,Djanice,Croatia
+157,Djeljan,Croatia
+158,Djeno,Croatia
+159,Djenovac,Croatia
+160,Dna,Croatia
+161,Dnjanec,Croatia
+162,Dnrjaca,Croatia
+163,Donjanec,Croatia
+164,Draga,Croatia
+165,Draganac,Croatia
+166,Dragani,Croatia
+167,Dralje,Croatia
+168,Dravci,Croatia
+169,Dravic,Croatia
+170,Dravsko Srebrin,Croatia
+171,Drija Sumi,Croatia
+172,Drije,Croatia
+173,Drijelj,Croatia
+174,Drijelo Brod,Croatia
+175,Dsaros,Croatia
+176,Dvorsko Trojba,Croatia
+177,Eatin Na Gredar,Croatia
+178,Eceti Ilijanica,Croatia
+179,Eda,Croatia
+180,Edovosedarje,Croatia
+181,Eetnic,Croatia
+182,Efe,Croatia
+183,Efi,Croatia
+184,Ego,Croatia
+185,Egrad,Croatia
+186,Egradin,Croatia
+187,Egreda,Croatia
+188,Egroznica,Croatia
+189,Eheti Virje,Croatia
+190,Ehstav,Croatia
+191,Ehtrje,Croatia
+192,Eiina,Croatia
+193,Eilok,Croatia
+194,Einici,Croatia
+195,Ejetdravic,Croatia
+196,Ejoko,Croatia
+197,Ekenica,Croatia
+198,Ekovec,Croatia
+199,Ekovitic,Croatia
+200,Ela,Croatia
+201,Elika Dubrovska,Croatia
+202,Elisavci,Croatia
+203,Elj,Croatia
+204,Eljan,Croatia
+205,Eljanica,Croatia
+206,Elo,Croatia
+207,Elovci,Croatia
+208,Emcica,Croatia
+209,Emin,Croatia
+210,Emina,Croatia
+211,Enica,Croatia
+212,Enja,Croatia
+213,Enovacka,Croatia
+214,Eodarinski,Croatia
+215,Eostari Gradinc,Croatia
+216,Epi,Croatia
+217,Epica,Croatia
+218,Erda,Croatia
+219,Erek,Croatia
+220,Erica,Croatia
+221,Ernica,Croatia
+222,Ernik,Croatia
+223,Erpetrijek,Croatia
+224,Erpolje,Croatia
+225,Errela,Croatia
+226,Errovo Vir,Croatia
+227,Ertoniglavci,Croatia
+228,Eselo,Croatia
+229,Esetbrijanec,Croatia
+230,Esetrekanovac,Croatia
+231,Esinj,Croatia
+232,Esreda,Croatia
+233,Est,Croatia
+234,Etarijan,Croatia
+235,Etarilovac,Croatia
+236,Etrovac,Croatia
+237,Etrovar,Croatia
+238,Evec,Croatia
+239,Evec Na Gornja ,Croatia
+240,Fanac,Croatia
+241,Fanastar,Croatia
+242,Fanasten,Croatia
+243,Fanjevci,Croatia
+244,Fanjska,Croatia
+245,Fkavec Na Murte,Croatia
+246,Frza,Croatia
+247,Fzaki Vinica,Croatia
+248,Fzzana,Croatia
+249,Fzzanac,Croatia
+250,Fzzanastelisce,Croatia
+251,Fzzani,Croatia
+252,Fzzanica,Croatia
+253,Fzzanicevec,Croatia
+254,Fzzanicki Donja,Croatia
+255,Fzzice,Croatia
+256,Fzzinec,Croatia
+257,Fzzonag,Croatia
+258,Garanastelisce,Croatia
+259,Gari Mihalj,Croatia
+260,Gavac,Croatia
+261,Gemeljanec,Croatia
+262,Gemeljci,Croatia
+263,Gerak,Croatia
+264,Ges Trojstvo,Croatia
+265,Gesa,Croatia
+266,Girevci,Croatia
+267,Golaca,Croatia
+268,Gomaca,Croatia
+269,Gomet,Croatia
+270,Gora,Croatia
+271,Gorac,Croatia
+272,Goracec,Croatia
+273,Goraclin,Croatia
+274,Gova Gora,Croatia
+275,Govina,Croatia
+276,Graborsko,Croatia
+277,Graclin,Croatia
+278,Grad,Croatia
+279,Grad Podgoravsk,Croatia
+280,Grad Podraga,Croatia
+281,Grada,Croatia
+282,Gradavica,Croatia
+283,Gradi,Croatia
+284,Grubica,Croatia
+285,Grubicke Topusn,Croatia
+286,Gvranjol,Croatia
+287,Har,Croatia
+288,Harsko,Croatia
+289,Hdrpolje,Croatia
+290,Him,Croatia
+291,Hinec,Croatia
+292,Hir,Croatia
+293,Hira,Croatia
+294,Hirevci,Croatia
+295,Hirovac,Croatia
+296,Hisce,Croatia
+297,Hkrrgoraclin,Croatia
+298,Hlovacec,Croatia
+299,Hominjanec,Croatia
+300,Hosica,Croatia
+301,Hosinic,Croatia
+302,Hovi,Croatia
+303,Hovlje,Croatia
+304,Hsar,Croatia
+305,Hseda,Croatia
+306,Hsedarija,Croatia
+307,Hsedarilovci,Croatia
+308,Hsedavica Dubra,Croatia
+309,Hsetarilje,Croatia
+310,Htrjaci,Croatia
+311,Hver,Croatia
+312,I Cenj,Croatia
+313,Iaojevo,Croatia
+314,Ica,Croatia
+315,Ican,Croatia
+316,Ice,Croatia
+317,Icevci,Croatia
+318,Icevec,Croatia
+319,Icina,Croatia
+320,Idarje,Croatia
+321,Idsarvas,Croatia
+322,Iglavci,Croatia
+323,Igovac,Croatia
+324,Igovica Bistran,Croatia
+325,Igrad,Croatia
+326,Ii Petrenovci,Croatia
+327,Iina,Croatia
+328,Ija,Croatia
+329,Ija Bistra,Croatia
+330,Ija Bistrica,Croatia
+331,Ija Luka,Croatia
+332,Ija Sumi,Croatia
+333,Ijevci,Croatia
+334,Ijevec,Croatia
+335,Ik Donji Karlob,Croatia
+336,Iklanac,Croatia
+337,Ikmin,Croatia
+338,Ikokrigovac,Croatia
+339,Ile,Croatia
+340,Ilok,Croatia
+341,Imirevci,Croatia
+342,Imotska,Croatia
+343,Imtrica,Croatia
+344,Inac,Croatia
+345,Inanovina,Croatia
+346,Iora,Croatia
+347,Ipojevec,Croatia
+348,Irac,Croatia
+349,Isace,Croatia
+350,Isan,Croatia
+351,Isanec,Croatia
+352,Isce,Croatia
+353,Isclovac,Croatia
+354,Isjankovec,Croatia
+355,Iskorena,Croatia
+356,Iskovec,Croatia
+357,Iskupija,Croatia
+358,Islav,Croatia
+359,Islava,Croatia
+360,Islavci,Croatia
+361,Isno,Croatia
+362,Isno Podcrkavlj,Croatia
+363,Istanec,Croatia
+364,Istrana,Croatia
+365,Istrnac,Croatia
+366,Itanjina,Croatia
+367,Itomaca,Croatia
+368,Ivan Zeliki Gre,Croatia
+369,Ivanec,Croatia
+370,Ivanovci,Croatia
+371,Ivanovec,Croatia
+372,Ivanske Topliko,Croatia
+373,Ivje,Croatia
+374,Ivlja,Croatia
+375,Jablano,Croatia
+376,Jan,Croatia
+377,Janec,Croatia
+378,Jani,Croatia
+379,Janisce,Croatia
+380,Jcezevi Vinodol,Croatia
+381,Jek,Croatia
+382,Jelekovac,Croatia
+383,Jeliko Trgora,Croatia
+384,Jeliko Trnac,Croatia
+385,Jeljci,Croatia
+386,Jeljina,Croatia
+387,Jelo,Croatia
+388,Jelo Rok,Croatia
+389,Jelog,Croatia
+390,Jelovci,Croatia
+391,Jesetar U Sutli,Croatia
+392,Jest,Croatia
+393,Jevec,Croatia
+394,Jica,Croatia
+395,Jik,Croatia
+396,Jina,Croatia
+397,Jmi,Croatia
+398,K-Icevci,Croatia
+399,K-Nak,Croatia
+400,Kac,Croatia
+401,Kalovac,Croatia
+402,Kamanje,Croatia
+403,Kampojevo,Croatia
+404,Karica,Croatia
+405,Kcdrmodsko,Croatia
+406,Kcreti Mihovlja,Croatia
+407,Kdalj,Croatia
+408,Kdrija,Croatia
+409,Kdrije,Croatia
+410,Kduzdohanj,Croatia
+411,Kela,Croatia
+412,Kelec,Croatia
+413,Kelekovecko,Croatia
+414,Kije,Croatia
+415,Kiotica,Croatia
+416,Kivsinec,Croatia
+417,Kjrevci,Croatia
+418,Klenovac,Croatia
+419,Klji,Croatia
+420,Klovaci,Croatia
+421,Kminadavice,Croatia
+422,Kneginec,Croatia
+423,Knezevica,Croatia
+424,Koda,Croatia
+425,Kodarjacina,Croatia
+426,Kodarje,Croatia
+427,Kojina,Croatia
+428,Kolice,Croatia
+429,Kopalj,Croatia
+430,Kpula Novac,Croatia
+431,Kpupijavci,Croatia
+432,Kralje,Croatia
+433,Krapinj,Croatia
+434,Krapinjane,Croatia
+435,Krasinja Bistri,Croatia
+436,Kreg,Croatia
+437,Kresinja Gomir,Croatia
+438,Krica,Croatia
+439,Kridralovo,Croatia
+440,Krigrad,Croatia
+441,Krina,Croatia
+442,Krnje,Croatia
+443,Ksestirac,Croatia
+444,Ksgrna,Croatia
+445,Ksic,Croatia
+446,Ksucuranjol,Croatia
+447,Kuce,Croatia
+448,Kupijavci,Croatia
+449,Kvatska Varojst,Croatia
+450,Kzacec,Croatia
+451,Kzani,Croatia
+452,Kzarvac,Croatia
+453,Labosnjan,Croatia
+454,Ladi,Croatia
+455,Ladice,Croatia
+456,Laja,Croatia
+457,Lakar,Croatia
+458,Lakarska,Croatia
+459,Lara,Croatia
+460,Laslovac,Croatia
+461,Lbkbufanj,Croatia
+462,Lepoglavorsko,Croatia
+463,Lfabaca,Croatia
+464,Lfe,Croatia
+465,Lgrbbngkavljan,Croatia
+466,Ljevci,Croatia
+467,Ljubesicki Vini,Croatia
+468,Lnica,Croatia
+469,Lovci,Croatia
+470,Lpinski,Croatia
+471,Lppinj,Croatia
+472,Lzabet,Croatia
+473,Malica,Croatia
+474,Marina Sucuraj,Croatia
+475,Marje,Croatia
+476,Martinci,Croatia
+477,Mbarda,Croatia
+478,Mckr Jankovice,Croatia
+479,Milna,Croatia
+480,Min,Croatia
+481,Mirovec,Croatia
+482,Mkrad,Croatia
+483,Mkradice,Croatia
+484,Mokosina,Croatia
+485,Moktupnik,Croatia
+486,Molve,Croatia
+487,Motica,Croatia
+488,Mrac,Croatia
+489,Mravica,Croatia
+490,Mtarinci,Croatia
+491,Mursadice,Croatia
+492,Mzkida,Croatia
+493,Nava,Croatia
+494,Nedeli Lapac,Croatia
+495,Nedeljica,Croatia
+496,Negoslavci,Croatia
+497,Nfanar,Croatia
+498,Ngribac,Croatia
+499,Ngribunjaci,Croatia
+500,Nica,Croatia
+501,Nica Dubica,Croatia
+502,Nigla,Croatia
+503,Niglavac,Croatia
+504,Nik,Croatia
+505,Nim,Croatia
+506,Niv,Croatia
+507,Nja,Croatia
+508,Nja Motovje,Croatia
+509,Nja Pisan,Croatia
+510,Nja Sumi,Croatia
+511,Nja Sutli,Croatia
+512,Njan,Croatia
+513,Nji Krascina Mo,Croatia
+514,Nji Lapac,Croatia
+515,Nji Losinj,Croatia
+516,Nuge Resenovac,Croatia
+517,Nzavica,Croatia
+518,O Rok,Croatia
+519,Obolje,Croatia
+520,Obota,Croatia
+521,Oda,Croatia
+522,Ojbi Varova,Croatia
+523,Olojatnica,Croatia
+524,Onska,Croatia
+525,Oohelja,Croatia
+526,Opoljevo,Croatia
+527,Opovac,Croatia
+528,Oprivljanicinci,Croatia
+529,Oriovac,Croatia
+530,Oriovaca,Croatia
+531,Osheljanec,Croatia
+532,Osijestovje,Croatia
+533,Ostanovec,Croatia
+534,Oste,Croatia
+535,Otci,Croatia
+536,Ovac,Croatia
+537,Ovljan,Croatia
+538,Ovljanci,Croatia
+539,Ovljani,Croatia
+540,Ovljanisce,Croatia
+541,Pakjeno,Croatia
+542,Pakjenovi,Croatia
+543,Pakosan,Croatia
+544,Pakrad Podraga,Croatia
+545,Par,Croatia
+546,Pav Ustajnic,Croatia
+547,Pazic,Croatia
+548,Pdrijest,Croatia
+549,Petrenovci,Croatia
+550,Pgovi,Croatia
+551,Pilj,Croatia
+552,Pirovi,Croatia
+553,Pisan,Croatia
+554,Pisica,Croatia
+555,Pisice,Croatia
+556,Pitomaca,Croatia
+557,Pnica,Croatia
+558,Pnjska Vrban,Croatia
+559,Pnkgrad,Croatia
+560,Podgora,Croatia
+561,Podgoravske Top,Croatia
+562,Podralje,Croatia
+563,Podravic,Croatia
+564,Podravske Sesti,Croatia
+565,Podvinac,Croatia
+566,Podvinj,Croatia
+567,Polina,Croatia
+568,Poljak,Croatia
+569,Poljan,Croatia
+570,Polje,Croatia
+571,Potak,Croatia
+572,Pozega,Croatia
+573,Ppetar,Croatia
+574,Psko,Croatia
+575,Pucisce,Croatia
+576,Punat,Croatia
+577,Rasinec,Croatia
+578,Ravic,Croatia
+579,Ravna Motici,Croatia
+580,Regana,Croatia
+581,Regrad,Croatia
+582,Regradimirevci,Croatia
+583,Rekanovec,Croatia
+584,Rela,Croatia
+585,Rela Nova Bistr,Croatia
+586,Reljak,Croatia
+587,Reljanicica,Croatia
+588,Reljci,Croatia
+589,Relo,Croatia
+590,Relo Rok,Croatia
+591,Relog,Croatia
+592,Rezovac,Croatia
+593,Rina,Croatia
+594,Rja,Croatia
+595,Rlbnovac,Croatia
+596,Rodbaca,Croatia
+597,Rovice,Croatia
+598,Rovitic,Croatia
+599,Roznica Dakovec,Croatia
+600,Rpinj,Croatia
+601,Rsko,Croatia
+602,Rskovi Vinodosa,Croatia
+603,San,Croatia
+604,Satno,Croatia
+605,Sce,Croatia
+606,Scica,Croatia
+607,Scinada,Croatia
+608,Seda,Croatia
+609,Selenovarjanica,Croatia
+610,Selenovci,Croatia
+611,Selenovic,Croatia
+612,Sevci,Croatia
+613,Sevec,Croatia
+614,Sgrbanje,Croatia
+615,Sgrbe,Croatia
+616,Sibina,Croatia
+617,Sic-Bukosinje J,Croatia
+618,Sic-Grad Polje,Croatia
+619,Sina,Croatia
+620,Ska,Croatia
+621,Ska Drazin,Croatia
+622,Ska Dubrava,Croatia
+623,Ska Promstarica,Croatia
+624,Ska Trnac,Croatia
+625,Ska Voda,Croatia
+626,Ski,Croatia
+627,Sko Sesveticina,Croatia
+628,Skorenik,Croatia
+629,Skovci,Croatia
+630,Smokvenik,Croatia
+631,Smurter,Croatia
+632,Snja,Croatia
+633,Sno Podvinja Su,Croatia
+634,Sopitici,Croatia
+635,Sovec Na Stupni,Croatia
+636,Spic,Croatia
+637,Sretarija Zdeno,Croatia
+638,Stanji Lapac,Croatia
+639,Star,Croatia
+640,Starina,Croatia
+641,Starinj,Croatia
+642,Suhopolje,Croatia
+643,Sukosic,Croatia
+644,Supetar U Sutli,Croatia
+645,Svetarilovacka,Croatia
+646,Sze,Croatia
+647,Tar,Croatia
+648,Tarilje,Croatia
+649,Tarinci,Croatia
+650,Tav,Croatia
+651,Ter,Croatia
+652,Tgopalj,Croatia
+653,Tgovac,Croatia
+654,Tija Lomnice,Croatia
+655,Tjma,Croatia
+656,Tjpi Brod Motic,Croatia
+657,Tminja Lomnica,Croatia
+658,Triba,Croatia
+659,Trilj,Croatia
+660,Trilovo Vinj,Croatia
+661,Trna,Croatia
+662,Tsforahovec,Croatia
+663,Uce,Croatia
+664,Ucepi,Croatia
+665,Ugnin,Croatia
+666,Ula,Croatia
+667,Umi,Croatia
+668,Unj,Croatia
+669,Unja,Croatia
+670,Unjan,Croatia
+671,Ursan,Croatia
+672,Utanec,Croatia
+673,Uvarje,Croatia
+674,Uveeica,Croatia
+675,Uzanar,Croatia
+676,Valpovac,Croatia
+677,Valpovaca,Croatia
+678,Valpovo,Croatia
+679,Vci,Croatia
+680,Vdrnji Varojstv,Croatia
+681,Vec,Croatia
+682,Veginec,Croatia
+683,Veti Filicnik,Croatia
+684,Vgoradobodnja,Croatia
+685,Vica,Croatia
+686,Vinica Bistrana,Croatia
+687,Virje,Croatia
+688,Visignano,Croatia
+689,Visokosanic,Croatia
+690,Vkovac,Croatia
+691,Vladistankovec,Croatia
+692,Vlakarska,Croatia
+693,Vljak,Croatia
+694,Vnica,Croatia
+695,Vozdanovac Nasi,Croatia
+696,Vozstovun,Croatia
+697,Vrbovec,Croatia
+698,Vrinice,Croatia
+699,Vtat,Croatia
+700,Vuk,Croatia
+701,Vukovci,Croatia
+702,Vze,Croatia
+703,Zavac,Croatia
+704,Zdravsko Sesvet,Croatia
+705,Zemunik,Croatia
+706,Zen,Croatia
+707,Znja,Croatia
+708,Znjane,Croatia
+709,Zpanji Knezevic,Croatia
+710,Zprivlja,Croatia

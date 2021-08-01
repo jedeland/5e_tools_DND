@@ -1,0 +1,596 @@
+,Name,Origin
+0,  Heydar-E Manj,Iran
+1, Ajab Shahr,Iran
+2, Avandar-E Manj,Iran
+3, Bor,Iran
+4, Emam Hasangerd,Iran
+5, Emam Khomeyni,Iran
+6, Genarab,Iran
+7, Hanu,Iran
+8, Hard,Iran
+9, Iyeh,Iran
+10, Jandariman,Iran
+11, Jzhsham,Iran
+12, Kord,Iran
+13, Lhasangerd,Iran
+14, Manjil,Iran
+15, Mmnaharb,Iran
+16, Pabedan,Iran
+17, Rab,Iran
+18, Shahr,Iran
+19, Shahra,Iran
+20, Shir,Iran
+21, Uhar,Iran
+22, Ven Iyeh,Iran
+23, Yen,Iran
+24, Zabad-E Gharb,Iran
+25, Zabahar,Iran
+26, Zahr,Iran
+27,'An,Iran
+28,'Ask,Iran
+29,'Dm Shahran,Iran
+30,'E ,Iran
+31,'E  Avar,Iran
+32,'Eh,Iran
+33,'Eh Bon,Iran
+34,'Ek,Iran
+35,'Em Shahr,Iran
+36,'Em Shir,Iran
+37,'En,Iran
+38,'Ham,Iran
+39,'Ij N,Iran
+40,'Im Shir,Iran
+41,'In Dezh,Iran
+42,'In Zahr,Iran
+43,'In Zahr-E Gena,Iran
+44,'In Zahran,Iran
+45,'Lomayan,Iran
+46,'M  Aveh Tappeh,Iran
+47,'Ol,Iran
+48,'U' Nab,Iran
+49,'Veh,Iran
+50,'Vez,Iran
+51,'Ye Kord,Iran
+52,'Zm Bahark,Iran
+53,'`Eh-Ye Kord,Iran
+54,- Gbard,Iran
+55,- Hesat,Iran
+56,- Kpvdehak,Iran
+57,- Mdmuniyeh,Iran
+58,- Mhnjar,Iran
+59,- `'San,Iran
+60,-'Eemam Hasal,Iran
+61,-'G Aaveh,Iran
+62,-'K Mabahar,Iran
+63,-'` Aeped,Iran
+64,-D Kord,Iran
+65,-Dymhar,Iran
+66,-El`Ahar,Iran
+67,-G'`Asangerd,Iran
+68,-Gugabahark,Iran
+69,-J Bon,Iran
+70,-P Pebdadiman,Iran
+71,-`E -E Heydarim,Iran
+72,-`Pmddashir,Iran
+73,A'Em Shahr-E Ge,Iran
+74,A'En,Iran
+75,A`Ed-E Kord,Iran
+76,A`Ed-E Shahr,Iran
+77,Abad,Iran
+78,Adsar,Iran
+79,Afresh,Iran
+80,Aiskan,Iran
+81,Akveh,Iran
+82,Al`Eh-Ye Kord,Iran
+83,Allat,Iran
+84,Alus,Iran
+85,Aluyeh,Iran
+86,Ana,Iran
+87,Anabad,Iran
+88,Ar-E Maharb,Iran
+89,Ardash,Iran
+90,Ash,Iran
+91,Asham,Iran
+92,At-E Babad,Iran
+93,Avar,Iran
+94,Aveh,Iran
+95,Avu',Iran
+96,B'Ad,Iran
+97,B'Is ,Iran
+98,Bahark,Iran
+99,Bdmashahr-E Gen,Iran
+100,Behar,Iran
+101,Bgad-E Ghard,Iran
+102,Bhid Tappeh,Iran
+103,Bhran,Iran
+104,Bjhar,Iran
+105,Bldask,Iran
+106,Blo,Iran
+107,Blvansar,Iran
+108,Bor,Iran
+109,Br-E Shahran,Iran
+110,Bra,Iran
+111,Brak,Iran
+112,Brak-E Heydar-E,Iran
+113,Bran,Iran
+114,Brbat-E Heydari,Iran
+115,Brdaskan,Iran
+116,Bro,Iran
+117,Bron,Iran
+118,Bshahr,Iran
+119,Bu'In Zahra,Iran
+120,Bu'In Zahran,Iran
+121,Bv'Nd Jandar-E ,Iran
+122,Cehin Dezh,Iran
+123,Cvalus,Iran
+124,D `Asal,Iran
+125,D`Jasd,Iran
+126,Damavansar,Iran
+127,Dan,Iran
+128,Dfrishahr,Iran
+129,Dgan-E Shahr-E ,Iran
+130,Djris,Iran
+131,Dlmas,Iran
+132,Dm Narab,Iran
+133,Dm Shir,Iran
+134,Dmarabad,Iran
+135,Dmhardaskan,Iran
+136,Dnarabad,Iran
+137,Dogan-E Babak,Iran
+138,Drak,Iran
+139,Drak-E `Asal,Iran
+140,Drak-E `Asalus,Iran
+141,Dramabadat Shir,Iran
+142,Dramabak,Iran
+143,Dran,Iran
+144,Drbaneh,Iran
+145,Drhasd,Iran
+146,Drogendijar,Iran
+147,Dsfarayen,Iran
+148,Dshahr,Iran
+149,Dshahr-E Shir,Iran
+150,Dshahran,Iran
+151,Dslamavar,Iran
+152,Dtratehak,Iran
+153,Dvand,Iran
+154,Dzamsin,Iran
+155,E Genarayen,Iran
+156,E`Adar-E Shir,Iran
+157,Edan,Iran
+158,Edht Shahr-E Ge,Iran
+159,Egan-E Kora,Iran
+160,Egendijan,Iran
+161,Egendijand,Iran
+162,Ehak,Iran
+163,Ehha,Iran
+164,Ehin Zahr-E Hey,Iran
+165,Ehord,Iran
+166,Ehra,Iran
+167,Ej`Dsav,Iran
+168,Ejhard,Iran
+169,Ejud Saveh,Iran
+170,Elamabad,Iran
+171,Elhahr,Iran
+172,Elhanjil,Iran
+173,Ellat,Iran
+174,Epsdan,Iran
+175,Epvdh,Iran
+176,Epvdr,Iran
+177,Eqlmas,Iran
+178,Erayen,Iran
+179,Erh,Iran
+180,Eyeh,Iran
+181,F Oeh,Iran
+182,Fashahin Dezh,Iran
+183,Fashahr,Iran
+184,Fashahr-E `Asal,Iran
+185,Fasham,Iran
+186,Fashir,Iran
+187,Fashtehar,Iran
+188,Fhahra,Iran
+189,Fhahrakeh,Iran
+190,Fis,Iran
+191,Fjrish,Iran
+192,Fleh Kah,Iran
+193,Fleh Savar,Iran
+194,For,Iran
+195,Fras,Iran
+196,Fras-E Emam Has,Iran
+197,Fras-E `Asalus,Iran
+198,Frash,Iran
+199,Frastak,Iran
+200,Frdsbahar,Iran
+201,Frdshahr,Iran
+202,Frdshahr-E Emam,Iran
+203,Frdshahr-E Ghar,Iran
+204,Frdshahr-E Shah,Iran
+205,Fresh,Iran
+206,Gab-E Genaveh S,Iran
+207,Garab,Iran
+208,Gdar-E Emam Has,Iran
+209,Gedbnad,Iran
+210,Gehdar-E Emam H,Iran
+211,Gehdar-E Genavi,Iran
+212,Gehdar-E Ghar,Iran
+213,Gehdar-E Heydar,Iran
+214,Gehdar-E Khonda,Iran
+215,Gehdar-E Kord,Iran
+216,Gehdar-E Shahr,Iran
+217,Gehdariyeh,Iran
+218,Gehdavandar-E M,Iran
+219,Gehdazk,Iran
+220,Genaviyeh,Iran
+221,Gendijandariman,Iran
+222,Gerab,Iran
+223,Gerd,Iran
+224,Gmavar,Iran
+225,Gorbat-E Emam H,Iran
+226,Gorbat-E Kord,Iran
+227,Grabad,Iran
+228,Grak,Iran
+229,Gshbhad-E Pabed,Iran
+230,Gtar,Iran
+231,Gurabaraveh,Iran
+232,Gzarb,Iran
+233,H'N  Ehzaksham,Iran
+234,H`Ej-D Ghar,Iran
+235,Haar,Iran
+236,Hadab Shahrak-E,Iran
+237,Hahrak-E Pabeda,Iran
+238,Hail,Iran
+239,Handab,Iran
+240,Har,Iran
+241,Harb,Iran
+242,Hardask,Iran
+243,Hark,Iran
+244,Hask,Iran
+245,Hdshahran,Iran
+246,Heh,Iran
+247,Hejar,Iran
+248,Hijin,Iran
+249,Hirak,Iran
+250,Hjrak-E `Asal,Iran
+251,Hlamabahark,Iran
+252,Hlvansar,Iran
+253,Hmrshahr,Iran
+254,Holeh Sefid,Iran
+255,Hr-E Genaraveh ,Iran
+256,Hra,Iran
+257,Hras,Iran
+258,Hrasin,Iran
+259,Hrvansar,Iran
+260,Hshahr,Iran
+261,Hshahran,Iran
+262,Htrrak-E Babad-,Iran
+263,Hu'En,Iran
+264,Hurab,Iran
+265,Hush,Iran
+266,Hvjnshahrak-E M,Iran
+267,Hvuj,Iran
+268,Hyra,Iran
+269,Hzahr,Iran
+270,Hzasham,Iran
+271,Hzdsr-E Ghar,Iran
+272,Hzjeh,Iran
+273,I'Eh,Iran
+274,Ihr,Iran
+275,Inu,Iran
+276,Ish,Iran
+277,Ishahra,Iran
+278,J  Hard,Iran
+279,J  Kord,Iran
+280,J Dham,Iran
+281,J M Hasan,Iran
+282,J M Shir,Iran
+283,J Yen,Iran
+284,J `Es-E `Asaluy,Iran
+285,Jah Zahr,Iran
+286,Jal,Iran
+287,Jfis,Iran
+288,Jg  Baharb,Iran
+289,Jil,Iran
+290,Jrish,Iran
+291,Jur,Iran
+292,Kbardaskan,Iran
+293,Kbor,Iran
+294,Kdariman,Iran
+295,Khar,Iran
+296,Khark,Iran
+297,Khomeyni,Iran
+298,Khvansar,Iran
+299,Knvijeh,Iran
+300,Kon,Iran
+301,Kor,Iran
+302,Kran,Iran
+303,Kshahr,Iran
+304,Kuh,Iran
+305,L'As,Iran
+306,L`Eh-Ye Khardab,Iran
+307,L`Eh-Ye Khondar,Iran
+308,L`Eh-Ye Kord,Iran
+309,Lalab,Iran
+310,Lar,Iran
+311,Lashtehard,Iran
+312,Lavand,Iran
+313,Lavansar,Iran
+314,Lavar,Iran
+315,Laveh,Iran
+316,Lbafashirin,Iran
+317,Ldask,Iran
+318,Leftas,Iran
+319,Leh Bon,Iran
+320,Leh Saveh,Iran
+321,Leh Sefid,Iran
+322,Lfashahr-E Baba,Iran
+323,Lfashir,Iran
+324,Lkondar-E Heyda,Iran
+325,Llat,Iran
+326,Llot,Iran
+327,Lol,Iran
+328,Loleh Tappeh,Iran
+329,Lolhand,Iran
+330,Lud,Iran
+331,Luo,Iran
+332,Lus,Iran
+333,Lvand,Iran
+334,Lvandabil,Iran
+335,Lvandar-E Pabed,Iran
+336,Lvandar-E `Asal,Iran
+337,Lvansar,Iran
+338,Lveh,Iran
+339,Lveh Tappeh,Iran
+340,Lven,Iran
+341,Lven Isakhtar,Iran
+342,Lven Iyeh,Iran
+343,Lven Veh,Iran
+344,Lzasham,Iran
+345,M'Is ,Iran
+346,Mahak,Iran
+347,Mahallat,Iran
+348,Mahar,Iran
+349,Marak-E Manjil,Iran
+350,Mhhar,Iran
+351,Mjhark,Iran
+352,Mjin,Iran
+353,Mkhar,Iran
+354,Mlvandab,Iran
+355,Mlvansar,Iran
+356,Mmhar,Iran
+357,Mnharb,Iran
+358,Mrhak,Iran
+359,Mshahr,Iran
+360,Muhar,Iran
+361,Muhark,Iran
+362,Musan,Iran
+363,Musangerd,Iran
+364,Nan,Iran
+365,Nlmas,Iran
+366,Nmpabedan,Iran
+367,Nramavandabil,Iran
+368,Nrdabak,Iran
+369,Ntanab,Iran
+370,Nu',Iran
+371,Nur,Iran
+372,Nus,Iran
+373,Nush,Iran
+374,Oindar-E Shahra,Iran
+375,Oindbrish,Iran
+376,Oindor-E Babad-,Iran
+377,Oll,Iran
+378,Oloatanz,Iran
+379,Olvandabak,Iran
+380,Olvandabil,Iran
+381,Olvansar,Iran
+382,Olyan,Iran
+383,Orbat-E Shir,Iran
+384,Ord,Iran
+385,Osht,Iran
+386,Oshtkhvandar-E ,Iran
+387,Padegan-E Emam ,Iran
+388,Peddnaviyeh,Iran
+389,Peh,Iran
+390,Plde Ahar,Iran
+391,Plde Har,Iran
+392,Plde Shirin,Iran
+393,Pldeh,Iran
+394,Pled Shir,Iran
+395,Ppeh,Iran
+396,Pphar,Iran
+397,Prdebaraveh,Iran
+398,Prdesh,Iran
+399,R-E Emam Hasan,Iran
+400,R-E Emam Khonda,Iran
+401,R-E Genaviyeh,Iran
+402,R-E Heydar-E Kh,Iran
+403,R-E Kord,Iran
+404,R-E Mahark,Iran
+405,R-E Shahr,Iran
+406,R-E Shahran,Iran
+407,R`Eh-Ye Kord,Iran
+408,Rab,Iran
+409,Rabad,Iran
+410,Rabad-E Ghardak,Iran
+411,Raboli,Iran
+412,Rak,Iran
+413,Rak-E Manjil,Iran
+414,Rak-E Pabedana,Iran
+415,Ral,Iran
+416,Ral-E Gharb,Iran
+417,Ran,Iran
+418,Raraveh Bon,Iran
+419,Ras,Iran
+420,Rat,Iran
+421,Raveh,Iran
+422,Rayen,Iran
+423,Rbat-E Genaraya,Iran
+424,Rbat-E Ghar,Iran
+425,Rdabil,Iran
+426,Rdan,Iran
+427,Rdaskan,Iran
+428,Rdehmudab,Iran
+429,Rdkeh,Iran
+430,Rdosht,Iran
+431,Reh,Iran
+432,Rfashtehak,Iran
+433,Rfashtkhvandar-,Iran
+434,Rgeharb,Iran
+435,Rgenaveh,Iran
+436,Rheh,Iran
+437,Rheydar-E Pabed,Iran
+438,Rin,Iran
+439,Rir,Iran
+440,Rish,Iran
+441,Rjan,Iran
+442,Rjandar-E Heyda,Iran
+443,Rleh Savar,Iran
+444,Rmas,Iran
+445,Rokht,Iran
+446,Royeh,Iran
+447,Rshahran,Iran
+448,Rsham,Iran
+449,Rshnan,Iran
+450,Ru-E Mabadat Sh,Iran
+451,Rush,Iran
+452,Rvab,Iran
+453,Rzabor,Iran
+454,S Fasht,Iran
+455,S`Ahar,Iran
+456,S`Ahardaskan,Iran
+457,S`Usan,Iran
+458,Sdlnabad,Iran
+459,Sfarabahar,Iran
+460,Sfarayan,Iran
+461,Sfarayen,Iran
+462,Sfash,Iran
+463,Sfashahr,Iran
+464,Sh-E Genaviyeh,Iran
+465,Shahin Dezh,Iran
+466,Shahr,Iran
+467,Shahr-E Shirin,Iran
+468,Shahr-E `Asalus,Iran
+469,Shahrak,Iran
+470,Shahrak-E Emam ,Iran
+471,Sharb,Iran
+472,Sheh,Iran
+473,Shfhahr,Iran
+474,Shlhanu,Iran
+475,Shlhenaviyeh,Iran
+476,Shnan,Iran
+477,Shtehar,Iran
+478,Shtkhvajeh,Iran
+479,Sjah Heydariman,Iran
+480,Slamabad-E Maha,Iran
+481,Slashir,Iran
+482,Slus,Iran
+483,Sol,Iran
+484,Srah,Iran
+485,Sshir,Iran
+486,Stahark,Iran
+487,Szahr,Iran
+488,T Shahr-E Mana,Iran
+489,T Shahra,Iran
+490,T Shir,Iran
+491,T Shirin,Iran
+492,T-E Shahin Dezh,Iran
+493,Tar,Iran
+494,Td Amavar,Iran
+495,Tehedin,Iran
+496,Tgfarayen,Iran
+497,Tllet Shir,Iran
+498,Tluo,Iran
+499,Torbat-E `Asalu,Iran
+500,Tsjrish,Iran
+501,U' Nahar,Iran
+502,U'An,Iran
+503,U'En,Iran
+504,U'Hn Veh Tappeh,Iran
+505,U'Jnil,Iran
+506,U'Kn,Iran
+507,U'Ln,Iran
+508,U'Un,Iran
+509,Um Shahr,Iran
+510,Ur-E Ghar,Iran
+511,Urab,Iran
+512,Urabad,Iran
+513,Urdbbid,Iran
+514,Urdk,Iran
+515,Urdkeh,Iran
+516,Ush,Iran
+517,Uyeh,Iran
+518,V M Hasangerd,Iran
+519,V Sefid,Iran
+520,V'E ,Iran
+521,V'Is Ahark,Iran
+522,V'Jeh,Iran
+523,V'Nd Ehzaraveh,Iran
+524,Vandar-E Genave,Iran
+525,Vandar-E Manjil,Iran
+526,Var,Iran
+527,Vd`Eh-Ye Khonda,Iran
+528,Ve  Heydar-E Ba,Iran
+529,Veh,Iran
+530,Veh Bon,Iran
+531,Vejeh,Iran
+532,Vel,Iran
+533,Ver,Iran
+534,Ver Shahr,Iran
+535,Veyei,Iran
+536,Vez,Iran
+537,Vge Dahin Dezh,Iran
+538,Vgehak,Iran
+539,Vgepdaskan,Iran
+540,Vgnsar,Iran
+541,Vh'Es,Iran
+542,Vjjeh,Iran
+543,Vjyeh,Iran
+544,Vlshtkhvaz,Iran
+545,Vor,Iran
+546,Vp'Em Shahra,Iran
+547,Vr'En,Iran
+548,Vrgehak,Iran
+549,Vsshahr-E Khond,Iran
+550,Vth Rasangerd,Iran
+551,Vu',Iran
+552,Vu'Zk,Iran
+553,Vvgnsar,Iran
+554,Ydris,Iran
+555,Yeh,Iran
+556,Z`Eh-Ye Kord,Iran
+557,Zaboli,Iran
+558,Zabor,Iran
+559,Zahr-E Shir,Iran
+560,Zahrak-E Genavi,Iran
+561,Zahran,Iran
+562,Zash,Iran
+563,Zashahr,Iran
+564,Zdham,Iran
+565,Zdhr-E Ghar,Iran
+566,Zhahr,Iran
+567,Zhahran,Iran
+568,Zhas,Iran
+569,Zhasr-E Babad,Iran
+570,Zhush,Iran
+571,Zinuyeh,Iran
+572,Zkah,Iran
+573,Zkhardabadan,Iran
+574,Zlbok,Iran
+575,Zmhahr,Iran
+576,Zorbat-E Genavi,Iran
+577,Zphad,Iran
+578,Zrbat-E Heydar-,Iran
+579,Zrheh,Iran
+580,Zyeh,Iran
+581,Zzbor,Iran
+582,`Ajab Shahin De,Iran
+583,`Ajab Shahin Za,Iran
+584,`Ajab Shahr,Iran
+585,`Ajab Shahr-E M,Iran
+586,`Ajab Shahr-E P,Iran
+587,`Ajab Shahra,Iran
+588,`Ajab Shahrak,Iran
+589,`Ajab Shahran,Iran
+590,`Ajab Shir,Iran
+591,`Ajab Shirin,Iran
+592,`Ajan,Iran
+593,`Ej-Y  Kord,Iran
+594,`Jjar,Iran

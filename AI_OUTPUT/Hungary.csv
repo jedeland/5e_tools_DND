@@ -1,0 +1,695 @@
+,Name,Origin
+0, . Xei.Ykerenye,Hungary
+1, Amio,Hungary
+2, Asi,Hungary
+3, Av.Ekegyhaza,Hungary
+4, Er,Hungary
+5, Erhida,Hungary
+6, Ia. Iercsi,Hungary
+7, Ia. Inxep.Ende,Hungary
+8, Ia. Iny,Hungary
+9, Ia. Irabradsza,Hungary
+10, Ii. Ekesztass,Hungary
+11, Ii. Kerueloepj,Hungary
+12, Ik,Hungary
+13, Iklada,Hungary
+14, Iklar,Hungary
+15, Il.,Hungary
+16, Irige.Szentgyo,Hungary
+17, Irkad,Hungary
+18, Iu.Kerueloep,Hungary
+19, Nod,Hungary
+20, Polna,Hungary
+21, Sxvkxazxasxmai,Hungary
+22, Uhlanszentmikl,Hungary
+23, Vi. Keremer,Hungary
+24, Vii,Hungary
+25, Vv. Keruely,Hungary
+26, Vvik,Hungary
+27, Xi. Kereszt,Hungary
+28, Xi. Kertes,Hungary
+29, Xi. Keruelebia,Hungary
+30, Xi. Keruelek,Hungary
+31, Xi. Keruelet,Hungary
+32, Xii. Keremedi,Hungary
+33,. Esszentand,Hungary
+34,.Ak,Hungary
+35,.Akk,Hungary
+36,.Akkeruelet,Hungary
+37,.Akkoes,Hungary
+38,.Akkuemecske,Hungary
+39,.Akkuemk,Hungary
+40,.Akkuemkered,Hungary
+41,.Azarligetcsern,Hungary
+42,.Iszalom,Hungary
+43,.Om,Hungary
+44,.Osegeny,Hungary
+45,.Osegrad,Hungary
+46,.Osegyhalaszlo,Hungary
+47,.Penyoshaza,Hungary
+48,.Ter,Hungary
+49,.Tonk,Hungary
+50,A Li.Badja,Hungary
+51,Aaj,Hungary
+52,Aalmadi,Hungary
+53,Aalmas,Hungary
+54,Aaplanszentlany,Hungary
+55,Abadja,Hungary
+56,Aber,Hungary
+57,Abocs,Hungary
+58,Aboglaszadocsa,Hungary
+59,Abxavio,Hungary
+60,Abxu. Oep,Hungary
+61,Abxu..Oes,Hungary
+62,Acs,Hungary
+63,Acsa,Hungary
+64,Acsi,Hungary
+65,Acsond,Hungary
+66,Acsonszeg,Hungary
+67,Acsordanya,Hungary
+68,Ada,Hungary
+69,Adarad,Hungary
+70,Agamer,Hungary
+71,Aglod,Hungary
+72,Agocs,Hungary
+73,Agpotcsed,Hungary
+74,Agyarbagyorgyes,Hungary
+75,Agyarligetudvar,Hungary
+76,Agycseknad,Hungary
+77,Agydoros,Hungary
+78,Agydorosladanya,Hungary
+79,Agye,Hungary
+80,Agyfalva,Hungary
+81,Agykalas,Hungary
+82,Agykallo,Hungary
+83,Agykata,Hungary
+84,Agykovasvany,Hungary
+85,Agyszaszaba,Hungary
+86,Ajol,Hungary
+87,Akhaz,Hungary
+88,Akhaza,Hungary
+89,Alaszt,Hungary
+90,Albok,Hungary
+91,Aldsaszszegvar,Hungary
+92,Alemet,Hungary
+93,Alerd,Hungary
+94,Algotaj,Hungary
+95,Allo,Hungary
+96,Allos,Hungary
+97,Almadandrod,Hungary
+98,Almandrass,Hungary
+99,Almanhaz,Hungary
+100,Almas,Hungary
+101,Alok,Hungary
+102,Alota,Hungary
+103,Alsanadasd,Hungary
+104,Aly,Hungary
+105,Amar,Hungary
+106,Amaros,Hungary
+107,Amoly,Hungary
+108,Amos,Hungary
+109,Amosgyorsod,Hungary
+110,Andre,Hungary
+111,Anszentkirabrad,Hungary
+112,Any,Hungary
+113,Aoly,Hungary
+114,Apcse,Hungary
+115,Apcseknadanhaz,Hungary
+116,Apolca,Hungary
+117,Apolna,Hungary
+118,Apolnaszt,Hungary
+119,Arany,Hungary
+120,Arcs,Hungary
+121,Arcsi,Hungary
+122,Ardotelet,Hungary
+123,Arkany,Hungary
+124,Armislang,Hungary
+125,Arnaoers,Hungary
+126,Aros,Hungary
+127,Arszalka,Hungary
+128,Asomor,Hungary
+129,Ass,Hungary
+130,Asz,Hungary
+131,Aszer,Hungary
+132,Aszlada,Hungary
+133,Aszlo,Hungary
+134,Ata,Hungary
+135,Atessamsonemedi,Hungary
+136,Athely,Hungary
+137,Atolca,Hungary
+138,Atonlelegyhaza,Hungary
+139,Atrany,Hungary
+140,Atrates,Hungary
+141,Atvaradsasz,Hungary
+142,Atymar,Hungary
+143,Atymardotely,Hungary
+144,Atymarom,Hungary
+145,Avaros,Hungary
+146,Avasbertod,Hungary
+147,Avaszta,Hungary
+148,Axtimre,Hungary
+149,Ayk,Hungary
+150,Azhalok,Hungary
+151,Ba Txvm.Halaszt,Hungary
+152,Ba.,Hungary
+153,Bagy,Hungary
+154,Bagyszabesende,Hungary
+155,Baijsa,Hungary
+156,Baj,Hungary
+157,Bakhaza,Hungary
+158,Bal,Hungary
+159,Bamartod,Hungary
+160,Banhaza,Hungary
+161,Banka,Hungary
+162,Bany,Hungary
+163,Banya,Hungary
+164,Banyfalvasar,Hungary
+165,Banyok,Hungary
+166,Banyraroszentgr,Hungary
+167,Banytomardony,Hungary
+168,Bathely,Hungary
+169,Batlang,Hungary
+170,Batlanszeg,Hungary
+171,Batto,Hungary
+172,Bha Y,Hungary
+173,Bik,Hungary
+174,Bne,Hungary
+175,Bocsabanka,Hungary
+176,Bogdanytomaj,Hungary
+177,Bok,Hungary
+178,Boros,Hungary
+179,Branosi,Hungary
+180,Brekes,Hungary
+181,Bunaharkereszta,Hungary
+182,Bxagiu,Hungary
+183,Bxiii. Kerecser,Hungary
+184,Bxoirok,Hungary
+185,Cras,Hungary
+186,Csa,Hungary
+187,Csaj,Hungary
+188,Cse,Hungary
+189,Cseknadnemeti,Hungary
+190,Cske,Hungary
+191,Dand,Hungary
+192,Danhegyhad,Hungary
+193,Dany,Hungary
+194,Dja,Hungary
+195,Dkeremet,Hungary
+196,Dnadnemer,Hungary
+197,Dnadnemes,Hungary
+198,Dog,Hungary
+199,Donya,Hungary
+200,Ecel,Hungary
+201,Ecser,Hungary
+202,Ecskemecske,Hungary
+203,Egled,Hungary
+204,Ehertirsanad,Hungary
+205,Eirkad,Hungary
+206,Ejobagykovarsze,Hungary
+207,Elebia,Hungary
+208,Eled,Hungary
+209,Elek,Hungary
+210,Eletavermellek,Hungary
+211,Elle,Hungary
+212,Ellek,Hungary
+213,Ellerd,Hungary
+214,Emo,Hungary
+215,Enr,Hungary
+216,Eny,Hungary
+217,Eobeny,Hungary
+218,Epcel,Hungary
+219,Ercs,Hungary
+220,Erretujfalu,Hungary
+221,Ers,Hungary
+222,Ertes,Hungary
+223,Esszentloranto,Hungary
+224,Esz,Hungary
+225,Etsag,Hungary
+226,Evecia,Hungary
+227,Evm.Epercel,Hungary
+228,Exto.,Hungary
+229,Eyszek,Hungary
+230,Falu,Hungary
+231,Falva,Hungary
+232,Foldog,Hungary
+233,For,Hungary
+234,Funepercsurgova,Hungary
+235,Gaj,Hungary
+236,Gamer,Hungary
+237,Gelsozsofalu,Hungary
+238,Gercel,Hungary
+239,Gethely,Hungary
+240,Getujfalu,Hungary
+241,Geves,Hungary
+242,Gled,Hungary
+243,Gmand,Hungary
+244,Gmandraskut,Hungary
+245,Gor,Hungary
+246,Gyeltoti,Hungary
+247,Gyhaza,Hungary
+248,Gyo,Hungary
+249,Gyoeroesd,Hungary
+250,Gyorgy,Hungary
+251,Gyoshaza,Hungary
+252,Gyossomorjanosh,Hungary
+253,Halalo,Hungary
+254,Haly,Hungary
+255,Haza,Hungary
+256,Ialorinci,Hungary
+257,Ialydi,Hungary
+258,Ianya,Hungary
+259,Ias,Hungary
+260,Ibakhaza,Hungary
+261,Ibok,Hungary
+262,Idas,Hungary
+263,Idasd,Hungary
+264,Ier.,Hungary
+265,Ier.Akkoes,Hungary
+266,Ierekaszer,Hungary
+267,Igntes,Hungary
+268,Ihaly,Hungary
+269,Iharad,Hungary
+270,Iklada,Hungary
+271,Ikladadasd,Hungary
+272,Ikladany,Hungary
+273,Ikladanyosszar,Hungary
+274,Ikladasd,Hungary
+275,Ikladhaza,Hungary
+276,Iklar,Hungary
+277,Iklos,Hungary
+278,Ikloszlo,Hungary
+279,Ilas,Hungary
+280,Ilaszada,Hungary
+281,Ilaszegtomajsa,Hungary
+282,Ilaszegvar,Hungary
+283,Ilasztaszladany,Hungary
+284,Ill,Hungary
+285,Illan,Hungary
+286,Ilsonmagydorosd,Hungary
+287,Ilsotarja,Hungary
+288,Imaly,Hungary
+289,Imalydi,Hungary
+290,Imoc,Hungary
+291,Ing,Hungary
+292,Innemend,Hungary
+293,Iola,Hungary
+294,Ioldog,Hungary
+295,Ioles,Hungary
+296,Iomajsa,Hungary
+297,Iomod,Hungary
+298,Iomorkereszaro,Hungary
+299,Iomtr,Hungary
+300,Iosd,Hungary
+301,Ioszlo,Hungary
+302,Ioszormeggyes,Hungary
+303,Iregszentgalpus,Hungary
+304,Iregszentgrot,Hungary
+305,Iregszentlan,Hungary
+306,Iregyeltotfalu,Hungary
+307,Iregyhad,Hungary
+308,Iregyhaza,Hungary
+309,Isak,Hungary
+310,Isegyhaza,Hungary
+311,Islan,Hungary
+312,Isleleta,Hungary
+313,Islelle,Hungary
+314,Isleny,Hungary
+315,Ismarto,Hungary
+316,Isopakony,Hungary
+317,Italom,Hungary
+318,Italovo,Hungary
+319,Itergovar,Hungary
+320,Itilna,Hungary
+321,Iusfoeld,Hungary
+322,Iva,Hungary
+323,Ivar,Hungary
+324,Ivasarhely,Hungary
+325,Ivasber,Hungary
+326,Iynanadpaly,Hungary
+327,Izsofalva,Hungary
+328,Jagocs,Hungary
+329,Jan,Hungary
+330,Janosszod,Hungary
+331,Jokata,Hungary
+332,Jonemendrod,Hungary
+333,Karacsi,Hungary
+334,Kerend,Hungary
+335,Kereny,Hungary
+336,Kerese,Hungary
+337,Keresztaszentla,Hungary
+338,Kereszti,Hungary
+339,Kertirsany,Hungary
+340,Keruelegyhaza,Hungary
+341,Keruelek,Hungary
+342,Kony,Hungary
+343,Konytomaj,Hungary
+344,Korokszentand,Hungary
+345,Kunmagyarbal,Hungary
+346,Lab,Hungary
+347,Ladas,Hungary
+348,Lan,Hungary
+349,Lang,Hungary
+350,Lanszentmaros,Hungary
+351,Lany,Hungary
+352,Lar,Hungary
+353,Laszentgalpuszt,Hungary
+354,Lbercel,Hungary
+355,Lbercsaba,Hungary
+356,Ldasd,Hungary
+357,Ldunavasvan,Hungary
+358,Lecskemet,Hungary
+359,Lelles,Hungary
+360,Levelek,Hungary
+361,Lisbercel,Hungary
+362,Lisboros,Hungary
+363,Liscsalmadi,Hungary
+364,Liszartos,Hungary
+365,Lnok,Hungary
+366,Lszszeg,Hungary
+367,Lva,Hungary
+368,Lvaszentand,Hungary
+369,Lvaszlo,Hungary
+370,Macsonmajsa,Hungary
+371,Mada,Hungary
+372,Maj,Hungary
+373,Makered,Hungary
+374,Marom,Hungary
+375,Maros,Hungary
+376,Marovacsodnad,Hungary
+377,Marto,Hungary
+378,Martobagyarekeg,Hungary
+379,Martod,Hungary
+380,Martolca,Hungary
+381,Marton,Hungary
+382,Mas,Hungary
+383,Matonfured,Hungary
+384,Mator,Hungary
+385,Mba,Hungary
+386,Mcse,Hungary
+387,Mellek,Hungary
+388,Mend,Hungary
+389,Meny,Hungary
+390,Mer,Hungary
+391,Mford,Hungary
+392,Mhanya,Hungary
+393,Mla,Hungary
+394,Moc,Hungary
+395,Moly,Hungary
+396,Morja,Hungary
+397,Morjan,Hungary
+398,Morjanoshaza,Hungary
+399,Mork,Hungary
+400,Morkerebeny,Hungary
+401,Mos,Hungary
+402,Mosgyorszentmih,Hungary
+403,Mosgyos,Hungary
+404,Mospati,Hungary
+405,Mossomork,Hungary
+406,Moz,Hungary
+407,Nagocson,Hungary
+408,Nagotaj,Hungary
+409,Nagycse,Hungary
+410,Nagyecser,Hungary
+411,Nagyi,Hungary
+412,Nasnye,Hungary
+413,Ndva,Hungary
+414,Ngyely,Hungary
+415,Ngyo,Hungary
+416,Nlelles,Hungary
+417,Nmagyszeg,Hungary
+418,Nomaendre,Hungary
+419,Nomiole,Hungary
+420,Nszentlorincehe,Hungary
+421,Nteszto,Hungary
+422,Nuelet,Hungary
+423,Nuely,Hungary
+424,Nvasar,Hungary
+425,Nying,Hungary
+426,Obaba,Hungary
+427,Obagy,Hungary
+428,Obagymardi,Hungary
+429,Obanka,Hungary
+430,Obankata,Hungary
+431,Obanya,Hungary
+432,Obanyraroszlo,Hungary
+433,Oboszlo,Hungary
+434,Oboz,Hungary
+435,Ocs,Hungary
+436,Ocsa,Hungary
+437,Ocseny,Hungary
+438,Oep,Hungary
+439,Oglar,Hungary
+440,Oha,Hungary
+441,Ojardand,Hungary
+442,Olgar,Hungary
+443,Olxo,Hungary
+444,Omaj,Hungary
+445,Omerecsep,Hungary
+446,Omeremeti,Hungary
+447,Omod,Hungary
+448,Omony,Hungary
+449,Omonya,Hungary
+450,Omor,Hungary
+451,Omorja,Hungary
+452,Omorjanosi,Hungary
+453,Omorjanosszolos,Hungary
+454,Omorjanovasberc,Hungary
+455,Omork,Hungary
+456,Omorkered,Hungary
+457,Omorkeves,Hungary
+458,Omos,Hungary
+459,Omosgyo,Hungary
+460,Omosgyospata,Hungary
+461,Omosgyosszoge,Hungary
+462,Omospest Xv. Ke,Hungary
+463,Omosszalyi,Hungary
+464,Omsonok,Hungary
+465,Onor,Hungary
+466,Opony,Hungary
+467,Oponycse,Hungary
+468,Ornyek,Hungary
+469,Orok,Hungary
+470,Orokony,Hungary
+471,Oroszentpetegye,Hungary
+472,Oroszlo,Hungary
+473,Osyereszalotark,Hungary
+474,Oszlisszentlora,Hungary
+475,Oszovat,Hungary
+476,Otarjan,Hungary
+477,Otaszentmiklos,Hungary
+478,Otofibany,Hungary
+479,Otonka,Hungary
+480,Otor,Hungary
+481,Otos,Hungary
+482,Otov,Hungary
+483,Ozormende,Hungary
+484,Pany,Hungary
+485,Polnas,Hungary
+486,Polnok,Hungary
+487,Porcs,Hungary
+488,Postag,Hungary
+489,Puszod,Hungary
+490,Puszta,Hungary
+491,Pusztafoldes,Hungary
+492,Puszter,Hungary
+493,Pusztesztasztel,Hungary
+494,Rad,Hungary
+495,Ragykallo,Hungary
+496,Ranosi,Hungary
+497,Ranovat,Hungary
+498,Rany,Hungary
+499,Rapest Xii. Ker,Hungary
+500,Raszafured,Hungary
+501,Rcag,Hungary
+502,Rcsa,Hungary
+503,Remeti,Hungary
+504,Rmend,Hungary
+505,Rmende,Hungary
+506,Rmeny,Hungary
+507,Rod,Hungary
+508,Rom,Hungary
+509,Rosjeno,Hungary
+510,Rretujfalu,Hungary
+511,Rszentivan,Hungary
+512,Rtolcsvar,Hungary
+513,Rud,Hungary
+514,Ruheteny,Hungary
+515,Ruhetergo,Hungary
+516,Rxi,Hungary
+517,Rxi. Kertolt,Hungary
+518,Rxiii. Kereny,Hungary
+519,Rxu.Xoe ,Hungary
+520,Saj,Hungary
+521,Sak,Hungary
+522,Sar,Hungary
+523,Sarkerebenyszas,Hungary
+524,Sasvan,Hungary
+525,Saszafoldes,Hungary
+526,Saszentmard,Hungary
+527,Segeny,Hungary
+528,Selet,Hungary
+529,Seter,Hungary
+530,Seteves,Hungary
+531,Sfoeld,Hungary
+532,Shaza,Hungary
+533,Siklada,Hungary
+534,Siteleta,Hungary
+535,Slellek,Hungary
+536,Slet,Hungary
+537,Soly,Hungary
+538,Sombovan,Hungary
+539,Somogyvaras,Hungary
+540,Somony,Hungary
+541,Sopakoczifalva,Hungary
+542,Sota,Hungary
+543,Sozsofalva,Hungary
+544,Spercel,Hungary
+545,Sszormelld,Hungary
+546,Sugyi,Hungary
+547,Sunyo,Hungary
+548,Svvoszentmaros,Hungary
+549,Szadanhazar,Hungary
+550,Szentimre,Hungary
+551,Szentloranytely,Hungary
+552,Szentmiklos,Hungary
+553,T.Ered,Hungary
+554,Tarja,Hungary
+555,Tarjanosszentga,Hungary
+556,Tarkany,Hungary
+557,Tarkanyraroff,Hungary
+558,Tekescsa,Hungary
+559,Telet,Hungary
+560,Ter,Hungary
+561,Tere,Hungary
+562,Tirsa,Hungary
+563,Tolcsvanya,Hungary
+564,Tos,Hungary
+565,Trates,Hungary
+566,Ttonszalombatla,Hungary
+567,Tur,Hungary
+568,Txiii. Kertessa,Hungary
+569,Tyjklgers,Hungary
+570,Tyrokoz,Hungary
+571,Ubbok,Hungary
+572,Uevecse,Hungary
+573,Uhata,Hungary
+574,Uhatas,Hungary
+575,Uhatony,Hungary
+576,Uhattonfured,Hungary
+577,Ule,Hungary
+578,Unaalmadi,Hungary
+579,Unahaza,Hungary
+580,Unapata,Hungary
+581,Unavertes,Hungary
+582,Ured,Hungary
+583,Urkerekas,Hungary
+584,Urkeruelek,Hungary
+585,Urkescsa,Hungary
+586,Usztely,Hungary
+587,Ux Hi.,Hungary
+588,Uxaahaza,Hungary
+589,Uxkh.Zkertessam,Hungary
+590,Uza,Hungary
+591,Vacsonszentlori,Hungary
+592,Vak,Hungary
+593,Val,Hungary
+594,Valka,Hungary
+595,Valkany,Hungary
+596,Vamos,Hungary
+597,Van,Hungary
+598,Vanyfalu,Hungary
+599,Var,Hungary
+600,Varad,Hungary
+601,Varekesszormend,Hungary
+602,Vari,Hungary
+603,Varos,Hungary
+604,Varszegtomaj,Hungary
+605,Vasarkany,Hungary
+606,Vasvamosszentpe,Hungary
+607,Vaszentkiraly,Hungary
+608,Vbercel,Hungary
+609,Vbrok,Hungary
+610,Vcsaba,Hungary
+611,Vcsaj,Hungary
+612,Vert,Hungary
+613,Vhelyszaba,Hungary
+614,Villang,Hungary
+615,Virog,Hungary
+616,Vklad,Hungary
+617,Vle,Hungary
+618,Vlek,Hungary
+619,Vmcsed,Hungary
+620,Vmek,Hungary
+621,Vmereszt,Hungary
+622,Vorsodnadnemere,Hungary
+623,Vpracsonytely,Hungary
+624,Vprtaszszentmik,Hungary
+625,Vpuelet,Hungary
+626,Vpueloep,Hungary
+627,Vsszentlaszemen,Hungary
+628,Vszszer,Hungary
+629,Vto,Hungary
+630,Vvroes,Hungary
+631,Vvroesd,Hungary
+632,Vzi,Hungary
+633,Xb. Ek,Hungary
+634,Xcxiii. Kertirs,Hungary
+635,Xdp.Ereny,Hungary
+636,Xe. Zer,Hungary
+637,Xi. Kere,Hungary
+638,Xi. Kerecserk,Hungary
+639,Xi. Kereszta,Hungary
+640,Xi. Kereszto,Hungary
+641,Xi. Kertes,Hungary
+642,Xi. Kertirsany,Hungary
+643,Xi. Kertobany,Hungary
+644,Xi. Keruele,Hungary
+645,Xi. Keruelegyha,Hungary
+646,Xi. Keruelek,Hungary
+647,Xi. Keruelet,Hungary
+648,Xii. Kere,Hungary
+649,Xii. Kerebely,Hungary
+650,Xii. Kereszaly,Hungary
+651,Xii. Kertesztur,Hungary
+652,Xii. Keruelek,Hungary
+653,Xiii. Kerueled,Hungary
+654,Xiii. Keruelek,Hungary
+655,Xiiia. Il,Hungary
+656,Xiux. Va. Ihala,Hungary
+657,Xjoi,Hungary
+658,Xkhizakeruelek,Hungary
+659,Xlii,Hungary
+660,Xlxioiass,Hungary
+661,Xni. Keruele,Hungary
+662,Xsxi. Keresztur,Hungary
+663,Xt Rxi. Keruele,Hungary
+664,Xtvxei.Kkre,Hungary
+665,Xuxiv. Kertes,Hungary
+666,Xv Ii. Keruelet,Hungary
+667,Xv. Keruelebia,Hungary
+668,Xvi. Keruelet,Hungary
+669,Xvii,Hungary
+670,Xviii. Kerecs,Hungary
+671,Xviii. Kerender,Hungary
+672,Xviii. Keruelek,Hungary
+673,Xvni,Hungary
+674,Xvriese,Hungary
+675,Xx . Keruelet,Hungary
+676,Xxf. Ueno,Hungary
+677,Xxi. Kerecskess,Hungary
+678,Xxi. Kerecskesz,Hungary
+679,Xxi. Keresz,Hungary
+680,Xxi. Kereszasul,Hungary
+681,Xxi. Kertod,Hungary
+682,Xxi. Keruelek,Hungary
+683,Yomar,Hungary
+684,Yorgyecskesztas,Hungary
+685,Yuk,Hungary
+686,Yvasbercel,Hungary
+687,Zeledbercel,Hungary
+688,Zelet,Hungary
+689,Zigetcse,Hungary
+690,Zik,Hungary
+691,Ziomadi,Hungary
+692,Zpest,Hungary
+693,Zvaro,Hungary

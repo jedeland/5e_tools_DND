@@ -1,0 +1,574 @@
+,Name,Origin
+0, An,Bulgaria
+1, Banite,Bulgaria
+2, Banitsa,Bulgaria
+3, Banya,Bulgaria
+4, Blagoevgrad,Bulgaria
+5, Dovo,Bulgaria
+6, El,Bulgaria
+7, Ernitsa,Bulgaria
+8, Myadomir,Bulgaria
+9, Ran,Bulgaria
+10, Ranya,Bulgaria
+11, Rograd,Bulgaria
+12, Trazhitsa,Bulgaria
+13, Uhnevene,Bulgaria
+14, Yanovgrad,Bulgaria
+15, Zagoevgrad,Bulgaria
+16,A Banya,Bulgaria
+17,A Olaevo,Bulgaria
+18,Aatevgrad,Bulgaria
+19,Abparuhovo,Bulgaria
+20,Agred,Bulgaria
+21,Aki,Bulgaria
+22,Akresna,Bulgaria
+23,Ala Slavyanovo,Bulgaria
+24,Ali,Bulgaria
+25,Amyadomir,Bulgaria
+26,Amyodremovo,Bulgaria
+27,Amyolarovo,Bulgaria
+28,Amyolra Zagora,Bulgaria
+29,Amyolrel,Bulgaria
+30,Anitsa,Bulgaria
+31,Anovo,Bulgaria
+32,Anya,Bulgaria
+33,Aopblutina,Bulgaria
+34,Apbmuil,Bulgaria
+35,Apbmurishte,Bulgaria
+36,Apbruhovo,Bulgaria
+37,Apomovo,Bulgaria
+38,Ari Chiflik,Bulgaria
+39,Arik,Bulgaria
+40,Arova Zagora,Bulgaria
+41,Arovo,Bulgaria
+42,Atpcuumboliyski,Bulgaria
+43,Atrna,Bulgaria
+44,Atrna Oryag,Bulgaria
+45,Azbbtel,Bulgaria
+46,Aze Rograd,Bulgaria
+47,Azhidim,Bulgaria
+48,Azpbluik,Bulgaria
+49,B Liyski,Bulgaria
+50,Bar,Bulgaria
+51,Batak,Bulgaria
+52,Batanovgrad,Bulgaria
+53,Batanovo,Bulgaria
+54,Bba ,Bulgaria
+55,Bbla,Bulgaria
+56,Bdzhitsa,Bulgaria
+57,Bea,Bulgaria
+58,Ber,Bulgaria
+59,Bha,Bulgaria
+60,Bhitsa,Bulgaria
+61,Bimets,Bulgaria
+62,Bkalofer,Bulgaria
+63,Bklovo,Bulgaria
+64,Bktecgndven,Bulgaria
+65,Bla,Bulgaria
+66,Bmuil,Bulgaria
+67,Bmyadomir,Bulgaria
+68,Bmyadovo,Bulgaria
+69,Bmyeliki Presna,Bulgaria
+70,Bmyelingrad,Bulgaria
+71,Bmyrdimorsko,Bulgaria
+72,Bo  Dol,Bulgaria
+73,Bom,Bulgaria
+74,Bomir,Bulgaria
+75,Boryanovgrad,Bulgaria
+76,Bothik,Bulgaria
+77,Bpblu,Bulgaria
+78,Bpbluio,Bulgaria
+79,Bpmobske,Bulgaria
+80,Bpmyurishte,Bulgaria
+81,Bpolovgrad,Bulgaria
+82,Bpolovo,Bulgaria
+83,Bpyala Slav,Bulgaria
+84,Brag,Bulgaria
+85,Brat,Bulgaria
+86,Brova Zagoevgra,Bulgaria
+87,Brovadia,Bulgaria
+88,Bta,Bulgaria
+89,Btag,Bulgaria
+90,Btara Zagoevgra,Bulgaria
+91,Buhovitsa,Bulgaria
+92,Bvo,Bulgaria
+93,Byala Slatina,Bulgaria
+94,Byatograd,Bulgaria
+95,Bzagoevgrad,Bulgaria
+96,Bzagora,Bulgaria
+97,Bzaten,Bulgaria
+98,Bzhidimorsko,Bulgaria
+99,Bzhitsa,Bulgaria
+100,Bzhtrich,Bulgaria
+101,Cbghlbvo,Bulgaria
+102,Cbuhindol,Bulgaria
+103,Ccmyili,Bulgaria
+104,Ccpbmuil,Bulgaria
+105,Ccrzadovets,Bulgaria
+106,Cczuhindol,Bulgaria
+107,Chbmyedin,Bulgaria
+108,Chek,Bulgaria
+109,Chhuliska,Bulgaria
+110,Chim,Bulgaria
+111,Chki,Bulgaria
+112,Chkyesna,Bulgaria
+113,Chmdik,Bulgaria
+114,Chmyadomir,Bulgaria
+115,Chmyolranitsa,Bulgaria
+116,Chmysliven Brya,Bulgaria
+117,Chpbruhovitsa,Bulgaria
+118,Chzhidimorsko,Bulgaria
+119,Ckbparuhovo,Bulgaria
+120,Cmbmlenikolaevo,Bulgaria
+121,Cotnikolaevo,Bulgaria
+122,Cpbmuil,Bulgaria
+123,Czkkresna,Bulgaria
+124,Czuhindol,Bulgaria
+125,Damsil,Bulgaria
+126,Darnobat,Bulgaria
+127,Darsahevo,Bulgaria
+128,Darsvo,Bulgaria
+129,Dchim,Bulgaria
+130,Del,Bulgaria
+131,Dha,Bulgaria
+132,Dhavora,Bulgaria
+133,Dhim,Bulgaria
+134,Dhiven Bryag,Bulgaria
+135,Dik,Bulgaria
+136,Dim,Bulgaria
+137,Dimitrovo,Bulgaria
+138,Dimorsko,Bulgaria
+139,Dimovo,Bulgaria
+140,Dmyili,Bulgaria
+141,Dol,Bulgaria
+142,Domir,Bulgaria
+143,Drimorsko,Bulgaria
+144,Drimovo,Bulgaria
+145,Dve Mogili,Bulgaria
+146,Dvomay,Bulgaria
+147,Dyavora,Bulgaria
+148,Dzharovgrad,Bulgaria
+149,Ebovitsa,Bulgaria
+150,Ebovo,Bulgaria
+151,Ech,Bulgaria
+152,Edin,Bulgaria
+153,Edkovo,Bulgaria
+154,Eenovtsi,Bulgaria
+155,Eik,Bulgaria
+156,Eki,Bulgaria
+157,Ekk,Bulgaria
+158,Eko,Bulgaria
+159,Ekovenets,Bulgaria
+160,Eliki Presna,Bulgaria
+161,Elingrad,Bulgaria
+162,Elograd,Bulgaria
+163,Emyodrimorsko,Bulgaria
+164,Enik,Bulgaria
+165,Enikovet,Bulgaria
+166,Eovo,Bulgaria
+167,Epkh,Bulgaria
+168,Epolovgrad,Bulgaria
+169,Erkovitsa,Bulgaria
+170,Erkovo,Bulgaria
+171,Erlebvo,Bulgaria
+172,Ernik,Bulgaria
+173,Esk,Bulgaria
+174,Eslavyanovo,Bulgaria
+175,Etrich,Bulgaria
+176,Etrichim,Bulgaria
+177,Ets,Bulgaria
+178,Euhovit,Bulgaria
+179,Evo,Bulgaria
+180,Eyovren,Bulgaria
+181,Fel,Bulgaria
+182,Gbla,Bulgaria
+183,Gbrkivi ,Bulgaria
+184,Gbrktmir,Bulgaria
+185,Gornsko,Bulgaria
+186,Grad,Bulgaria
+187,Gradchik,Bulgaria
+188,Grav,Bulgaria
+189,Gred,Bulgaria
+190,Grid,Bulgaria
+191,Grovo,Bulgaria
+192,Habla,Bulgaria
+193,Hali,Bulgaria
+194,Harovadia,Bulgaria
+195,Harovo,Bulgaria
+196,Hbmyadomir,Bulgaria
+197,Hbrit,Bulgaria
+198,Hbrova Zagoevgr,Bulgaria
+199,Hdazsite,Bulgaria
+200,Hdim,Bulgaria
+201,Hets,Bulgaria
+202,Hevo,Bulgaria
+203,Hik,Bulgaria
+204,Him,Bulgaria
+205,Hitsa,Bulgaria
+206,Hliven,Bulgaria
+207,Hlivo Pole,Bulgaria
+208,Hmyolra Zagora,Bulgaria
+209,Holiyski,Bulgaria
+210,Holovgrad,Bulgaria
+211,Hpbruhovo,Bulgaria
+212,Hprimolovo,Bulgaria
+213,Hrdzhali,Bulgaria
+214,Huhindol,Bulgaria
+215,Huliskar,Bulgaria
+216,Humen,Bulgaria
+217,Hurishte,Bulgaria
+218,Iakatnikovo,Bulgaria
+219,Ibpelik,Bulgaria
+220,Ibpolovo,Bulgaria
+221,Ikdiv,Bulgaria
+222,Iki Preslav,Bulgaria
+223,Iki Presna,Bulgaria
+224,Ikolarovo,Bulgaria
+225,Ikoven,Bulgaria
+226,Ikovitsa,Bulgaria
+227,Ikovo,Bulgaria
+228,Iktrazhidim,Bulgaria
+229,Iktrich,Bulgaria
+230,Imar,Bulgaria
+231,Imeonovo,Bulgaria
+232,Imeonovtsi,Bulgaria
+233,Imets,Bulgaria
+234,Imorsko,Bulgaria
+235,Imovo,Bulgaria
+236,Ipbruhovit,Bulgaria
+237,Ipbruhovo,Bulgaria
+238,Iperih,Bulgaria
+239,Ipka,Bulgaria
+240,Ipman,Bulgaria
+241,Itrovgrad,Bulgaria
+242,Itsa,Bulgaria
+243,Itts,Bulgaria
+244,K#Erkovitsa,Bulgaria
+245,Kar,Bulgaria
+246,Kavarnobat,Bulgaria
+247,Kbla,Bulgaria
+248,Kbta,Bulgaria
+249,Kbtagred,Bulgaria
+250,Kbva Zagoevgrad,Bulgaria
+251,Kbva Zagora,Bulgaria
+252,Kbvet,Bulgaria
+253,Kcteh,Bulgaria
+254,Kets,Bulgaria
+255,Khitsa,Bulgaria
+256,Kiki Presh,Bulgaria
+257,Kiki Preslavin,Bulgaria
+258,Kiki Preslavyan,Bulgaria
+259,Kitsa,Bulgaria
+260,Kiven,Bulgaria
+261,Kkoven Bryag,Bulgaria
+262,Kkovitsa,Bulgaria
+263,Klesve,Bulgaria
+264,Kmor,Bulgaria
+265,Kmyrdimorsko,Bulgaria
+266,Knitsa,Bulgaria
+267,Kolaevo,Bulgaria
+268,Kolarovo,Bulgaria
+269,Kolaryonra,Bulgaria
+270,Kotel,Bulgaria
+271,Koven,Bulgaria
+272,Kovene,Bulgaria
+273,Kovit,Bulgaria
+274,Kovitsa,Bulgaria
+275,Kovo,Bulgaria
+276,Kperih,Bulgaria
+277,Kresh,Bulgaria
+278,Kresna,Bulgaria
+279,Ktec,Bulgaria
+280,Ktecghavora,Bulgaria
+281,Ktesa,Bulgaria
+282,Ktrazhitsa,Bulgaria
+283,Kubrat,Bulgaria
+284,Kven,Bulgaria
+285,Kvo,Bulgaria
+286,Kyacofer,Bulgaria
+287,Kzbot,Bulgaria
+288,Kzbotisatanovgr,Bulgaria
+289,Kztel,Bulgaria
+290,Laki,Bulgaria
+291,Lanovgrad,Bulgaria
+292,Lav,Bulgaria
+293,Lgeresh,Bulgaria
+294,Lik,Bulgaria
+295,Lika Preslavyan,Bulgaria
+296,Liki Presh,Bulgaria
+297,Liki Presna,Bulgaria
+298,Lipka,Bulgaria
+299,Liska,Bulgaria
+300,Litsa,Bulgaria
+301,Lkiven Bryahovo,Bulgaria
+302,Lkven,Bulgaria
+303,Lmko,Bulgaria
+304,Lrkite,Bulgaria
+305,Lrkivin,Bulgaria
+306,Ltgrad,Bulgaria
+307,Ltrova Zagora,Bulgaria
+308,Lukovo,Bulgaria
+309,Lzhotim,Bulgaria
+310,Lzkotel,Bulgaria
+311,Lzyidim,Bulgaria
+312,Mbal,Bulgaria
+313,Mboliyski,Bulgaria
+314,Mmyodrevo,Bulgaria
+315,Myadomir,Bulgaria
+316,Myadoven,Bulgaria
+317,Myadovenets,Bulgaria
+318,Myadovets,Bulgaria
+319,Myadovo,Bulgaria
+320,Myodreslav,Bulgaria
+321,Myodrimovo,Bulgaria
+322,Myolaevo,Bulgaria
+323,Myolra Kreslavy,Bulgaria
+324,Myolra Zagoevgr,Bulgaria
+325,Myolretnik,Bulgaria
+326,Myolrimorsko,Bulgaria
+327,Myorrshovit,Bulgaria
+328,Myosrevo,Bulgaria
+329,Myovren,Bulgaria
+330,Ndol,Bulgaria
+331,Nikovo,Bulgaria
+332,Nitsa,Bulgaria
+333,Nobat,Bulgaria
+334,Nrkovenets,Bulgaria
+335,Nubovo,Bulgaria
+336,Nzbot Dly,Bulgaria
+337,Obadia,Bulgaria
+338,Obgsaden,Bulgaria
+339,Obla,Bulgaria
+340,Obpslavinite,Bulgaria
+341,Obukivenets,Bulgaria
+342,Obvtnik,Bulgaria
+343,Obyatanovo,Bulgaria
+344,Obyatograd,Bulgaria
+345,Ocbckifei,Bulgaria
+346,Occhomir,Bulgaria
+347,Ofer,Bulgaria
+348,Ograd,Bulgaria
+349,Okmyadomir,Bulgaria
+350,Okoven,Bulgaria
+351,Olav,Bulgaria
+352,Omgrrdamsk,Bulgaria
+353,Omyadomir,Bulgaria
+354,Omyadovo,Bulgaria
+355,Ootara Kresh,Bulgaria
+356,Opbluin,Bulgaria
+357,Opmlil,Bulgaria
+358,Optrich,Bulgaria
+359,Opyadovets,Bulgaria
+360,Opyala Slatina,Bulgaria
+361,Opyanovgradchik,Bulgaria
+362,Orar,Bulgaria
+363,Orik,Bulgaria
+364,Orna,Bulgaria
+365,Orova Zagora,Bulgaria
+366,Oryag,Bulgaria
+367,Oryamovo,Bulgaria
+368,Oryanovgrad,Bulgaria
+369,Oryanovo,Bulgaria
+370,Otac,Bulgaria
+371,Otara Kresh,Bulgaria
+372,Otrich,Bulgaria
+373,Otrichik,Bulgaria
+374,Otsp,Bulgaria
+375,Ovgrad,Bulgaria
+376,Oyala Slatina,Bulgaria
+377,Oyanovo,Bulgaria
+378,Oyarovo,Bulgaria
+379,Oyski,Bulgaria
+380,Ozdit,Bulgaria
+381,Ozdurishte,Bulgaria
+382,Ozpurishte,Bulgaria
+383,Ozreth,Bulgaria
+384,Ozven,Bulgaria
+385,Pbluik,Bulgaria
+386,Pbmuhl,Bulgaria
+387,Pbmuhlav,Bulgaria
+388,Pbmuhlivenets,Bulgaria
+389,Pbmuhlivo Pole,Bulgaria
+390,Pbmuil,Bulgaria
+391,Pbmuliska,Bulgaria
+392,Pbmurishte,Bulgaria
+393,Pbmurl,Bulgaria
+394,Pbmurlaovo,Bulgaria
+395,Pbmurlsbiets,Bulgaria
+396,Pbmurlshiv,Bulgaria
+397,Pbmurlshivene,Bulgaria
+398,Pbmurlshivnitsa,Bulgaria
+399,Pbmurlshivo Pol,Bulgaria
+400,Pbmurlshovit,Bulgaria
+401,Pbmurnski,Bulgaria
+402,Pbmutrazhidimov,Bulgaria
+403,Pbrat,Bulgaria
+404,Pbruhovit,Bulgaria
+405,Pbruhovitsa,Bulgaria
+406,Pbruhovo,Bulgaria
+407,Pbrumovo,Bulgaria
+408,Petrich,Bulgaria
+409,Petrichik,Bulgaria
+410,Pim,Bulgaria
+411,Pitrovo,Bulgaria
+412,Pmyrdim,Bulgaria
+413,Pmyulimpolovdiv,Bulgaria
+414,Pmyulingradchik,Bulgaria
+415,Pmyulingradchim,Bulgaria
+416,Pmyuliven Brya,Bulgaria
+417,Provo,Bulgaria
+418,Ptrdzhidim,Bulgaria
+419,Ptrrah,Bulgaria
+420,Puhindol,Bulgaria
+421,Pyabovo,Bulgaria
+422,Pyadomir,Bulgaria
+423,Pyadovets,Bulgaria
+424,Pyakovo,Bulgaria
+425,Pyala Slatina,Bulgaria
+426,Pyala Slatograd,Bulgaria
+427,Pyanovgrad,Bulgaria
+428,Pyanovo,Bulgaria
+429,Pyauhovitsa,Bulgaria
+430,Pyolarovo,Bulgaria
+431,Pyolresna,Bulgaria
+432,Radomir,Bulgaria
+433,Radoven Bryag,Bulgaria
+434,Ram,Bulgaria
+435,Rbzhali,Bulgaria
+436,Rbztanovtsi,Bulgaria
+437,Rdhavora,Bulgaria
+438,Rdman,Bulgaria
+439,Rdzhali,Bulgaria
+440,Rhuhindol,Bulgaria
+441,Rik,Bulgaria
+442,Rila,Bulgaria
+443,Rimovo,Bulgaria
+444,Rkadia,Bulgaria
+445,Robat,Bulgaria
+446,Rocgrkdovo,Bulgaria
+447,Rsvo,Bulgaria
+448,S Ran,Bulgaria
+449,Sarevo,Bulgaria
+450,Sel,Bulgaria
+451,Set,Bulgaria
+452,Sik,Bulgaria
+453,Ska,Bulgaria
+454,Skar,Bulgaria
+455,Smyadoven Bryah,Bulgaria
+456,Sperih,Bulgaria
+457,Ste,Bulgaria
+458,Strazhitsa,Bulgaria
+459,Syavora,Bulgaria
+460,Tanovgrad,Bulgaria
+461,Tanovo,Bulgaria
+462,Tara Kresh,Bulgaria
+463,Tara Kreslavyan,Bulgaria
+464,Tara Kresna,Bulgaria
+465,Tara Zagoevgrad,Bulgaria
+466,Tara Zagora,Bulgaria
+467,Ter,Bulgaria
+468,Tervel,Bulgaria
+469,Terven,Bulgaria
+470,Thik,Bulgaria
+471,Tlagora,Bulgaria
+472,Tlaziita,Bulgaria
+473,Tlazvitsa,Bulgaria
+474,Tlivo Pole,Bulgaria
+475,Tparuhovo,Bulgaria
+476,Tpbauhovo,Bulgaria
+477,Tpbruhovo,Bulgaria
+478,Tperih,Bulgaria
+479,Trav,Bulgaria
+480,Trazhidim,Bulgaria
+481,Trazhidimorsko,Bulgaria
+482,Trazhidimovo,Bulgaria
+483,Trazhitsa,Bulgaria
+484,Triporovo,Bulgaria
+485,Ttrazhidimovo,Bulgaria
+486,Uhindol,Bulgaria
+487,Uhindoliyski,Bulgaria
+488,Uhovo,Bulgaria
+489,V Dolna Banitsa,Bulgaria
+490,V Dolna Bansko,Bulgaria
+491,V Dolni Chiflik,Bulgaria
+492,Varnobat,Bulgaria
+493,Vbla,Bulgaria
+494,Vbnitsa,Bulgaria
+495,Vchim,Bulgaria
+496,Vdiv,Bulgaria
+497,Ven Bryanovtsi,Bulgaria
+498,Vgrad,Bulgaria
+499,Vhili,Bulgaria
+500,Vhurishte,Bulgaria
+501,Vim,Bulgaria
+502,Vimstrazhidim,Bulgaria
+503,Vitsa,Bulgaria
+504,Vkiyiki Presh,Bulgaria
+505,Vko,Bulgaria
+506,Vlav,Bulgaria
+507,Vlivnitsa,Bulgaria
+508,Vlivo Pole,Bulgaria
+509,Vmyadoven Bryah,Bulgaria
+510,Voge,Bulgaria
+511,Vooatak,Bulgaria
+512,Vrimovo,Bulgaria
+513,Vtsi,Bulgaria
+514,Vuhindol,Bulgaria
+515,Vzhali,Bulgaria
+516,Vziee,Bulgaria
+517,Vzinets,Bulgaria
+518,Yala Slatina,Bulgaria
+519,Yala Slatograd,Bulgaria
+520,Yala Slav,Bulgaria
+521,Yala Slavyanovo,Bulgaria
+522,Yanovgradchim,Bulgaria
+523,Yanovo,Bulgaria
+524,Yanovtsi,Bulgaria
+525,Yara Kreslavyan,Bulgaria
+526,Yara Kresna,Bulgaria
+527,Yarova Zagora,Bulgaria
+528,Yarovadia,Bulgaria
+529,Yarovgrad,Bulgaria
+530,Yarovo,Bulgaria
+531,Ymmbrla,Bulgaria
+532,Ymmbrltovo,Bulgaria
+533,Yolaevo,Bulgaria
+534,Yolarovadia,Bulgaria
+535,Yolrad,Bulgaria
+536,Yolreohovitsa,Bulgaria
+537,Yolreomovo,Bulgaria
+538,Yolreoshevo,Bulgaria
+539,Ypmbulingrad,Bulgaria
+540,Ytrich,Bulgaria
+541,Yulingrad,Bulgaria
+542,Yuliskar,Bulgaria
+543,Yurishte,Bulgaria
+544,Yvlingrad,Bulgaria
+545,Z Ernitsa,Bulgaria
+546,Zavet,Bulgaria
+547,Zavets,Bulgaria
+548,Zbbrovadia,Bulgaria
+549,Zbot,Bulgaria
+550,Zchuhindol,Bulgaria
+551,Zhali,Bulgaria
+552,Zharovo,Bulgaria
+553,Zhedvel,Bulgaria
+554,Zhidim,Bulgaria
+555,Zhidimovo,Bulgaria
+556,Zhitsa,Bulgaria
+557,Zhurishte,Bulgaria
+558,Zkar,Bulgaria
+559,Zkerovadia,Bulgaria
+560,Zkolaevo,Bulgaria
+561,Zkolarovo,Bulgaria
+562,Zktrazhidimovo,Bulgaria
+563,Zktrazhitsa,Bulgaria
+564,Zozuarna,Bulgaria
+565,Zpatuik,Bulgaria
+566,Zptrichik,Bulgaria
+567,Zpurishte,Bulgaria
+568,Zrat,Bulgaria
+569,Zuhindol,Bulgaria
+570,Zvtrazhidim,Bulgaria
+571,Zzaedovo,Bulgaria
+572,Zzhdim,Bulgaria

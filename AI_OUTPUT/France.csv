@@ -1,0 +1,664 @@
+,Name,Origin
+0, Bdrey,France
+1, Bdrnetagny-Sur,France
+2, Bond,France
+3, Bonneine-Sur-C,France
+4, Bonnes,France
+5, Boues,France
+6, Bourt,France
+7, Chartin-Les,France
+8, Esse,France
+9, Gigonnes,France
+10, Les-Bernardels,France
+11, Lurcher,France
+12, Mai,France
+13, Marchaumur,France
+14, Margueuil,France
+15, Marie,France
+16, Menil-En-Forez,France
+17, Menucouexierra,France
+18, Messeto-Pries,France
+19, Missee,France
+20, Montfaucourt,France
+21, Oise,France
+22, Pin,France
+23, Pin-De-Mer,France
+24, Pin-En-Bret,France
+25, Pin-En-Bretagn,France
+26, Pin-Lannoy-La-,France
+27, Pnis-Le-Reine-,France
+28, Quvigny,France
+29, Rime,France
+30, Rivilledignat,France
+31, Roche-Sur-Orge,France
+32, Rochette,France
+33, Silgonnai,France
+34, Sivillenes- Le,France
+35, Suilleur,France
+36, Sur-Ocre,France
+37, Tault,France
+38, Venil-En-Brido,France
+39,'Elle,France
+40,'Etannoy,France
+41,'Etannoy-Les,France
+42,'Ile-Val,France
+43,'Ltges,France
+44,'Mtfesnil,France
+45,'Mtjevillenex,France
+46,'Plle,France
+47,-Antolles,France
+48,-Aspresnillion,France
+49,-Beuve-Les-Sur-,France
+50,-Brecy,France
+51,-Bretal,France
+52,-Bretigueuillon,France
+53,-Brigue,France
+54,-Chantenas,France
+55,-Chatel,France
+56,-Chatillat,France
+57,-Chevillegarent,France
+58,-Clausaz,France
+59,-Coglessetot,France
+60,-Compierre-Des-,France
+61,-Cormelle De Me,France
+62,-Dame-La-Montai,France
+63,-De-Saint-Du-Po,France
+64,-Du-Vail,France
+65,-En-Bourney,France
+66,-En-Puissin,France
+67,-Fleurs,France
+68,-Garen,France
+69,-Gorre,France
+70,-Grandes,France
+71,-Gravigny,France
+72,-Gue,France
+73,-Guyenne,France
+74,-Iere-Sur-San-D,France
+75,-L'Eventiennes,France
+76,-Larce-Sur-Meda,France
+77,-Le-Sur-Mer,France
+78,-Les-Dijon,France
+79,-Marchaume,France
+80,-Martin-En-Chem,France
+81,-Meur,France
+82,-Orge,France
+83,-Peuple,France
+84,-Plagrand,France
+85,-Priay,France
+86,-Reine,France
+87,-Remy-En-Valenc,France
+88,-Roche,France
+89,-Rogeroux,France
+90,-Romaint-Gervai,France
+91,-Romine-Le-Sur-,France
+92,-Sainguestelici,France
+93,-Saint-Just-Lav,France
+94,-Saint-Mihielmu,France
+95,-Saint-Pruges,France
+96,-Salvagny-Les-F,France
+97,-San-Sur-Siagny,France
+98,-Sance-Sur-Meus,France
+99,-Sur-Agout,France
+100,-Sur-Eurentange,France
+101,-Sur-Gorre,France
+102,-Sur-Gorre-En-B,France
+103,-Sur-Meuse,France
+104,-Sur-Orges,France
+105,-Sur-Sartin-En-,France
+106,-Sur-Seine-En-F,France
+107,-Sur-Sir-Bret,France
+108,-Vetignat,France
+109,-Veyle,France
+110,-Zere,France
+111,A Suint-Jean-De,France
+112,Abbe-D'Arnoulas,France
+113,Ac-Sur-Sallage,France
+114,Agne,France
+115,Agny-Soussarroi,France
+116,Ain-De-Loirefon,France
+117,Aint-Girontaire,France
+118,Ais,France
+119,Albias,France
+120,Alizay,France
+121,Ambille-Roi,France
+122,Ambrontlhery,France
+123,Ame-En-Val,France
+124,Angeville,France
+125,Anne,France
+126,Anne-En-Rogersa,France
+127,Anne-Le-Grangat,France
+128,Annevillaint-Me,France
+129,Annonay,France
+130,Archauvetervais,France
+131,Arche,France
+132,Ard,France
+133,Ardelle,France
+134,Ardy,France
+135,Argemontgomes-D,France
+136,Argentiat,France
+137,Arguerion,France
+138,Argues,France
+139,Arn,France
+140,Arnardy,France
+141,Arne,France
+142,Arney-Souse,France
+143,Arney-Sur-Agout,France
+144,Ars,France
+145,Asse,France
+146,Asseaux,France
+147,Asseny,France
+148,Assusson,France
+149,Astel-Les,France
+150,Aubevoye,France
+151,Auges,France
+152,Autres,France
+153,Autrontlher,France
+154,Auve-Les-Beuve-,France
+155,Aux,France
+156,Aux-Chenneville,France
+157,Avel,France
+158,Averny,France
+159,Avigniere,France
+160,Bbaflixecours,France
+161,Beaufortailles-,France
+162,Berancerre-Sall,France
+163,Berg,France
+164,Berge,France
+165,Berhauve-Les,France
+166,Bert,France
+167,Bert-Des-Salvai,France
+168,Bes,France
+169,Bgan,France
+170,Bidach-Les-Maug,France
+171,Bignat,France
+172,Bigne,France
+173,Blin,France
+174,Boutillage,France
+175,Brand,France
+176,Bretagnes-Bitch,France
+177,Bruchterras,France
+178,Bsube,France
+179,Bsur-Messy,France
+180,C-Sur-Messe-Sur,France
+181,Cajalles,France
+182,Castaire-Des-Ba,France
+183,Ccltierras,France
+184,Cgouvignes-Vara,France
+185,Champs-Vert,France
+186,Champtal,France
+187,Chanin,France
+188,Chantin-Les,France
+189,Chanton,France
+190,Chateaux,France
+191,Chaumoisy-Les-B,France
+192,Chauques,France
+193,Chausbertus,France
+194,Chauveur,France
+195,Chauvignat,France
+196,Che,France
+197,Che-Sur-Oise,France
+198,Chel,France
+199,Chel-Sur-Mer,France
+200,Chelle,France
+201,Cheprimer-En-Be,France
+202,Chery,France
+203,Ches,France
+204,Chesee,France
+205,Clecy,France
+206,Cmer,France
+207,Cmery,France
+208,Con,France
+209,Courge,France
+210,Courgemont-Saon,France
+211,Court,France
+212,Courthoult,France
+213,Csuttes,France
+214,Cterrency,France
+215,Cyaingue,France
+216,D'Mrdagran,France
+217,Darde-Moul,France
+218,Den,France
+219,Der,France
+220,Derion,France
+221,Des-En-Belabris,France
+222,Des-En-Saing,France
+223,Deuil,France
+224,Dieux,France
+225,Dles-Aux-Chatea,France
+226,Doir,France
+227,Dre,France
+228,Drey,France
+229,Dugna,France
+230,Dugnan,France
+231,Dugnand,France
+232,Dugnon,France
+233,Dugnon-Saone,France
+234,Dugnonay,France
+235,Dugnoy-Les,France
+236,Dugny,France
+237,Dugny-En-Tardie,France
+238,E Castre-Sur-Be,France
+239,E Chabrisy-Sous,France
+240,E Chapellers-D',France
+241,E Charteneux,France
+242,E Pin-Sur-Mer,France
+243,E Roches,France
+244,E S Tle-Mongueu,France
+245,E Sur-Saveligne,France
+246,E-De-Marigny-Su,France
+247,E-Sur-Durance,France
+248,E-Sur-Siagnies,France
+249,Eaux,France
+250,Ebrecy,France
+251,Edernin,France
+252,Ees-En-Marche,France
+253,Eine,France
+254,Eines,France
+255,Els Banne,France
+256,Els-Andays-Mont,France
+257,Enguer,France
+258,Eoult,France
+259,Epuix,France
+260,Erangatte,France
+261,Erdut,France
+262,Ers,France
+263,Ers-Sur-De-Sur-,France
+264,Erseray,France
+265,Erseraz,France
+266,Ery,France
+267,Es Ulis,France
+268,Es-Antonnay,France
+269,Es-Baille-Sur-M,France
+270,Es-Bailly-Les-B,France
+271,Es-Dijon,France
+272,Es-En-Boult,France
+273,Es-Hame-En-Jall,France
+274,Es-Hameaux,France
+275,Es-Hardel,France
+276,Es-Iere,France
+277,Es-Lavalle,France
+278,Es-Sur-Eure,France
+279,Es-Sur-Meuse,France
+280,Esc,France
+281,Essarros,France
+282,Esse,France
+283,Esse-Sur-Gorren,France
+284,Esseaux,France
+285,Essetot,France
+286,Esseubevieilles,France
+287,Essy-La-De-Roma,France
+288,Essy-Les,France
+289,Essy-Lesseto-Pr,France
+290,Essy-Sur-Veyle,France
+291,Estailles,France
+292,Estin-Le-Sur-Lo,France
+293,Etsg,France
+294,Eubeville-Risle,France
+295,Eubre,France
+296,Eubry,France
+297,Eville-San-Les,France
+298,Evilles-Hames,France
+299,F-Le-Sur-Saint-,France
+300,Farche,France
+301,Faucourge,France
+302,Faucoury,France
+303,Ferny,France
+304,Feuil,France
+305,Firmi,France
+306,Fleul-Le-Chatel,France
+307,Fleul-Les-Les,France
+308,Flixecourt,France
+309,Foutienne,France
+310,Frcourt,France
+311,Fuic-Sur-Oise,France
+312,Fville Castrevi,France
+313,Gard,France
+314,Garde-Rochette,France
+315,Garde-Vire,France
+316,Gardieu,France
+317,Gardivet,France
+318,Garen,France
+319,Garenne,France
+320,Garentiers-D'Ar,France
+321,Gelot,France
+322,Geme,France
+323,Gemontbazinic,France
+324,Gemontiennes,France
+325,Gen,France
+326,Gent-Amienoisse,France
+327,Genteligny-Sous,France
+328,Genvillat,France
+329,Genville-Charti,France
+330,Ger-En-Royal,France
+331,Ger-En-Saint-Ci,France
+332,Ger-En-Tardieux,France
+333,Ger-En-Varen,France
+334,Ger-Sur-Orgen,France
+335,Ger-Sur-Oust,France
+336,Gerollard-En-Ja,France
+337,Gerolledigniers,France
+338,Gerolles,France
+339,Geron,France
+340,Gerouvron,France
+341,Geroux,France
+342,Gerouxierreux,France
+343,Gerouxy,France
+344,Gers,France
+345,Gers-D'Arle,France
+346,Gers-D'Arnoult,France
+347,Gers-D'Outils,France
+348,Gers-De-Thesee,France
+349,Gers-Sur-Delos,France
+350,Gerseray,France
+351,Gersheim,France
+352,Gillaz-Alba-La-,France
+353,Gilly-Carrossen,France
+354,Gne,France
+355,Gny-En-Tard,France
+356,Gny-Le-Claire,France
+357,Gsarroix,France
+358,Gsarros,France
+359,Gseshonq,France
+360,Gsoas,France
+361,Gues,France
+362,Guevin,France
+363,Hausaz,France
+364,Her,France
+365,Hfirmi,France
+366,Hligna,France
+367,Hoiry,France
+368,Houze,France
+369,Hpiriay,France
+370,Hsolsuillac,France
+371,Hsors,France
+372,Hsues,France
+373,Hsult,France
+374,Huir,France
+375,Iberg,France
+376,Ibernay,France
+377,Iderny,France
+378,Ierennes,France
+379,Ignan,France
+380,Ilbeufchanin,France
+381,Ile-Vite-Mont-C,France
+382,Illac,France
+383,Illarde-Village,France
+384,Ille,France
+385,Ille-Risle,France
+386,Illes,France
+387,Illes-Sallarue,France
+388,Illon-Lavigna,France
+389,Im Aret,France
+390,Ing,France
+391,Inguet,France
+392,Innoy-Les,France
+393,Ire,France
+394,Irefleurs,France
+395,Is-Les,France
+396,Iscigonnes-Dame,France
+397,Issolles,France
+398,Issolles-Saint-,France
+399,Issomeray,France
+400,Issomere,France
+401,Issomes,France
+402,Issomes-Bail,France
+403,Isson,France
+404,Isuen,France
+405,Isuent,France
+406,Isues,France
+407,Iteuille,France
+408,Itte,France
+409,Ives,France
+410,Jevieillage,France
+411,Jevillence,France
+412,Jouy-Les-Belign,France
+413,Juignat,France
+414,Kerque-Vielmur-,France
+415,Kerque-Vite-Hel,France
+416,Kerquer,France
+417,Kerques,France
+418,Kerquesme-Des-B,France
+419,Kerquesme-En-Ro,France
+420,Kerquestierre-S,France
+421,L'Uiry,France
+422,La Mont-Peuplet,France
+423,Lairefleur,France
+424,Largemouvre,France
+425,Lberge,France
+426,Ldarnetagne,France
+427,Le Castelle,France
+428,Le-Laverdut,France
+429,Ledignan,France
+430,Ledigneuve-La-R,France
+431,Les,France
+432,Les-Andal Aint-,France
+433,Les-Elbeuf-Le-S,France
+434,Lignes,France
+435,Ljaglandes,France
+436,Ljains-En-Thiba,France
+437,Ljouy-Les-Sarti,France
+438,Ljouy-Lez-Lanne,France
+439,Llardels-De-Sur,France
+440,Lorez,France
+441,Louges,France
+442,Louze-Sur-March,France
+443,Louzeau,France
+444,Lssiat,France
+445,Lvarot,France
+446,Marchatel,France
+447,Mbes,France
+448,Mbrance-En-Vale,France
+449,Mbron-Lavelin,France
+450,Me-De-Mont-Comp,France
+451,Meles-Marie,France
+452,Mesnand,France
+453,Mgne,France
+454,Mion,France
+455,Mire,France
+456,Montaurouxiere-,France
+457,Montpontpontill,France
+458,Monvillagrangev,France
+459,Monvilles,France
+460,Mout,France
+461,Mouze,France
+462,Mouzeau-Sur-Ois,France
+463,Mouzin,France
+464,Mrchausasc,France
+465,Mrudekerque-Vit,France
+466,Msnoy,France
+467,Mssalle-Cosme-D,France
+468,Mutzwald,France
+469,N-Germaint-Les-,France
+470,Nas,France
+471,Ncon,France
+472,Ne Ougastre-Sur,France
+473,Ne-De-Lange,France
+474,Nels Banyuls-Ar,France
+475,Nes,France
+476,Nevilles,France
+477,Nge,France
+478,Ngeroes,France
+479,Ngerouvre,France
+480,Nguettes,France
+481,Nil,France
+482,Nis,France
+483,Nonay-Le-Helene,France
+484,Nuies,France
+485,Oceaux-Chalivet,France
+486,Octevillion,France
+487,On-Du-Roche,France
+488,On-Sain,France
+489,On-Sallaint-Sou,France
+490,On-Sur-Saint-Ju,France
+491,On-Sur-Venne,France
+492,Ontbazens,France
+493,Ontmagne,France
+494,Orbe,France
+495,Ormontgailhac-S,France
+496,Osme-De-Laverdu,France
+497,Osmes,France
+498,Oubin-Sur-Sienn,France
+499,Oul,France
+500,Oult,France
+501,Ouse,France
+502,Out,France
+503,Outils,France
+504,Ouvigne,France
+505,Ouvignon-Laval,France
+506,Ouvilles-Bozard,France
+507,Ouvpiarentiat,France
+508,Ouvre,France
+509,Ouvrin,France
+510,Ouvrinic,France
+511,Ouvronay,France
+512,Ouvrons,France
+513,Pere,France
+514,Pere-De-Marot,France
+515,Perle,France
+516,Pes,France
+517,Pgorrent-Etiere,France
+518,Plouch,France
+519,Psalvaint-Giron,France
+520,Pssvieillbenos,France
+521,Psur-Agoutilled,France
+522,Qsieu-Sur-Mer,France
+523,Quecourg,France
+524,Quecourt,France
+525,Quent,France
+526,Ques,France
+527,Quint,France
+528,Quint-Mihielmur,France
+529,Ralives,France
+530,Rdives,France
+531,Re-Sur-Martin-B,France
+532,Resnestiere-De-,France
+533,Ressenne,France
+534,Ret,France
+535,Rge,France
+536,Rges,France
+537,Riay,France
+538,Rmi,France
+539,Ron,France
+540,Rons,France
+541,Rospordivetervi,France
+542,Rsse,France
+543,Rusis-D'Abeaux,France
+544,Rusis-D'Abzac,France
+545,Rusis-De-Nogard,France
+546,Rusis-En-Vairai,France
+547,Rusis-En-Valene,France
+548,Rusis-Le-Risle,France
+549,Rusis-Le-Sur-Su,France
+550,Rusisgre,France
+551,S Banys D'Arlet,France
+552,S Banys D'Arnou,France
+553,S Banyuls-D'Arn,France
+554,S Clouzeau,France
+555,S Clusaz,France
+556,S Montis-De-Mau,France
+557,S Monts,France
+558,S Paint-Clouz,France
+559,S Saumond,France
+560,S-Aspresse,France
+561,S-Aux,France
+562,S-Claire,France
+563,Sagen,France
+564,Saint-L'Abeau,France
+565,Sarros,France
+566,Sarry,France
+567,Sbiedee,France
+568,Sbrre-Sur-Oust,France
+569,Serangevillous-,France
+570,Sesseaux,France
+571,Sgre,France
+572,Siat,France
+573,Simiana,France
+574,Simiane-De-Mont,France
+575,Sle,France
+576,Smdeuillency,France
+577,Sne,France
+578,Ssan,France
+579,Sse,France
+580,Sse-Sur-Coudun,France
+581,Sseau-Sur-Saint,France
+582,Sseaux,France
+583,Sseaux-Chausber,France
+584,Ssee,France
+585,Sseix,France
+586,Ssenheim,France
+587,Ssenheimsbrunn,France
+588,Ssenne,France
+589,Ssenne-Chateau,France
+590,Ssennes,France
+591,Sseny,France
+592,Sseto-Prie,France
+593,Ssetot,France
+594,Sseube,France
+595,Sseubevin,France
+596,Sseubevoye,France
+597,Ssrange,France
+598,Sstatt,France
+599,Stiennes,France
+600,T-Gervillaz-Alb,France
+601,Tagne,France
+602,Tain-Les,France
+603,Taint-Saint-Ger,France
+604,Taurouardy,France
+605,Tel-Les-Veray,France
+606,Terras,France
+607,Terre-Daoult,France
+608,Ters,France
+609,The,France
+610,Ther,France
+611,Tiguer,France
+612,Tille,France
+613,Tpes,France
+614,Tpiette,France
+615,Tte,France
+616,Ttigneuse,France
+617,Tur,France
+618,Txiere,France
+619,Uc-Le-Chapelles,France
+620,Uc-Le-Vire,France
+621,Uerpere,France
+622,Uilles-Baille-D,France
+623,Uillet,France
+624,Ules-Valence-En,France
+625,Uline-De-Guyenn,France
+626,Usseto-Priac-Et,France
+627,V-Les,France
+628,Varommere,France
+629,Vel,France
+630,Velines,France
+631,Vesse,France
+632,Viere,France
+633,Village,France
+634,Villaz-Alba-La-,France
+635,Ville,France
+636,Villevilly-Le-C,France
+637,Villey,France
+638,Villouge,France
+639,Villy,France
+640,Villy-En-Chars,France
+641,Vseaufort,France
+642,Vsle-Saing,France
+643,Vsult-Du-Perre-,France
+644,Wail,France
+645,Waille,France
+646,Waudry,France
+647,Weis,France
+648,Weit,France
+649,Weville,France
+650,Wevillencerre-E,France
+651,Wrvel,France
+652,Xiere,France
+653,Xierrefontlhero,France
+654,Xiers-De-Montga,France
+655,Xse-Sur-Agout-D,France
+656,Ys D'Arnoules-E,France
+657,Ys D'Arnouloc,France
+658,Ysur-Mesne,France
+659,Zan-De-Brethmas,France
+660,Zars,France
+661,Zarsans,France
+662,Zel,France

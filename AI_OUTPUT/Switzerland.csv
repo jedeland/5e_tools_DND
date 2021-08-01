@@ -1,0 +1,766 @@
+,Name,Origin
+0, (Dorf,Switzerland
+1, (Larussen,Switzerland
+2, / Blatt,Switzerland
+3, Al Bei Melchna,Switzerland
+4, Al Bei Wintgge,Switzerland
+5, An Derswil,Switzerland
+6, Ar Aarand-Sava,Switzerland
+7, C0Enit,Switzerland
+8, Dorf),Switzerland
+9, Ens,Switzerland
+10, Hofach,Switzerland
+11, Kollbrunn / Sp,Switzerland
+12, Le Montagnier,Switzerland
+13, Moos,Switzerland
+14, Rikon,Switzerland
+15, Unterthur (Kre,Switzerland
+16,(Daennensee / B,Switzerland
+17,(Der,Switzerland
+18,(Dorf,Switzerland
+19,(Dorf (Waeder,Switzerland
+20,(Dorf (Waedtche,Switzerland
+21,(Dorf / Vitaqua,Switzerland
+22,(Dorfker,Switzerland
+23,(Dorfthalach (K,Switzerland
+24,(Kreis 2) / Spi,Switzerland
+25,(Kreis 3) / Tal,Switzerland
+26,(Kreis 7) / Dor,Switzerland
+27,(Kreis 9) / Chi,Switzerland
+28,(Nau,Switzerland
+29,(Terthur (Kreis,Switzerland
+30,(Zhalwil Bei Me,Switzerland
+31,-Imchellenziken,Switzerland
+32,-Joratt,Switzerland
+33,-Oberglatt,Switzerland
+34,/ Chiesaz,Switzerland
+35,/ Untersiggens-,Switzerland
+36,/Bruck,Switzerland
+37,/Derswil (Dorf,Switzerland
+38,/Fwollbruggen,Switzerland
+39,/I Uesch,Switzerland
+40,/M/ Iensdorf (W,Switzerland
+41,/Merthur (Kreis,Switzerland
+42,/Mlolingen,Switzerland
+43,/Mnach,Switzerland
+44,/N1Nerrheimiswi,Switzerland
+45,/Oaltbrunn,Switzerland
+46,/Uvisperscholz,Switzerland
+47,/Wettigny,Switzerland
+48,/Wil,Switzerland
+49,/Wten,Switzerland
+50,0Agen,Switzerland
+51,0Eein,Switzerland
+52,0Erich (Kreis 8,Switzerland
+53,0Evilard-Sainte,Switzerland
+54,0Ha Dorf,Switzerland
+55,0Ieelex,Switzerland
+56,0Ier,Switzerland
+57,0In An Der-Stoc,Switzerland
+58,0Jard-Savagnier,Switzerland
+59,0Nau,Switzerland
+60,0Stier,Switzerland
+61,0Uren,Switzerland
+62,1(Dorf,Switzerland
+63,1Aerglatz,Switzerland
+64,1Albis,Switzerland
+65,1Ausannedorf / ,Switzerland
+66,1Fhoin,Switzerland
+67,1Kendorf,Switzerland
+68,1Likon,Switzerland
+69,1Meithen / Hesl,Switzerland
+70,1Risters,Switzerland
+71,1Uz),Switzerland
+72,2-Wsingen,Switzerland
+73,2Chen,Switzerland
+74,2En / Dietlikon,Switzerland
+75,2Naellen,Switzerland
+76,2Ter,Switzerland
+77,2Tern),Switzerland
+78,2Zewville,Switzerland
+79,3An,Switzerland
+80,3Derach (Kreis ,Switzerland
+81,3Ericker,Switzerland
+82,3Seno,Switzerland
+83,3Srad,Switzerland
+84,3St Am Albis,Switzerland
+85,3St Am Altstau,Switzerland
+86,3St Am Rhein,Switzerland
+87,3St Am Rheinlut,Switzerland
+88,3Sthalle,Switzerland
+89,3Tern),Switzerland
+90,3Terthur (Kreis,Switzerland
+91,4Agen,Switzerland
+92,4Dersihl,Switzerland
+93,4Er-Geerau,Switzerland
+94,4Iengentrum),Switzerland
+95,4Ienstern,Switzerland
+96,4Ietlikon (Dorf,Switzerland
+97,4Le,Switzerland
+98,4Nachsee,Switzerland
+99,4Nenbacht,Switzerland
+100,4Nendorf),Switzerland
+101,4Pualaz,Switzerland
+102,4Sen,Switzerland
+103,4Stein,Switzerland
+104,4Sterthur (Brug,Switzerland
+105,4Swil,Switzerland
+106,4Swil / Heslin,Switzerland
+107,5Angenhofensdor,Switzerland
+108,5En / Mittnau,Switzerland
+109,5Ens,Switzerland
+110,5Ergue,Switzerland
+111,5Ienberes,Switzerland
+112,5Iengen,Switzerland
+113,5Iengg,Switzerland
+114,5Iensee / Ter,Switzerland
+115,5Ieretstal,Switzerland
+116,5Le,Switzerland
+117,5Nen,Switzerland
+118,5Penthalten,Switzerland
+119,5Prstrass,Switzerland
+120,5Sen,Switzerland
+121,5Serfeld,Switzerland
+122,5Srietlingen,Switzerland
+123,5Stadt,Switzerland
+124,5Swil / Dorf,Switzerland
+125,5Terhoelzackern,Switzerland
+126,5Terthurnez,Switzerland
+127,7Engstrasson,Switzerland
+128,7Es-Le-Jorat,Switzerland
+129,7Ienglenzburg,Switzerland
+130,7Le,Switzerland
+131,7Nach,Switzerland
+132,7St Am Altstal,Switzerland
+133,7Staad,Switzerland
+134,7Stau,Switzerland
+135,7Stavaglingg,Switzerland
+136,7Swil,Switzerland
+137,7Swil / Stafa,Switzerland
+138,8Ingen,Switzerland
+139,8Lenwil,Switzerland
+140,8Nach,Switzerland
+141,8Ser,Switzerland
+142,8Stau,Switzerland
+143,8Stein Am Rhein,Switzerland
+144,8Steinterhoelza,Switzerland
+145,8Sterkhein,Switzerland
+146,8Swil (Dorf,Switzerland
+147,8Swil / Itschli,Switzerland
+148,9En,Switzerland
+149,9In,Switzerland
+150,9Ingen,Switzerland
+151,9Mat,Switzerland
+152,9Nen,Switzerland
+153,9Nenberwint-Sur,Switzerland
+154,9Thtkacm,Switzerland
+155,A (Dorf / Charr,Switzerland
+156,Aaineggistatt,Switzerland
+157,Aenelex,Switzerland
+158,Aennwaldstau,Switzerland
+159,Aeugst Am Rhein,Switzerland
+160,Aher-Stockern,Switzerland
+161,Ahlierengen Am ,Switzerland
+162,Allen,Switzerland
+163,Allenwil / Gsch,Switzerland
+164,Alles-Le-Laus,Switzerland
+165,Alpnach,Switzerland
+166,Alpnach (Kreis ,Switzerland
+167,Alpnacher Dorf),Switzerland
+168,Alten (Dorf / S,Switzerland
+169,Altermuhlers,Switzerland
+170,Alterstringen,Switzerland
+171,Alterswil / Hir,Switzerland
+172,Alterthur (Krei,Switzerland
+173,Altstal),Switzerland
+174,Altstatt / Stad,Switzerland
+175,Altstau,Switzerland
+176,Altstettmens,Switzerland
+177,Ambrach,Switzerland
+178,An Der-Le-Jorat,Switzerland
+179,An),Switzerland
+180,Anier,Switzerland
+181,Anis,Switzerland
+182,Ano,Switzerland
+183,Antern),Switzerland
+184,Aoerlen,Switzerland
+185,Apendligenbacht,Switzerland
+186,Ard,Switzerland
+187,Auenhausen,Switzerland
+188,Auenhofquarting,Switzerland
+189,Auhen,Switzerland
+190,Auhr,Switzerland
+191,Aunieren / Zinz,Switzerland
+192,Auplingen,Switzerland
+193,Aurg,Switzerland
+194,Aurgenbrunn / B,Switzerland
+195,Awinterkindelfi,Switzerland
+196,B/ (Dorf,Switzerland
+197,Bach Dorf,Switzerland
+198,Bders,Switzerland
+199,Ben / Kollbrunn,Switzerland
+200,Bendlishorn,Switzerland
+201,Berbrugg),Switzerland
+202,Berdorf,Switzerland
+203,Beren,Switzerland
+204,Berg,Switzerland
+205,Bergue,Switzerland
+206,Berwinten,Switzerland
+207,Bkseosaz,Switzerland
+208,Blums,Switzerland
+209,Bmenzburghausen,Switzerland
+210,Bn Undorf (Waed,Switzerland
+211,Bristathalwil,Switzerland
+212,Buzgin,Switzerland
+213,Ch (Kreis 11) /,Switzerland
+214,Chal,Switzerland
+215,Chalwil (Dorf,Switzerland
+216,Chancy,Switzerland
+217,Chanikon / Zinz,Switzerland
+218,Chanz,Switzerland
+219,Chanzlerschliac,Switzerland
+220,Charandson,Switzerland
+221,Chasersiggen,Switzerland
+222,Chaterthur (Kre,Switzerland
+223,Chavannen,Switzerland
+224,Cheller-Daeten,Switzerland
+225,Chen,Switzerland
+226,Chen An Der-Dae,Switzerland
+227,Chen An Derswil,Switzerland
+228,Cher Urdorf,Switzerland
+229,Cher-Geeregasse,Switzerland
+230,Cher-Stockendes,Switzerland
+231,Cheserfelthey,Switzerland
+232,Chevilard-Savag,Switzerland
+233,Chezard,Switzerland
+234,Chlikon / Itsch,Switzerland
+235,Chmarsihl,Switzerland
+236,Chpery,Switzerland
+237,Cht / Albis,Switzerland
+238,Cht / Hofsterd,Switzerland
+239,Chterrgen,Switzerland
+240,Chthal,Switzerland
+241,Chthalterthur (,Switzerland
+242,Chubelbach,Switzerland
+243,Chuepfheim,Switzerland
+244,Daettswil / Hof,Switzerland
+245,Dallen,Switzerland
+246,Dderlenbrunn,Switzerland
+247,Den,Switzerland
+248,Den / Vorder-Co,Switzerland
+249,Dens,Switzerland
+250,Denschenikon / ,Switzerland
+251,Densdorf (Waede,Switzerland
+252,Densdorf / Raet,Switzerland
+253,Densdorfker,Switzerland
+254,Densee / Engst ,Switzerland
+255,Densteiliers,Switzerland
+256,Denstorf),Switzerland
+257,Denswil,Switzerland
+258,Der-Stockenbach,Switzerland
+259,Der-Stocker,Switzerland
+260,Derlingen,Switzerland
+261,Dieti,Switzerland
+262,Dietlikon / Bal,Switzerland
+263,Dnenberg,Switzerland
+264,Domatigenda,Switzerland
+265,Dombresingen,Switzerland
+266,Dorfker,Switzerland
+267,Dtern / Seengst,Switzerland
+268,E Thalwil,Switzerland
+269,E/Mienberg (Cha,Switzerland
+270,E2Chen / Rikon ,Switzerland
+271,E5),Switzerland
+272,E9Kendorf,Switzerland
+273,Ecstiinacher-Da,Switzerland
+274,Egcirheimbach,Switzerland
+275,Egen,Switzerland
+276,Egens,Switzerland
+277,Egent,Switzerland
+278,Eglia,Switzerland
+279,Eich (Kreis 3) ,Switzerland
+280,Eich / Balgach ,Switzerland
+281,Eich / Rikon,Switzerland
+282,Eicht / Guggen ,Switzerland
+283,Einlutzelle,Switzerland
+284,Eitach,Switzerland
+285,Eken,Switzerland
+286,Embrach,Switzerland
+287,Enne,Switzerland
+288,Ennen,Switzerland
+289,Entlebuch,Switzerland
+290,Erachselwangen,Switzerland
+291,Esch,Switzerland
+292,Escharmensch,Switzerland
+293,Eschwil,Switzerland
+294,Eseno,Switzerland
+295,Eseux,Switzerland
+296,Esnach (Kreis 2,Switzerland
+297,Estathausen,Switzerland
+298,Ettnau,Switzerland
+299,Euhausannedorf ,Switzerland
+300,Eunkirch,Switzerland
+301,Eventrum,Switzerland
+302,Evholzmatten/Mo,Switzerland
+303,Evilaruescholz,Switzerland
+304,F (Kreis 9) / O,Switzerland
+305,F Le Cheser / V,Switzerland
+306,Fallenbach / Vo,Switzerland
+307,Falles-Le-Jorat,Switzerland
+308,Fens,Switzerland
+309,Fffallen,Switzerland
+310,Fhellbrunn / Ho,Switzerland
+311,Fhubendli-Zopf,Switzerland
+312,Frau,Switzerland
+313,Freis 11) / Zen,Switzerland
+314,Freis 2) / Wase,Switzerland
+315,Fren,Switzerland
+316,Fren),Switzerland
+317,Frich (Kreier,Switzerland
+318,Froist,Switzerland
+319,Fsebendliswil,Switzerland
+320,Fullen-Fuhr,Switzerland
+321,Fully,Switzerland
+322,G / Kloten,Switzerland
+323,Gant-Cern,Switzerland
+324,Gchalwil,Switzerland
+325,Gelthen / Bahnh,Switzerland
+326,Gen,Switzerland
+327,Geneve,Switzerland
+328,Geroldstal),Switzerland
+329,Gerollikon,Switzerland
+330,Geroman,Switzerland
+331,Geromuensterswi,Switzerland
+332,Gerquartingen,Switzerland
+333,Gerstringen,Switzerland
+334,Ggen,Switzerland
+335,Ggersigen,Switzerland
+336,Ghavannes-Sur-C,Switzerland
+337,Gnach,Switzerland
+338,Gnach (Kreis 12,Switzerland
+339,Gnach (Kreis 2),Switzerland
+340,Gnach / Eich / ,Switzerland
+341,Gnae,Switzerland
+342,Gnand-Savagliac,Switzerland
+343,Gnau (Dorf / Pf,Switzerland
+344,Gontrum,Switzerland
+345,Gossau-Raetersc,Switzerland
+346,Gp/ / Nord,Switzerland
+347,Gpenz,Switzerland
+348,Gpundorf / Volk,Switzerland
+349,Gstathalterthur,Switzerland
+350,Gstatt / Friet,Switzerland
+351,Gstavagliackern,Switzerland
+352,Gutte,Switzerland
+353,Gutten / Wasere,Switzerland
+354,Gvossanne,Switzerland
+355,Halle,Switzerland
+356,Harans,Switzerland
+357,Hatt,Switzerland
+358,Heazxolnau,Switzerland
+359,Heim,Switzerland
+360,Heimbach (Kreis,Switzerland
+361,Hfrau,Switzerland
+362,Hindelbankt Gal,Switzerland
+363,Hinden,Switzerland
+364,Hintal,Switzerland
+365,Hinten,Switzerland
+366,Hinterns,Switzerland
+367,Hitten,Switzerland
+368,Hittermingen,Switzerland
+369,Hlikon / Oberg,Switzerland
+370,Hnach (Dorf,Switzerland
+371,Hnach (Kreis 2),Switzerland
+372,Hnach Dorfkerne,Switzerland
+373,Hnachen,Switzerland
+374,Hnachsee,Switzerland
+375,Hofach (Kreissb,Switzerland
+376,Holstein,Switzerland
+377,Hrisdorf),Switzerland
+378,Hstettmingen,Switzerland
+379,Htigny,Switzerland
+380,Httau,Switzerland
+381,Hunsee / Engstr,Switzerland
+382,Hut,Switzerland
+383,Huterschwil / R,Switzerland
+384,Huzeinboesingen,Switzerland
+385,I See,Switzerland
+386,Ibstgartierex,Switzerland
+387,Ich,Switzerland
+388,Ich (Kreis 3) /,Switzerland
+389,Ich (Kreis 5) /,Switzerland
+390,Ich (Kreis 8) /,Switzerland
+391,Ich (Kreissbere,Switzerland
+392,Ich / Ausse-Nen,Switzerland
+393,Ich / Kreilen,Switzerland
+394,Ich / Wein,Switzerland
+395,Iengstrangen,Switzerland
+396,Ier,Switzerland
+397,Ier-Lautern),Switzerland
+398,Igen,Switzerland
+399,Ijarrat,Switzerland
+400,Ingen,Switzerland
+401,Ingen / Embrach,Switzerland
+402,Ingenazzo,Switzerland
+403,Ingg,Switzerland
+404,Irgen,Switzerland
+405,Irgenstermuhlen,Switzerland
+406,Is 2) / Neunkho,Switzerland
+407,Isellenstorfker,Switzerland
+408,Istersiggen,Switzerland
+409,Itach,Switzerland
+410,Itach (Kreis 5),Switzerland
+411,Itachsen,Switzerland
+412,Iupersigenmoos,Switzerland
+413,Iwiu / Oerloch,Switzerland
+414,J-Auma,Switzerland
+415,Jach,Switzerland
+416,Jalach (Kreis 5,Switzerland
+417,Jalais,Switzerland
+418,Jalaz,Switzerland
+419,Janay,Switzerland
+420,Jard,Switzerland
+421,Jenasco,Switzerland
+422,Kdevan,Switzerland
+423,Ken,Switzerland
+424,Kern,Switzerland
+425,Ketswil,Switzerland
+426,Kgossannes,Switzerland
+427,Kleim,Switzerland
+428,Klotenbach,Switzerland
+429,Klotenziken,Switzerland
+430,Kmdorf,Switzerland
+431,Kmthliackern),Switzerland
+432,Kmthten,Switzerland
+433,Korschwil,Switzerland
+434,Kriedenswil,Switzerland
+435,Kriederstrino,Switzerland
+436,Kriedlisholz,Switzerland
+437,Krienbach (Krei,Switzerland
+438,Kriensteig,Switzerland
+439,Krietlingerschw,Switzerland
+440,L/ Eichten,Switzerland
+441,Laus,Switzerland
+442,Lckinchal,Switzerland
+443,Le Moos,Switzerland
+444,Leben,Switzerland
+445,Legsi (Dorf,Switzerland
+446,Leibstavagnolfi,Switzerland
+447,Leibstgart,Switzerland
+448,Leimbacht / Was,Switzerland
+449,Lekntmalvannedo,Switzerland
+450,Lensch,Switzerland
+451,Lensterengstrin,Switzerland
+452,Leuk,Switzerland
+453,Lge,Switzerland
+454,Lich (Kreis 7) ,Switzerland
+455,Ljorat,Switzerland
+456,Lnen,Switzerland
+457,Lnggen,Switzerland
+458,Lservion,Switzerland
+459,Lueschlier,Switzerland
+460,Lun,Switzerland
+461,Lutry,Switzerland
+462,Luzein,Switzerland
+463,Lvanneig,Switzerland
+464,Lvisperthur (Kr,Switzerland
+465,M(Derlens,Switzerland
+466,M(Eren / Raetts,Switzerland
+467,M(Erenay,Switzerland
+468,M4Ggnsee,Switzerland
+469,Mberg,Switzerland
+470,Mberglatz,Switzerland
+471,Mberwinten,Switzerland
+472,Mberwintermundi,Switzerland
+473,Mderthurnen,Switzerland
+474,Messonat,Switzerland
+475,Mettendorf,Switzerland
+476,Mgeti / Gscholz,Switzerland
+477,Mirich Dorf,Switzerland
+478,Mmittnau,Switzerland
+479,Mmittnau (Dorf,Switzerland
+480,Mmtttringen,Switzerland
+481,Msegliackernez,Switzerland
+482,Msennedorf,Switzerland
+483,Msennwald,Switzerland
+484,Msennwalde,Switzerland
+485,Msitnau,Switzerland
+486,Mslterns,Switzerland
+487,Msltin,Switzerland
+488,Msttfreti,Switzerland
+489,Mvillen,Switzerland
+490,Mwrggenberwinte,Switzerland
+491,N / Pfaeffikon ,Switzerland
+492,N(Erenkenbach,Switzerland
+493,N-Ost,Switzerland
+494,Nach (Kreis 9),Switzerland
+495,Nafelde,Switzerland
+496,Naz,Switzerland
+497,Nceengstringen ,Switzerland
+498,Nceerenlinsburg,Switzerland
+499,Nchaffohr (Brug,Switzerland
+500,Nchaltorf,Switzerland
+501,Nchen,Switzerland
+502,Ndeis 2) / Irge,Switzerland
+503,Ndorf,Switzerland
+504,Nen,Switzerland
+505,Nenbach,Switzerland
+506,Nenbrugg),Switzerland
+507,Nenbrunn (Zenta,Switzerland
+508,Nenbuchsen,Switzerland
+509,Nendorf,Switzerland
+510,Nendorfkernwil,Switzerland
+511,Nens,Switzerland
+512,Netswil,Switzerland
+513,Neuhaus,Switzerland
+514,Ngen,Switzerland
+515,Ngenay,Switzerland
+516,Nich (Kreifen,Switzerland
+517,Nieden,Switzerland
+518,Ningen / Kollis,Switzerland
+519,Ningensteinlutz,Switzerland
+520,Ningentres-Le-L,Switzerland
+521,Ninghalwil,Switzerland
+522,Nkenbach Dorf,Switzerland
+523,Nlund,Switzerland
+524,Nne,Switzerland
+525,Nnheuen,Switzerland
+526,Nofenstorf / Zi,Switzerland
+527,Noffreten (Zent,Switzerland
+528,Nond/Iwregg,Switzerland
+529,Nonden / Raettl,Switzerland
+530,Nondli-Zopf,Switzerland
+531,Nondorf,Switzerland
+532,Noudon,Switzerland
+533,Nren),Switzerland
+534,Nte-Croidevanne,Switzerland
+535,Nte-Croix,Switzerland
+536,Nterdorf / Blat,Switzerland
+537,Nthald,Switzerland
+538,Nthaus,Switzerland
+539,Oberg,Switzerland
+540,Oberlunkirchber,Switzerland
+541,Odligen,Switzerland
+542,Oenchaldswil,Switzerland
+543,Oenlin,Switzerland
+544,Oenlingen,Switzerland
+545,Oenlingenbueris,Switzerland
+546,Oenmoos,Switzerland
+547,Oens,Switzerland
+548,Oentingen,Switzerland
+549,Oentingensdorf,Switzerland
+550,Oerlen,Switzerland
+551,Omenz,Switzerland
+552,Ommberg,Switzerland
+553,Ona,Switzerland
+554,Onaduz,Switzerland
+555,Onau,Switzerland
+556,Ossau,Switzerland
+557,Ost,Switzerland
+558,Othmarsignau,Switzerland
+559,Ovikpafinges,Switzerland
+560,Paanen,Switzerland
+561,Paelle,Switzerland
+562,Pargretikon / O,Switzerland
+563,Paringen,Switzerland
+564,Paringenazzo,Switzerland
+565,Patigen,Switzerland
+566,Patingen,Switzerland
+567,Pchen / Oberegg,Switzerland
+568,Pdens,Switzerland
+569,Pel,Switzerland
+570,Pendorf,Switzerland
+571,Penz,Switzerland
+572,Persee,Switzerland
+573,Perswil / Vogen,Switzerland
+574,Pesen,Switzerland
+575,Platt (Dorf),Switzerland
+576,Plattdorf,Switzerland
+577,Plutzelle,Switzerland
+578,Pster,Switzerland
+579,Pstettswil,Switzerland
+580,Quart,Switzerland
+581,Quartens,Switzerland
+582,Quartier,Switzerland
+583,Quartingen,Switzerland
+584,R(Dorf (Waedtch,Switzerland
+585,Raltsterskappe,Switzerland
+586,Raltstettswil (,Switzerland
+587,Rat,Switzerland
+588,Rdietlikon / Ko,Switzerland
+589,Reiden,Switzerland
+590,Reienbuerickers,Switzerland
+591,Rengstrass,Switzerland
+592,Res,Switzerland
+593,Res-Le-Lauters ,Switzerland
+594,Ressonau,Switzerland
+595,Revilaroux,Switzerland
+596,Rienbach,Switzerland
+597,Ringenthausen,Switzerland
+598,Rist,Switzerland
+599,Rmeen / See,Switzerland
+600,Rnen,Switzerland
+601,Roesinach (Krei,Switzerland
+602,Roess (Kreis 1),Switzerland
+603,Ron,Switzerland
+604,Roux,Switzerland
+605,Rpeih,Switzerland
+606,Rringen,Switzerland
+607,S / Oerlen-Ost,Switzerland
+608,S / Seen Am Rhe,Switzerland
+609,Sceffisberg,Switzerland
+610,Schal,Switzerland
+611,Schenikon,Switzerland
+612,Sdun,Switzerland
+613,Sedligen,Switzerland
+614,Seengen / Zinzn,Switzerland
+615,Seglia,Switzerland
+616,Seme,Switzerland
+617,Sen,Switzerland
+618,Sen-Ost,Switzerland
+619,Senne (Kreis 8),Switzerland
+620,Sennedorf,Switzerland
+621,Sennen,Switzerland
+622,Sennendorfkern),Switzerland
+623,Sennens,Switzerland
+624,Sennwald,Switzerland
+625,Servion,Switzerland
+626,Shallenbachelle,Switzerland
+627,Sheim,Switzerland
+628,Siez,Switzerland
+629,Sina,Switzerland
+630,Sinach,Switzerland
+631,Singen,Switzerland
+632,Slibach,Switzerland
+633,Snen,Switzerland
+634,Sonnen,Switzerland
+635,Spatt,Switzerland
+636,Sperswil),Switzerland
+637,Ssteinfels,Switzerland
+638,Stattenstettnau,Switzerland
+639,Steffikon / Emb,Switzerland
+640,Steinboesson,Switzerland
+641,Steinlutzellers,Switzerland
+642,Sterswil,Switzerland
+643,Stetten / Seen ,Switzerland
+644,Storf,Switzerland
+645,Storf / Eschwel,Switzerland
+646,Storf / Staedtc,Switzerland
+647,Storren / Rikon,Switzerland
+648,Storrendorf),Switzerland
+649,Swangen,Switzerland
+650,T / Wein,Switzerland
+651,Tavagnolfhaus,Switzerland
+652,Tavan,Switzerland
+653,Tavannedorf),Switzerland
+654,Terdorf / Werdo,Switzerland
+655,Terenkenberg,Switzerland
+656,Terkulm,Switzerland
+657,Terswil,Switzerland
+658,Thal,Switzerland
+659,Thald,Switzerland
+660,Thallisbach / M,Switzerland
+661,Thur (Kreis 9) ,Switzerland
+662,Tkernen,Switzerland
+663,Tres,Switzerland
+664,Tsen,Switzerland
+665,U1Len,Switzerland
+666,Ubsasco,Switzerland
+667,Uendli-Zopf,Switzerland
+668,Uenhaus,Switzerland
+669,Uericht / Hosto,Switzerland
+670,Uge,Switzerland
+671,Ullikon (Dorf,Switzerland
+672,Unte-Croiden Un,Switzerland
+673,Unte-Croix,Switzerland
+674,Unter Inboess (,Switzerland
+675,Unterdorf,Switzerland
+676,Untere,Switzerland
+677,Unterhoelzli,Switzerland
+678,Unterkindez /Ch,Switzerland
+679,Unterkirch,Switzerland
+680,Unterkulm,Switzerland
+681,Untermingen,Switzerland
+682,Untern),Switzerland
+683,Unterroy,Switzerland
+684,Unters,Switzerland
+685,Unterschen / Ri,Switzerland
+686,Unterschingen,Switzerland
+687,Unterscholzmat,Switzerland
+688,Untersee,Switzerland
+689,Untersingental,Switzerland
+690,Untersinges,Switzerland
+691,Unterskappendor,Switzerland
+692,Unterswil,Switzerland
+693,Unterswil / Vit,Switzerland
+694,Unterthur (Krei,Switzerland
+695,Upery,Switzerland
+696,Usternen,Switzerland
+697,Ut0Erg (Rheim,Switzerland
+698,Ut0Ignau,Switzerland
+699,Utaeig,Switzerland
+700,Utbinningen,Switzerland
+701,Uzdorfteinachse,Switzerland
+702,Vantermingen,Switzerland
+703,Vegnau,Switzerland
+704,Vhaericht / See,Switzerland
+705,Vhinthalternier,Switzerland
+706,Viens,Switzerland
+707,Vilard,Switzerland
+708,Ville,Switzerland
+709,Villenberg,Switzerland
+710,Villerachterkhe,Switzerland
+711,Villerswil,Switzerland
+712,Villy,Switzerland
+713,Visp,Switzerland
+714,Vispchmerthur (,Switzerland
+715,Vispers,Switzerland
+716,Vispersackendor,Switzerland
+717,Visperschen / A,Switzerland
+718,Visperskappendo,Switzerland
+719,Vispersnach,Switzerland
+720,Visperthur (Bru,Switzerland
+721,Visperthur (Kre,Switzerland
+722,Vnasco,Switzerland
+723,Voeseaux,Switzerland
+724,Volketstatten,Switzerland
+725,Volketstavaglin,Switzerland
+726,Volketswil,Switzerland
+727,Volketswil / Bl,Switzerland
+728,Volketswil / Ge,Switzerland
+729,Volketswil / Ke,Switzerland
+730,Volketswil / Wi,Switzerland
+731,Von,Switzerland
+732,Voy,Switzerland
+733,Vsillersch,Switzerland
+734,Vuistein,Switzerland
+735,Vuisterdorf,Switzerland
+736,Wald,Switzerland
+737,Walde,Switzerland
+738,Walle,Switzerland
+739,Wchlikon / Klot,Switzerland
+740,Weggisberrheim,Switzerland
+741,Wieder Ren / Se,Switzerland
+742,Wiedligen,Switzerland
+743,Wiedlisburgen,Switzerland
+744,Wil,Switzerland
+745,Wil (Dorf,Switzerland
+746,Wil / Buelachth,Switzerland
+747,Wil / Freis 3) ,Switzerland
+748,Wilchnau,Switzerland
+749,Wilde,Switzerland
+750,Wili Zenthausen,Switzerland
+751,Wnacht / Wallwi,Switzerland
+752,Wnerdorf,Switzerland
+753,Wrietlikon / Wa,Switzerland
+754,Wttenberlingen,Switzerland
+755,Yvisp,Switzerland
+756,Zern,Switzerland
+757,Zern An Derling,Switzerland
+758,Zernen,Switzerland
+759,Zhald,Switzerland
+760,Zhanzler,Switzerland
+761,Zier,Switzerland
+762,Zrighofen,Switzerland
+763,Zron,Switzerland
+764,Zwint-Sur-Lause,Switzerland

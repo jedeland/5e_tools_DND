@@ -575,7 +575,11 @@ def soup_names():
                 print("Starting up Beautiful Soup")
 
                 df = pd.DataFrame(columns=["name", "tag", "origin"])
+                print("adding wikipedia names")
                 df = add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats)
+                df_unmerged = add_wiki_names(df)
+                con_frames = [df, df_unmerged]
+                df = pd.concat(con_frames, ignore_index=True)
                 df = translit_non_latin(df)
                 print("Forming files ...")
                 # form_files(df)
@@ -591,7 +595,7 @@ def soup_names():
     else:
         print("File does not exist, starting up Beautiful Soup and creating files")
         df = pd.DataFrame(columns=["name", "tag", "origin"])
-        df = add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats)
+        df = add_names(df, name_div=name_div, name_fin=name_fin, nation_abrev=nation_abrev, nations=nations, probable_formats=probable_formats)
         df_unmerged = add_wiki_names(df)
         con_frames = [df, df_unmerged]
         df = pd.concat(con_frames, ignore_index=True)
@@ -673,7 +677,7 @@ def add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats):
                     item_txt = item_txt.strip()
                 print(item.string)
                 print("Divided text: ", item_txt)
-
+                print(name_div, item_txt)
                 if item_txt == name_div:  # First female entry
                     divide = True
                 if item_txt == name_fin[i]:  # Last acceptable entry
@@ -726,6 +730,7 @@ def read_category_names(df_category, key, origins, gender):
             if any(re.findall(r"Appendix|learn more|previous|List|Surnames|name", name, re.IGNORECASE)):
                 print("Invalid name: ", name)
             else:
+                print(name, gender, origins)
                 df_category = df_category.append({"name": name, "tag": gender, "origin": origins}, ignore_index=True)
         a_tag = tag.find_all("a", href=True)
         for a_link in a_tag:
@@ -842,4 +847,19 @@ def form_files(data):
     # Continue Later
     # data.to_sql()
 
-
+nations = ["French", "Italian", "Spanish", "Turkish", "Dutch", "Swedish", "Polish", "Serbian", "Irish",
+               "Czech", "Hungarian", "Russian", "Persian", "Basque", "Armenian",
+               "German"]  # Test cases to see if wiktionary will take these as a real argument
+nation_abrev = ["France", "Italy", "Spain", "Turkey", "Dutch", "Sweden", "Poland", "Serbia", "Ireland",
+                    "Czech", "Hungary", "Russia", "Persian", "Basque", "Armenia", "German"]
+probable_formats = ["dd", "dd", "dd", "dd", "li", "dd", "td", "li", "li", "dd", "dd", "td", "li", "dd",
+                        "li", "dd"]
+name_div = ['Abbée', "Abbondanza" "Abdianabel", "Abay", "Aafke", "Aagot", "Adela", "Anica",
+                "Aengus", "Ada", "Adél", "Авдотья", "Aban", "Abarrane", "Akabi", "Aaltje"]
+name_fin = ["Zoëlle", "Zelmira", "Zulema", "Zekiye", "Zjarritjen", "Öllegård", "Żywia",
+                "Vida", "Nóra", "Zorka", "Zseraldin", "Ярослава", "Yasmin", "Zuriňe", "Zoulal", "Zwaantje"]
+df = pd.DataFrame(columns=["name", "tag", "origin"])
+df = add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats)
+df_new = df[df["origin"] == "France"]
+print(df_new["tag"].value_counts())
+print(df["tag"].value_counts())

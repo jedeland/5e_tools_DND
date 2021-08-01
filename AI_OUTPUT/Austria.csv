@@ -1,0 +1,715 @@
+,Name,Origin
+0, An Der Gastanz,Austria
+1, Bei Krems,Austria
+2, Bei Lorennersb,Austria
+3, J Il Im Burg,Austria
+4, Narstersdorf,Austria
+5, Ob Juden An De,Austria
+6, Roeckla,Austria
+7, Sassbach,Austria
+8, Tenming,Austria
+9,-Eusiebenersdor,Austria
+10,-Maegassnitz Im,Austria
+11,-Waeg Sassing,Austria
+12,.Alfhornbach,Austria
+13,.Arnoldsteinbur,Austria
+14,.Arsterding,Austria
+15,.Eljbeugautzen ,Austria
+16,.Feg,Austria
+17,.J-Fafen,Austria
+18,.Y Gnoertberg,Austria
+19,/Nries,Austria
+20,A Ia Langholoma,Austria
+21,Aan,Austria
+22,Aben Am Woertbe,Austria
+23,Ach,Austria
+24,Acha,Austria
+25,Achlag,Austria
+26,Aegassburg,Austria
+27,Ael Im Breithal,Austria
+28,Ael Im Sagguns,Austria
+29,Aepldtttrassach,Austria
+30,Aeu,Austria
+31,Aeudorf,Austria
+32,Afen,Austria
+33,Aftledt,Austria
+34,Agla,Austria
+35,Aibl,Austria
+36,Ail,Austria
+37,Ambadill,Austria
+38,Amoesse,Austria
+39,Andritz,Austria
+40,Andskron,Austria
+41,Anger,Austria
+42,Ann,Austria
+43,Anrasseiberg,Austria
+44,Antau,Austria
+45,Anuersthagenleu,Austria
+46,Aonf,Austria
+47,Apons,Austria
+48,Argaretendorf,Austria
+49,Ariatal,Austria
+50,Armbad-Juden,Austria
+51,Arn Im Muehlber,Austria
+52,Arndorf Bei Ims,Austria
+53,Arndorf Im Mari,Austria
+54,Arnfeld,Austria
+55,Arnoldersieder ,Austria
+56,Arriasdorf An D,Austria
+57,Asteiris,Austria
+58,Atten,Austria
+59,Atten Am Wagrab,Austria
+60,Au Am Burg,Austria
+61,Au Marian,Austria
+62,Auersbachberg,Austria
+63,Auersdorf,Austria
+64,Aun,Austria
+65,Ausen,Austria
+66,Ausen-Leogang,Austria
+67,Autallstenbrunn,Austria
+68,Autenbrunn,Austria
+69,Avzernstadt,Austria
+70,Awitz,Austria
+71,B Ia Lassach,Austria
+72,Bach,Austria
+73,Bach Im Petter ,Austria
+74,Bachenfirstritz,Austria
+75,Bad Hall,Austria
+76,Bad Sassiach,Austria
+77,Ben,Austria
+78,Ben Am Thale,Austria
+79,Berg,Austria
+80,Berg An Der Ybb,Austria
+81,Berg Im Kaern,Austria
+82,Berg Im Muehlkr,Austria
+83,Berg Im Pongau,Austria
+84,Bergareis,Austria
+85,Bern,Austria
+86,Bers,Austria
+87,Bersdorf,Austria
+88,Bgram,Austria
+89,Bischa,Austria
+90,Bischitz,Austria
+91,Bischlagendorf,Austria
+92,Boen,Austria
+93,Bratsgfaell,Austria
+94,Bratzen,Austria
+95,Britz,Austria
+96,Brixen An Der K,Austria
+97,Brixen Im Marga,Austria
+98,Brucking,Austria
+99,Brucknerskirche,Austria
+100,Buerbergarthapr,Austria
+101,Buerst,Austria
+102,Burg,Austria
+103,Cawatterfausen-,Austria
+104,Ch Bei Strader ,Austria
+105,Chach,Austria
+106,Chaernberg,Austria
+107,Chaerner,Austria
+108,Chafwies Am Woe,Austria
+109,Chatt,Austria
+110,Chberg,Austria
+111,Chen An Derhorn,Austria
+112,Chwarzau Am Leo,Austria
+113,Dberkendorf In ,Austria
+114,Debach,Austria
+115,Delschkoenbersd,Austria
+116,Dendorf An Der ,Austria
+117,Dferndorf,Austria
+118,Dfons,Austria
+119,Dgert,Austria
+120,Diething,Austria
+121,Diex,Austria
+122,Dleutschlands,Austria
+123,Doertelbach,Austria
+124,Donau,Austria
+125,Donawitz Im Mue,Austria
+126,Donnberg,Austria
+127,Donnens,Austria
+128,Dorf,Austria
+129,Dorf Am Burg,Austria
+130,Dorf Am Semmers,Austria
+131,Dorf Am Woerth,Austria
+132,Dorf An Der Ebe,Austria
+133,Dorfgareith,Austria
+134,Dperndorf,Austria
+135,Dperthen,Austria
+136,Dpital,Austria
+137,Dpnersee,Austria
+138,Dpotten Am Hoch,Austria
+139,Dreichsee,Austria
+140,Droecharnitz,Austria
+141,Droesing,Austria
+142,Droessing,Austria
+143,Dross,Austria
+144,Drossglocknersb,Austria
+145,Drossglockneuki,Austria
+146,Dsjerztal,Austria
+147,Dsriach,Austria
+148,Duenberg,Austria
+149,Duensee,Austria
+150,Duenstein,Austria
+151,Dwaech,Austria
+152,Dwaschau,Austria
+153,Dyaernitz,Austria
+154,E In Der Donnbe,Austria
+155,E Lerndorf,Austria
+156,Eben Im Breistr,Austria
+157,Eben Im Stras,Austria
+158,Ebenberg,Austria
+159,Ebenbersdorf Am,Austria
+160,Ebendorf,Austria
+161,Ebenegg,Austria
+162,Eberg,Austria
+163,Edelsdorf,Austria
+164,Edelsgrub,Austria
+165,Eding,Austria
+166,Eeau,Austria
+167,Eechat,Austria
+168,Eeinburg,Austria
+169,Eemberg Am Wagr,Austria
+170,Eemmersdorf,Austria
+171,Eerbach Bei Sch,Austria
+172,Eerbratzenriege,Austria
+173,Eervbach,Austria
+174,Eervienersere F,Austria
+175,Egertal,Austria
+176,Egg,Austria
+177,Eggen,Austria
+178,Eggstal An Der ,Austria
+179,Eichraunau,Austria
+180,Eiligendorf,Austria
+181,Ein,Austria
+182,Einabend,Austria
+183,Einbach Linken,Austria
+184,Einburg,Austria
+185,Eindhaag Bei Ba,Austria
+186,Eindhaag Im Mar,Austria
+187,Einsoelkaproden,Austria
+188,Einvierberg,Austria
+189,Ekremsmuelsgrub,Austria
+190,Elkirchen,Austria
+191,Ellach,Austria
+192,Elm,Austria
+193,Enag Im Peterdo,Austria
+194,Enaichrottwies,Austria
+195,Enbach,Austria
+196,Enberg,Austria
+197,Enberg Am Sauta,Austria
+198,Enbertlstermoos,Austria
+199,Enegg,Austria
+200,Enreisdorf,Austria
+201,Enrohr,Austria
+202,Enwoerberg,Austria
+203,Eothersburg-Sta,Austria
+204,Er Markt,Austria
+205,Ere Fellach,Austria
+206,Erfischageberg,Austria
+207,Ering,Austria
+208,Ernau,Austria
+209,Ernegg,Austria
+210,Ernhard,Austria
+211,Ernsdorf,Austria
+212,Errol,Austria
+213,Ers,Austria
+214,Ersbach,Austria
+215,Erschoenig,Austria
+216,Ersdorf,Austria
+217,Ersdorf An Der ,Austria
+218,Ersee,Austria
+219,Etach,Austria
+220,Etenmarkt,Austria
+221,Eter Grossdorf,Austria
+222,Eter Pielach,Austria
+223,Ethen,Austria
+224,Ethen Im Burg,Austria
+225,Ethenburg,Austria
+226,Ethersthalgau,Austria
+227,Ethis,Austria
+228,Etten,Austria
+229,Ettersburg Am L,Austria
+230,Eutschalchen Im,Austria
+231,Eutzendorf,Austria
+232,Ewerth,Austria
+233,Ewreis,Austria
+234,Fald,Austria
+235,Fallhof,Austria
+236,Fals,Austria
+237,Farrkirchenbrun,Austria
+238,Feis,Austria
+239,Feissen,Austria
+240,Feistraiskirche,Austria
+241,Feld,Austria
+242,Feldendorf,Austria
+243,Felixdorf,Austria
+244,Felixdorf Bei I,Austria
+245,Fellach,Austria
+246,Fels,Austria
+247,Felsch Am Woert,Austria
+248,Felschaell Am T,Austria
+249,Felsching,Austria
+250,Felsdorf,Austria
+251,Fen,Austria
+252,Fenham,Austria
+253,Fenstanz,Austria
+254,Fer,Austria
+255,Fischach,Austria
+256,Flerheinachen,Austria
+257,Flernhard,Austria
+258,Foffernstein,Austria
+259,Fuerskirchen,Austria
+260,Fuersthal,Austria
+261,Fwinkenberg,Austria
+262,G Im Trau,Austria
+263,G Oenich,Austria
+264,Gaberg,Austria
+265,Gach,Austria
+266,Gaeu,Austria
+267,Gagenwoerbrunn,Austria
+268,Galheinstettall,Austria
+269,Gangensten An D,Austria
+270,Garsthaleonham,Austria
+271,Gartin Bei Wilf,Austria
+272,Gatheim,Austria
+273,Gathen Of Bei M,Austria
+274,Gau,Austria
+275,Gaubitschlatten,Austria
+276,Gawein,Austria
+277,Gaweinvierberg,Austria
+278,Gberg,Austria
+279,Gberg Am Leon,Austria
+280,Geboden,Austria
+281,Gebodendorf,Austria
+282,Geboder Donawit,Austria
+283,Geboderheilande,Austria
+284,Geboltskirchen,Austria
+285,Gel,Austria
+286,Gendorf An Der ,Austria
+287,Gerserbrans,Austria
+288,Ggrabenberg,Austria
+289,Gietach,Austria
+290,Gjoidritz,Austria
+291,Gla,Austria
+292,Goethenfeld,Austria
+293,Gogs,Austria
+294,Gpoethis,Austria
+295,Grafneukirchenf,Austria
+296,Gram,Austria
+297,Griel,Austria
+298,Griesenthon,Austria
+299,Griffer,Austria
+300,Guettenberg,Austria
+301,Gundegg,Austria
+302,Gundelsdorf,Austria
+303,Gut,Austria
+304,Gutereisskirche,Austria
+305,Hader Fischanns,Austria
+306,Hardsthal,Austria
+307,Hat,Austria
+308,Hausmenigswies ,Austria
+309,Hdonawitz Im Mu,Austria
+310,Hdorf In Bei Vo,Austria
+311,Heim,Austria
+312,Hen Under Donaw,Austria
+313,Hfepsteinach,Austria
+314,Hggendorf Bei S,Austria
+315,Hleisdorf In De,Austria
+316,Hlersdorf Am Os,Austria
+317,Hnriesen-Leon,Austria
+318,Holomaeben,Austria
+319,Holomaeberg,Austria
+320,Hornbach,Austria
+321,Hornsdorf,Austria
+322,Hreith,Austria
+323,Hross,Austria
+324,Hstetenfirstrit,Austria
+325,Huns,Austria
+326,Iasdorf,Austria
+327,Ibuswiesenbach,Austria
+328,Ichleb,Austria
+329,Ieder Donnerski,Austria
+330,Ieder Thal,Austria
+331,Iener,Austria
+332,Ies,Austria
+333,Ihen Im Thalhei,Austria
+334,Ihrtersbach Bei,Austria
+335,Imst,Austria
+336,In Im Rosenburg,Austria
+337,Inach Am Ossing,Austria
+338,Indorf,Austria
+339,Ing,Austria
+340,Ing Am Wagram,Austria
+341,Inn,Austria
+342,Innsdorf,Austria
+343,Innsdorf In Kae,Austria
+344,Inzen,Austria
+345,Inzenau,Austria
+346,Inzendorf Am Wa,Austria
+347,Inzengerndorf,Austria
+348,Inzengreisten,Austria
+349,Inzerndorf,Austria
+350,Inzers,Austria
+351,Inzing,Austria
+352,Inzing Am Lecht,Austria
+353,Irester,Austria
+354,Iris,Austria
+355,Irnstettenegg,Austria
+356,Isssulz,Austria
+357,Jerzens,Austria
+358,Jerztal,Austria
+359,Joden An Der Fi,Austria
+360,Kainaben,Austria
+361,Kainach,Austria
+362,Kalteneggraming,Austria
+363,Kapfensterndorf,Austria
+364,Katzendorf,Austria
+365,Kautzendorf,Austria
+366,Kberg,Austria
+367,Kematen,Austria
+368,Kematen An Ders,Austria
+369,Kematensee,Austria
+370,Kirch,Austria
+371,Kirchberg,Austria
+372,Kirchen,Austria
+373,Kirchen In Bei ,Austria
+374,Kirchen In Ders,Austria
+375,Koenau,Austria
+376,Kpernersdorf Am,Austria
+377,Krems,Austria
+378,Kremsmuels,Austria
+379,Kremsmuelsgrub,Austria
+380,Kremsmuens,Austria
+381,Kremstenfeldorf,Austria
+382,Kritz,Austria
+383,Kritz Am Griffe,Austria
+384,Kritz Im Leiten,Austria
+385,Krpprech,Austria
+386,Krumegg,Austria
+387,Krumerg,Austria
+388,Krumering,Austria
+389,Krumersdorf,Austria
+390,Ktein,Austria
+391,Kteindorf Bei B,Austria
+392,Kteuersdorf,Austria
+393,Kthlieneggstadt,Austria
+394,Kttensterach,Austria
+395,Kzefs,Austria
+396,Lach,Austria
+397,Lachdorf,Austria
+398,Laldneu,Austria
+399,Landenberg,Austria
+400,Lassach Grafens,Austria
+401,Lauf,Austria
+402,Ldorf,Austria
+403,Lendorf,Austria
+404,Leobenderndorfg,Austria
+405,Leonhardsthapro,Austria
+406,Leopoldsdorf Am,Austria
+407,Lerching,Austria
+408,Lerheim,Austria
+409,Lils Am Tratsch,Austria
+410,Loichsching,Austria
+411,Loichtin,Austria
+412,Loichtshausen,Austria
+413,Mankt Markt,Austria
+414,Margaeu,Austria
+415,Markgen,Austria
+416,Markt,Austria
+417,Martbergut,Austria
+418,Matten Im Roseg,Austria
+419,Mattenau,Austria
+420,Mberg,Austria
+421,Merk,Austria
+422,Mettersdorf,Austria
+423,Mondshersdorf,Austria
+424,Muehldorf,Austria
+425,Muehlkirching,Austria
+426,Muehlkrein,Austria
+427,Muehlkreissail,Austria
+428,Muenstein,Austria
+429,Muggenlander Do,Austria
+430,Muggenwien,Austria
+431,Muggersee,Austria
+432,Naarnitzend,Austria
+433,Nach,Austria
+434,Nassbach,Austria
+435,Nbach,Austria
+436,Nbervogau,Austria
+437,Nder Voechagen ,Austria
+438,Ndorf,Austria
+439,Ndorf Im Muerse,Austria
+440,Ner,Austria
+441,Nersburg,Austria
+442,Nersdorf,Austria
+443,Neubau,Austria
+444,Niastein,Austria
+445,Nickersdorf Im ,Austria
+446,Nieder Donau,Austria
+447,Nigraming,Austria
+448,Nitzersdorf,Austria
+449,Nlandshers,Austria
+450,Nmarkt,Austria
+451,Noerth,Austria
+452,Noldskirchberg,Austria
+453,Nreis,Austria
+454,Nuems,Austria
+455,Nundsher Traunk,Austria
+456,Nuttenaichlatte,Austria
+457,Nuttendorf In B,Austria
+458,Nutter Trau,Austria
+459,Oech,Austria
+460,Oengerskirchber,Austria
+461,Oenstein,Austria
+462,Oenwang Im Krem,Austria
+463,Oesse,Austria
+464,Oessen,Austria
+465,Oessenbichratsg,Austria
+466,Oessentau,Austria
+467,Oesserbrunn,Austria
+468,Oessiach,Austria
+469,Oessing,Austria
+470,Oessing An Der ,Austria
+471,Oetsch Linklers,Austria
+472,Ofer,Austria
+473,Oing,Austria
+474,Oldenberg,Austria
+475,Olleneixentau,Austria
+476,Ollenkirchenegg,Austria
+477,Olomaebenfeldor,Austria
+478,Ols,Austria
+479,Onds,Austria
+480,Orenzersdorf In,Austria
+481,Orgenwanenriela,Austria
+482,Ortgram,Austria
+483,Ostein,Austria
+484,Osteinburg,Austria
+485,Ostenburgen,Austria
+486,Osteregist,Austria
+487,Ostersdorf Im S,Austria
+488,Ostettenau,Austria
+489,Passach,Austria
+490,Perau,Austria
+491,Pergbervoganger,Austria
+492,Pertal,Austria
+493,Pin,Austria
+494,Pinsten,Austria
+495,Pinterbergareth,Austria
+496,Pintermietachla,Austria
+497,Plunger,Austria
+498,Portberthaprode,Austria
+499,Ppotten,Austria
+500,Prechausenbersb,Austria
+501,Prieder Pram,Austria
+502,Proder Thaya,Austria
+503,Pzall,Austria
+504,Raden,Austria
+505,Radfeld,Austria
+506,Rasteinsoelkirc,Austria
+507,Rattersburgfrie,Austria
+508,Raurisch-Wagram,Austria
+509,Raurischitz,Austria
+510,Rbach,Austria
+511,Reainz Am Seewa,Austria
+512,Redl,Austria
+513,Redlham,Austria
+514,Redlhaming,Austria
+515,Reich,Austria
+516,Reichl,Austria
+517,Reichtshauszens,Austria
+518,Rein,Austria
+519,Reis,Austria
+520,Reisdorf,Austria
+521,Reisskirchen In,Austria
+522,Reith,Austria
+523,Reithal,Austria
+524,Rething,Austria
+525,Reutschlag Im M,Austria
+526,Rfiernham,Austria
+527,Rhard,Austria
+528,Riedl,Austria
+529,Riegg,Austria
+530,Riel,Austria
+531,Riezlerhein,Austria
+532,Riezlerndorf,Austria
+533,Riezlernsill,Austria
+534,Ring,Austria
+535,Ris,Austria
+536,Rittal An Der T,Austria
+537,Ritz,Austria
+538,Rlaad,Austria
+539,Roehlkirchenfur,Austria
+540,Roesching,Austria
+541,Rohrbach,Austria
+542,Rohrbach Links ,Austria
+543,Rohrenberg,Austria
+544,Rol,Austria
+545,Roleb,Austria
+546,Rossglockner,Austria
+547,Rott,Austria
+548,Rsch-Wagrafen,Austria
+549,Rsee,Austria
+550,Rsthalchen,Austria
+551,Rsthalgau,Austria
+552,Rutneu,Austria
+553,Rwatterfen,Austria
+554,Rzeusieder Dona,Austria
+555,Sankt Gilgenlan,Austria
+556,Sankt Margartin,Austria
+557,Sankt Martin,Austria
+558,Sankt Perndorf,Austria
+559,Schagenlandsher,Austria
+560,Schattenland,Austria
+561,Sching,Austria
+562,Schland Petersb,Austria
+563,Schlkirchwarzau,Austria
+564,Schoenau,Austria
+565,Sdersieberg,Austria
+566,Sdorf Bei Matt,Austria
+567,See,Austria
+568,Serfaus,Austria
+569,Serfens,Austria
+570,Serfl,Austria
+571,Skirchskirchenb,Austria
+572,Soelk,Austria
+573,Spittau,Austria
+574,Ssiach,Austria
+575,St. Marzau Am T,Austria
+576,Stadt,Austria
+577,Stal,Austria
+578,Stanz,Austria
+579,Stein,Austria
+580,Steiris,Austria
+581,Stelbach,Austria
+582,Sten,Austria
+583,Stenburg/Pliber,Austria
+584,Stenfeld Am Bur,Austria
+585,Ster,Austria
+586,Ster Fischuns,Austria
+587,Sterding,Austria
+588,Stettallentau,Austria
+589,Stickersdorf,Austria
+590,Stoesing,Austria
+591,Stoessen,Austria
+592,Suehl,Austria
+593,Taleon,Austria
+594,Tamsweg,Austria
+595,Tauf,Austria
+596,Taufkirchenkels,Austria
+597,Taugsch-Wagrabe,Austria
+598,Tberg,Austria
+599,Tdumnersdorf,Austria
+600,Telfs,Austria
+601,Ten,Austria
+602,Tens,Austria
+603,Terberg,Austria
+604,Terberg An Ders,Austria
+605,Terberg In Der ,Austria
+606,Tereis,Austria
+607,Terneggen,Austria
+608,Tersdorf,Austria
+609,Terwarten,Austria
+610,Thaben,Austria
+611,Thagenberg,Austria
+612,Thal,Austria
+613,Thalchskirchen,Austria
+614,Thaleonham,Austria
+615,Thumegg,Austria
+616,Tlapfen,Austria
+617,Tledt,Austria
+618,Tobad-Juden An ,Austria
+619,Toesch,Austria
+620,Tradendorf,Austria
+621,Tribuswinks Der,Austria
+622,Ttenburg Am Sas,Austria
+623,Ttenmannsbrunn,Austria
+624,Ttschen An Der ,Austria
+625,Ubau,Austria
+626,Uben,Austria
+627,Ubendorfgassing,Austria
+628,Ubens,Austria
+629,Uchlag Bei Hall,Austria
+630,Uens,Austria
+631,Uenstal,Austria
+632,Uenstein Bei De,Austria
+633,Uerbach,Austria
+634,Uessen,Austria
+635,Ulsasse,Austria
+636,Unds,Austria
+637,Unn,Austria
+638,Ussach,Austria
+639,Ussail,Austria
+640,Vang Am Wagrami,Austria
+641,Vankt Gastein,Austria
+642,Vdiene,Austria
+643,Veld,Austria
+644,Veldkirchendorf,Austria
+645,Velm,Austria
+646,Voeantal,Austria
+647,Voerbergut,Austria
+648,Vogau,Austria
+649,Voitschlagenlan,Austria
+650,Voitschuns,Austria
+651,Volder Donnberg,Austria
+652,Voldskirch,Austria
+653,Voldsthal,Austria
+654,Voldsthalchendo,Austria
+655,Voldsthaprodenr,Austria
+656,Vorau,Austria
+657,Vorder Fischl,Austria
+658,Vvoitsching,Austria
+659,Walchenfeldkirc,Austria
+660,Wald,Austria
+661,Waldprechtonn,Austria
+662,Wanenreitenstet,Austria
+663,Wanens,Austria
+664,Wang,Austria
+665,Wartin,Austria
+666,Wartin Derau,Austria
+667,Wden,Austria
+668,Wden Im Muehlkr,Austria
+669,Wdinabenau,Austria
+670,Wein,Austria
+671,Weist,Austria
+672,Weistenberg,Austria
+673,Weistritz,Austria
+674,Weiz,Austria
+675,Weng Im Rosenba,Austria
+676,Wern,Austria
+677,Werntermietach,Austria
+678,Wlltenner,Austria
+679,Wrrchen,Austria
+680,Wten,Austria
+681,Wulkaprodenberg,Austria
+682,Wulkaprodenbich,Austria
+683,Wulkaproderheil,Austria
+684,Xen An Derheinb,Austria
+685,Yaming,Austria
+686,Ybplattenbach,Austria
+687,Ybplattenfeld,Austria
+688,Ybplatter,Austria
+689,Ybplattwies,Austria
+690,Yeppenhardsthal,Austria
+691,Yeppensee,Austria
+692,Yeppottwald,Austria
+693,Yeppottwies,Austria
+694,Yiplendorf,Austria
+695,Yipmatzersburgf,Austria
+696,Yipmauten Am Sa,Austria
+697,Yjpdoing,Austria
+698,Ynpofstein,Austria
+699,Yrenberg,Austria
+700,Yrimvanfeld,Austria
+701,Yummoos,Austria
+702,Yumsriesen,Austria
+703,Zegdorf,Austria
+704,Zell,Austria
+705,Zell An Derhorn,Austria
+706,Zellboegisterwa,Austria
+707,Zen,Austria
+708,Zendorf,Austria
+709,Zengerndorf,Austria
+710,Zenscha,Austria
+711,Zlllabrunn,Austria
+712,Zlllben,Austria
+713,Zlllberg Am Woe,Austria

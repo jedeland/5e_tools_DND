@@ -361,11 +361,13 @@ def show_npc(df, nations, num_npcs):
         if counter % 2 == 0:
             counter += 1
             rand_name = df.loc[(df["tag"] == "M") | (df["tag"] == "NN") | (df["tag"] == "WM")]
-            pyside_df = append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname)
+            gender_in = "M"
+            pyside_df = append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname, gender_in)
         else:
             counter += 1
             rand_name = df.loc[(df["tag"] == "F") | (df["tag"] == "NN") | (df["tag"] == "WF")]
-            pyside_df = append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname)
+            gender_in = "F"
+            pyside_df = append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname, gender_in)
     print(pyside_df)
     return pyside_df
 
@@ -375,7 +377,7 @@ def show_npc(df, nations, num_npcs):
 
 
 
-def append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname):
+def append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname, gender_in):
     f_name, l_name, job = np.random.choice(rand_name["name"], 1), np.random.choice(rand_surname["name"],
                                                                                    1), np.random.choice(
         job_choice, 1)
@@ -397,7 +399,7 @@ def append_npc(gender_tags, neutral_genders, pyside_df, rand_name, rand_surname)
     #     print(name_group)
     #     l_name = "-".join(name_group)
     # Cases NN, WF, WM
-    f_gender = find_gender(str(f_gender), gender_tags, neutral_genders)
+    f_gender = find_gender(gender_in, gender_tags, neutral_genders)
     print(f_gender)
     # Verifies if names are made up of char's
     gender = str(f_gender)

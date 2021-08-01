@@ -57,10 +57,37 @@ def find_names():
 def create_names():
     df = find_names()
     names = pd.unique(df["timezone"])
+
+    df_out = df.copy()
+    df_new = pd.DataFrame(columns=df_out.columns)
+    for name in names:
+        df_temp = df_out[df_out["timezone"] == name]
+        df_size = int(df_temp["timezone"].size)
+        print("Size of dataframe is ", df_temp["timezone"].size)
+        print(df_temp)
+        try:
+            if df_size >= 500:
+                df_new = pd.concat([df_new, df_temp.sample(500)], ignore_index=True)
+            elif df_size >= 100:
+                print("I WORKED")
+                df_new = pd.concat([df_new, df_temp.sample(100)], ignore_index=True)
+            elif df_size >= 50:
+                df_new = pd.concat([df_new, df_temp.sample(50)], ignore_index=True)
+            elif df_size == 0:
+                df_new = df_temp.sample(500)
+        except:
+            print("Error")
+    print(df_new)
+    print(df_new["timezone"].size)
+    df_new = df_new.drop_duplicates()
+    print(df_new.size)
+    print(pd.unique(df_new["timezone"]))
+    #print(input(""))
     tags = pd.unique(df["country_code"])
     print(tags)
     print(df["country_code"])
     country_names = {}
+    #TODO: change df fantasy to use df_new which is a smaller size
     for tag in tags:
         country_names[tag] = coco.convert(names=tag, to="name_short")
     print(country_names)
@@ -68,8 +95,9 @@ def create_names():
 
     names = pd.unique(df["timezone"])
     df_fantasy = pd.DataFrame(columns=["name", "result", "capital", "country"])
+    print(df["timezone"].value_counts())
     for f in names:
-        df_temp = df[df["timezone"] == f]
+        df_temp = df_new[df_new["timezone"] == f]
         for k, v in df_temp.iterrows():
             print(k, v)
             timezone = v["timezone"].split(r"/")[1]
@@ -78,9 +106,12 @@ def create_names():
             print("DF fantasy ", df_fantasy)
         print(df_temp)
     print(df_fantasy)
+    print("LOOK HERE ", df_fantasy["capital"].value_counts())
     #print(input(""))
     df = df_fantasy
     print(df)
+    print(df.size)
+    #print(input(""))
 
 
 
@@ -134,11 +165,11 @@ def create_names():
 
         x, y, train_util, train_info = training_data(g, data_dict, 3)
         # print(train_util)
-        current_model, training_infos, history = model_start(train_info, 178)  # Original used 128, 256 is too slow
+        current_model, training_infos, history = model_start(train_info, 128)  # Original used 128, 256 is too slow
         compile_model(model=current_model,
                       hyperparams={"lr": 0.003, "loss": "categorical_crossentropy", "batch_size": 32},
                       history=history, training_infos=training_infos)
-        train_model(current_model, x, y, training_infos, history, 1200)  # Epochs after 2000 seem efficient
+        train_model(current_model, x, y, training_infos, history, 950)  # Epochs after 2000 seem efficient
         print("Printing {} names".format(g))
         name_list = []
         name_list = set(name_list)
@@ -164,6 +195,10 @@ def create_names():
         name_list = sorted(name_list)
         names_dict.update({g: list(name_list)})
         print(names_dict)
+        out_df = pd.DataFrame()
+        out_df["Name"] = name_list
+        out_df["Origin"] = g
+        out_df.to_csv(path_or_buf="AI_OUTPUT/{}.csv".format(g))
 
     print("Did that work?")
     return names_dict

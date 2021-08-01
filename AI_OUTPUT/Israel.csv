@@ -1,0 +1,571 @@
+,Name,Origin
+0, 'Ezra,Israel
+1, Adar,Israel
+2, Brak,Israel
+3, Dat,Israel
+4, Deidis,Israel
+5, El'Azariyya,Israel
+6, Hashah,Israel
+7, Hashahar,Israel
+8, Ilqaneu Adar,Israel
+9, K'Ar Tavor,Israel
+10, Qra,Israel
+11, Rasif,Israel
+12, Rosh Hadassa,Israel
+13, S'El,Israel
+14, Sham,Israel
+15, Shama',Israel
+16, Shmuel,Israel
+17, Tarshiha,Israel
+18, Triyyon,Israel
+19, Tzt Yehud-Mono,Israel
+20, Vet Hahadassa,Israel
+21, Yehoshon Hadas,Israel
+22, Yehuda,Israel
+23,''Ezra,Israel
+24,'At ,Israel
+25,'Azarea,Israel
+26,'Azaret Hashitt,Israel
+27,'Azaret Yehuda,Israel
+28,'Blllfzaret Had,Israel
+29,'Blllhnsh Hashi,Israel
+30,'Blllzha,Israel
+31,'Blllzziryat Sh,Israel
+32,'Bt 'Ezra,Israel
+33,'Eiia Ramona,Israel
+34,'El,Israel
+35,'Elr Hadaj,Israel
+36,'Elrah,Israel
+37,'Elrasif,Israel
+38,'Er Tarshiha,Israel
+39,'Er Tavor,Israel
+40,'Eri,Israel
+41,'Erot,Israel
+42,'Et El'Azari,Israel
+43,'Et Heib,Israel
+44,'Ezra,Israel
+45,'Fzriyya,Israel
+46,'Ib Ol Haniqra,Israel
+47,'Ir Hashitta,Israel
+48,'Mzer,Israel
+49,'Ol Haniqra,Israel
+50,'Ol Hann,Israel
+51,'On Hann,Israel
+52,'Ov Yon,Israel
+53,'Rzaiir Ha`Emeq,Israel
+54,'Tzner Taiyiba,Israel
+55,'Tzner Tavor,Israel
+56,'Tzner Toviyyon,Israel
+57,'Tzniyiba,Israel
+58,'Yzeir Hannun,Israel
+59,-Lfmaryahu,Israel
+60,-Lrmha,Israel
+61,-Lryat Monoisio,Israel
+62,A Adar,Israel
+63,A'Alem,Israel
+64,A'Yelomi,Israel
+65,Adar,Israel
+66,Aharbiya,Israel
+67,Ajardesiyya,Israel
+68,Arad,Israel
+69,Ata,Israel
+70,Azarea,Israel
+71,Azaret Hilqiyyo,Israel
+72,Azareth,Israel
+73,Azari,Israel
+74,Azariyya,Israel
+75,B Ala Hadaj,Israel
+76,B Fahm,Israel
+77,B Gltush,Israel
+78,B `Eina,Israel
+79,B'Alem,Israel
+80,B'Eri,Israel
+81,Bata,Israel
+82,Bet Hashitta,Israel
+83,Bftiq,Israel
+84,Bir Hadaj,Israel
+85,Bir Hann,Israel
+86,Bir Hashitta,Israel
+87,Blim,Israel
+88,Bqen,Israel
+89,Bqllahst Jannun,Israel
+90,Bqlllzliya Pitu,Israel
+91,Br'Ka Blllhnim,Israel
+92,Brekhasif,Israel
+93,Brekhasim,Israel
+94,Bsiyya,Israel
+95,Bt Ka Blllh,Israel
+96,Bt'Alem,Israel
+97,Bulgh,Israel
+98,Bulleh,Israel
+99,Bval Hagaliya P,Israel
+100,Bval Kamma,Israel
+101,Bval Karmi'El,Israel
+102,Bvalansuwa,Israel
+103,Bvama',Israel
+104,Bziyya,Israel
+105,Csesereth,Israel
+106,D'Es,Israel
+107,D-Mond,Israel
+108,D`In Makkabbim ,Israel
+109,Da',Israel
+110,Dai,Israel
+111,Daisi,Israel
+112,Daj,Israel
+113,Dasha,Israel
+114,Dasham,Israel
+115,Dashmona,Israel
+116,Dassa,Israel
+117,Dasseret 'Ezra,Israel
+118,Dasseret Heib,Israel
+119,Dassereth,Israel
+120,Dat,Israel
+121,Desiyyon,Israel
+122,Det Hadasham,Israel
+123,Dir,Israel
+124,Dqin,Israel
+125,Drdesiyya,Israel
+126,Dresher,Israel
+127,Dshon Leziyya,Israel
+128,Dzriyya,Israel
+129,Ef Batin,Israel
+130,Ef Bst Janna,Israel
+131,Eh Tiqwa,Israel
+132,Esh Hashaharbiy,Israel
+133,Et 'Ezra,Israel
+134,Et Batin,Israel
+135,Et Batya,Israel
+136,Et Ben-Gurion,Israel
+137,Et El'Azaret Hi,Israel
+138,Et Hilqiyyon,Israel
+139,Et Tavor,Israel
+140,Et Ziyya,Israel
+141,Ezaqef,Israel
+142,Ezqanea Aaa,Israel
+143,F 'Ezra,Israel
+144,F Ea Yasim,Israel
+145,F El'Azaret 'Ez,Israel
+146,F Hagalil,Israel
+147,F Hagalim,Israel
+148,F Hahadasha,Israel
+149,F Hashitta,Israel
+150,F Kamma,Israel
+151,F Karmi'El,Israel
+152,F Makr,Israel
+153,F Rasim,Israel
+154,F Tarshiha,Israel
+155,Faishon Ha`Emeq,Israel
+156,Far Naoranim,Israel
+157,Far Taiyiba,Israel
+158,Far Toviyya,Israel
+159,Far Yehud-Monos,Israel
+160,Far Yona,Israel
+161,Farmel,Israel
+162,Farmi'El,Israel
+163,Fas Ama',Israel
+164,Fassa,Israel
+165,Feret 'Ezra,Israel
+166,Fh Qasim,Israel
+167,Firla,Israel
+168,Fsher,Israel
+169,Ft Kamma,Israel
+170,Fureida Makkabb,Israel
+171,Fzre,Israel
+172,Fzrreidis,Israel
+173,G'Vun,Israel
+174,Gdal Hadassa,Israel
+175,Gdal Hagaliya P,Israel
+176,Gdal Haniqra,Israel
+177,Gdal Hashah,Israel
+178,Gdal Hashitta,Israel
+179,Gdal Kamma,Israel
+180,Gdal Karmel,Israel
+181,Gdal Karmi'El,Israel
+182,Gdal Karmi'Ezer,Israel
+183,Gdar,Israel
+184,Gdelomi,Israel
+185,Ghvre',Israel
+186,Gjur,Israel
+187,Gvv'On Leziyyon,Israel
+188,H Tiqwa,Israel
+189,H'Ale,Israel
+190,Ha',Israel
+191,Ha'Alem,Israel
+192,Hah,Israel
+193,Hahadassa,Israel
+194,Hahar,Israel
+195,Haharbiya,Israel
+196,Hahariyya,Israel
+197,Hahariyyon,Israel
+198,Haifa,Israel
+199,Halil,Israel
+200,Har,Israel
+201,Har Naoranim,Israel
+202,Har Yehud-Monos,Israel
+203,Harad,Israel
+204,Has,Israel
+205,Hasha,Israel
+206,Hat,Israel
+207,Hava,Israel
+208,Hb'Eiiir Hadaj,Israel
+209,Hbmu Llt Ata,Israel
+210,Hbrzkirba,Israel
+211,Hbtti,Israel
+212,Hefar Naoranim,Israel
+213,Heikh Danna,Israel
+214,Hekkabbim Re'Ut,Israel
+215,Hekkabbim Reina,Israel
+216,Hektabim Re'Ut,Israel
+217,Helomi,Israel
+218,Hemaryat Al Had,Israel
+219,Hemaryat Gat,Israel
+220,Henaym,Israel
+221,Her,Israel
+222,Heroshua',Israel
+223,Hesarea,Israel
+224,Heskeher,Israel
+225,Heskereth,Israel
+226,Het 'Ezra,Israel
+227,Het Batin,Israel
+228,Het El'Azaret B,Israel
+229,Het Heib,Israel
+230,Het Ziyya,Israel
+231,Hevassa,Israel
+232,Hevava,Israel
+233,Hhaifa,Israel
+234,Hhariyyon,Israel
+235,Hhibq,Israel
+236,Hhiiq Aa'Alem,Israel
+237,Hiba,Israel
+238,Hirah,Israel
+239,Hiret Hilqiyyon,Israel
+240,Hitta,Israel
+241,Hjda,Israel
+242,Hkhasim,Israel
+243,Hkrrmel,Israel
+244,Hllonis,Israel
+245,Hmordiyya,Israel
+246,Hnrzaiiyya,Israel
+247,Hotiqwa,Israel
+248,Hr Toviyya,Israel
+249,Hrah,Israel
+250,Hrfziryat Yasif,Israel
+251,Hrilot Taiyiba,Israel
+252,Hsha,Israel
+253,Hsham,Israel
+254,Hshama',Israel
+255,Hshohama',Israel
+256,Ht Tarshiha,Israel
+257,Hud-Mond,Israel
+258,Hul',Israel
+259,Huu'Ayna-Nujayd,Israel
+260,I`Ree,Israel
+261,Ibbim Re'Ut,Israel
+262,Ibbim Reina,Israel
+263,Ibi',Israel
+264,Ibi'Alem,Israel
+265,Ibvil Ha`Emeq,Israel
+266,Idheshet Ha`Eme,Israel
+267,If Hashitta,Israel
+268,Ifa,Israel
+269,Ir Hagalil,Israel
+270,Ir Hashah,Israel
+271,Ir Hashitta,Israel
+272,Irah,Israel
+273,Irdassa,Israel
+274,Irra,Israel
+275,Ish,Israel
+276,Isha,Israel
+277,Ishon Hagalil,Israel
+278,Ishon Leziyya,Israel
+279,Ishon Leziyyon,Israel
+280,Ivha'Il Hashitt,Israel
+281,Ivtonaim,Israel
+282,Iyron,Israel
+283,Jardesiyya,Israel
+284,Jardesiyyon,Israel
+285,Jatdayshet Hann,Israel
+286,Jerdaysa El Fah,Israel
+287,Jhrdesiyyon,Israel
+288,Jhrdiyya,Israel
+289,Jhrdiyyon,Israel
+290,Jhrdljon,Israel
+291,Jud,Israel
+292,Jzpr On Hadassa,Israel
+293,K'Area,Israel
+294,Kasbiyat Monoss,Israel
+295,Kfar Adar,Israel
+296,Kfar Ben-Gurion,Israel
+297,Kfar Seir Hasha,Israel
+298,Knfassa,Israel
+299,Krbiyat Yehuda,Israel
+300,Krfaisi,Israel
+301,Ksher,Israel
+302,Kt Tavor,Israel
+303,L 'Ezra,Israel
+304,L Fureida Makr,Israel
+305,L Fureidis,Israel
+306,L Ghaush,Israel
+307,L Ilit,Israel
+308,L Kabbim Reina,Israel
+309,L Mozqin,Israel
+310,L Rasim,Israel
+311,L `On Leziyya,Israel
+312,Lapid,Israel
+313,Ldpesrerusalem,Israel
+314,Ldpi,Israel
+315,Ldpis,Israel
+316,Ldpiyya,Israel
+317,Ldpiyyon,Israel
+318,Lhpid,Israel
+319,Lih,Israel
+320,Ltpiyya,Israel
+321,Lzriyya,Israel
+322,Md'Rmol,Israel
+323,Mdar,Israel
+324,Mdbinyon,Israel
+325,Mdhist,Israel
+326,Mdiq,Israel
+327,Mdzriyyon,Israel
+328,Mld-Sljet El'Az,Israel
+329,Mldiin Makkabbi,Israel
+330,Modi'In Makkabb,Israel
+331,N Makkabbim Rei,Israel
+332,N''Azariyyon,Israel
+333,Nata,Israel
+334,Nbu Ghaush,Israel
+335,Nehaqim,Israel
+336,Nfa Qasif,Israel
+337,Nha',Israel
+338,Odlisi,Israel
+339,Odliyya,Israel
+340,Of Hadasha,Israel
+341,Pdet Bat Monoss,Israel
+342,Qel Fureidis,Israel
+343,Qer,Israel
+344,Qfar Toviyyon,Israel
+345,Qlllzzir,Israel
+346,Qrel,Israel
+347,Qrinya,Israel
+348,Qrra,Israel
+349,Qrrah,Israel
+350,Qrrayim,Israel
+351,Qrreth,Israel
+352,Qsret Ziyyon,Israel
+353,Qulayim,Israel
+354,R Hadashmona,Israel
+355,R Hahadaj,Israel
+356,R Hashitta,Israel
+357,R Naoranim,Israel
+358,R Qasim,Israel
+359,R Rosh Hann,Israel
+360,R Tarshiha,Israel
+361,R Toviyyon,Israel
+362,R Yasim,Israel
+363,R`Eina,Israel
+364,Ranim,Israel
+365,Rasim,Israel
+366,Ravim,Israel
+367,Rbiya Pituah,Israel
+368,Rbiyat Mozqin,Israel
+369,Rdashama',Israel
+370,Rdesiyya,Israel
+371,Rdesiyyon,Israel
+372,Rekhasim,Israel
+373,Reniqra,Israel
+374,Ret Hadassa,Israel
+375,Rfhura,Israel
+376,Rfirmi'El,Israel
+377,Rihat,Israel
+378,Rjkhrdaiir Hann,Israel
+379,Ron,Israel
+380,Rqelalil,Israel
+381,Rqsyileish,Israel
+382,Rreina,Israel
+383,Rtonis,Israel
+384,Rvea Ylm,Israel
+385,Rvha',Israel
+386,Rvkne,Israel
+387,Sh Shmuel,Israel
+388,Sha,Israel
+389,Shelomi,Israel
+390,Shemaryat Monos,Israel
+391,Sher,Israel
+392,Shet Batin,Israel
+393,Shet Batya,Israel
+394,Shet Ben-Gurion,Israel
+395,Shet El'Azari,Israel
+396,Shet Hadaj,Israel
+397,Shet Haniqra,Israel
+398,Shet Hanna,Israel
+399,Shet Hashitta,Israel
+400,Shet Heib,Israel
+401,Shet Hilqiyya,Israel
+402,Shet Yam,Israel
+403,Shet Yasif,Israel
+404,Shet Ziyyon,Israel
+405,Shon Hagaliyat ,Israel
+406,Shon Hanna,Israel
+407,Shon Leziyyon,Israel
+408,Ssha,Israel
+409,Ssret Yam,Israel
+410,St Jann,Israel
+411,St Janna,Israel
+412,St Jannun,Israel
+413,St Jerusalem,Israel
+414,Sver Tavor,Israel
+415,Szer,Israel
+416,T Ata,Israel
+417,T Bal Karmel,Israel
+418,T Ben-Gurion,Israel
+419,T El'Azarea,Israel
+420,T Fahm,Israel
+421,T Ha`Emeq,Israel
+422,T Had,Israel
+423,T Hadaj,Israel
+424,T Hagaliya Pitu,Israel
+425,T Haniqra,Israel
+426,T Hann,Israel
+427,T Hashah,Israel
+428,T Hashahat,Israel
+429,T Heib,Israel
+430,T Hilqiyya,Israel
+431,T Hilqiyyon,Israel
+432,T Laziyya,Israel
+433,T Laziyyon,Israel
+434,T Leziyya,Israel
+435,T Rasifea,Israel
+436,T Reina,Israel
+437,T Yam,Israel
+438,T Yehuda,Israel
+439,T Ziyya,Israel
+440,T Ziyyon,Israel
+441,Tb'El,Israel
+442,Tbgat,Israel
+443,Tbiya Pituah,Israel
+444,Teh,Israel
+445,Tih,Israel
+446,Tla,Israel
+447,Tlzpi ,Israel
+448,Trliya,Israel
+449,Tv'On Hadaj,Israel
+450,Tvel Monosson,Israel
+451,Tz' El'Azariyya,Israel
+452,Tzaiiq Qen,Israel
+453,Tzale,Israel
+454,Tziyya,Israel
+455,Tziyyon,Israel
+456,Tzpe Ramona,Israel
+457,Tzriyyon,Israel
+458,Ud-Monosson,Israel
+459,Uda,Israel
+460,Ull,Israel
+461,Urmi'Ezer,Israel
+462,Uru,Israel
+463,Uzmirea,Israel
+464,Vazarea,Israel
+465,Vbt Kasb Shmuel,Israel
+466,Veh Tiqwa,Israel
+467,Ver Toviyya,Israel
+468,Ver Toviyyon,Israel
+469,Ves El Mond,Israel
+470,Ves Er Taiyiba,Israel
+471,Ves Er Tavor,Israel
+472,Ves Er Toviyya,Israel
+473,Vesaret Hilqiyy,Israel
+474,Vesher,Israel
+475,Vest Jannun,Israel
+476,Vest Jerusalem,Israel
+477,Vet Batya,Israel
+478,Vet Ben-Gurion,Israel
+479,Vet Ha`Emeq,Israel
+480,Vet Hadaj,Israel
+481,Vet Hahadashama,Israel
+482,Vet Hanna,Israel
+483,Vet Heib,Israel
+484,Vet Hilqiyya,Israel
+485,Vet Hilqiyyon,Israel
+486,Vet Yam,Israel
+487,Vet Yasim,Israel
+488,Vet Yehosh Shem,Israel
+489,Vet Ziyya,Israel
+490,Vet Ziyyon,Israel
+491,Vev Lanya,Israel
+492,Vez'Annun,Israel
+493,Vezer,Israel
+494,Veztr,Israel
+495,Vir,Israel
+496,Vov,Israel
+497,Vsh Hashitta,Israel
+498,Yavne'Eri,Israel
+499,Yhaharbiyat Ata,Israel
+500,Yhon Leziyyon,Israel
+501,Yshon Leziyya,Israel
+502,Yshua',Israel
+503,Yzhor Hashaharb,Israel
+504,Z'Er Tarshiha,Israel
+505,Zarea,Israel
+506,Zaret Hilqiyya,Israel
+507,Zareth,Israel
+508,Zari,Israel
+509,Zariyya,Israel
+510,Zasea,Israel
+511,Zbrekhasim,Israel
+512,Zeir,Israel
+513,Zer,Israel
+514,Zhreida Makkabb,Israel
+515,Ziryat Al Hadas,Israel
+516,Ziryat Ata,Israel
+517,Ziryat Hagalim,Israel
+518,Ziryat Yam,Israel
+519,Zlryat Gat,Israel
+520,Zmark,Israel
+521,Zpr Oeiya,Israel
+522,Zre,Israel
+523,Zreida Makkabbi,Israel
+524,Zreidis,Israel
+525,Zrel,Israel
+526,Zriyya,Israel
+527,Zriyyon,Israel
+528,Zrr Adashmon,Israel
+529,Zrr Hahadasha,Israel
+530,Zrr Haniqra,Israel
+531,Zrr Reina,Israel
+532,Zrr Yona,Israel
+533,Zrret Batin,Israel
+534,Zrrkayrah,Israel
+535,Zrrshiha,Israel
+536,Zsir,Israel
+537,Zsrel,Israel
+538,Zsrerh,Israel
+539,Zsret Batya,Israel
+540,Zt Yasif,Israel
+541,Ztin,Israel
+542,Ztreida Makkabb,Israel
+543,Ztreida Makr,Israel
+544,Ztreidis,Israel
+545,Ztret El'Azarea,Israel
+546,Ztreth,Israel
+547,Ztriyya,Israel
+548,Zurion,Israel
+549,`'Eer Toviyyon,Israel
+550,`Blem,Israel
+551,`En Boqeq,Israel
+552,`Ener Tarshiha,Israel
+553,`Enny,Israel
+554,`Ennyenosson,Israel
+555,`Ennyenuy,Israel
+556,`Ennynen Yehosh,Israel
+557,`Ennynsow,Israel
+558,`Eret Hadassere,Israel
+559,`Fe Kamma,Israel
+560,`Heekdab,Israel
+561,`Henzmer,Israel
+562,`In Makkabbim R,Israel
+563,`Meer,Israel
+564,`On Hadaj,Israel
+565,`On Hashahat,Israel
+566,`On Leziyyon,Israel
+567,`Rnei Ayish,Israel
+568,`Rnei Brak,Israel
+569,`Ven Yehud-Mond,Israel

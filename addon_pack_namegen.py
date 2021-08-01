@@ -310,8 +310,11 @@ def read_surnames():
 def splice_names():
     #Please note that most of the names involved in this function are infact latin-ised names, and cover countries that have already been found via web scraping
     df = form_international_names()
+    #Check why some types are not assigning most as men or "M"
     df_bs4 = soup_names()
+    print(df_bs4, pd.unique(df_bs4["origin"]))
     df_surnames = soup_surnames()
+
 
     frames = [df, df_bs4, df_surnames]
     df_full = pd.concat(frames, ignore_index=True)
@@ -435,7 +438,6 @@ def add_stragglers(df, file_arg, name_fin): #Can add gender argument, only appli
                 #    divide = True
                 if item_txt == name_fin[i]:  # Last acceptable entry
                     adder = str(item_txt)
-
                     df = df.append({"name": adder, "tag": gender[i], "origin": origins},
                                    ignore_index=True)
                     break
@@ -504,7 +506,7 @@ def soup_names():
     nations = ["French", "Italian", "Spanish", "Turkish", "Dutch", "Swedish", "Polish", "Serbian", "Irish",
                        "Czech", "Hungarian", "Russian", "Persian", "Basque", "Armenian", "German"] #Test cases to see if wiktionary will take these as a real argument
     nation_abrev = ["France", "Italy", "Spain", "Turkey", "Dutch", "Sweden", "Poland", "Serbia", "Ireland",
-                            "Czech", "Hungary", "Russia", "Arabia/Persia", "Basque", "Armenia", "German"]
+                            "Czech", "Hungary", "Russia", "Persian", "Basque", "Armenia", "German"]
     probable_formats = ["dd", "dd", "dd", "dd", "li", "dd", "td", "li", "li", "dd", "dd", "td", "li", "dd",
                         "li", "dd"]
     name_div = ["Abbée", "Abbondanza" "Abdianabel", "Abay", "Aafke", "Aagot",  "Adela", "Anica",
@@ -538,12 +540,13 @@ def soup_names():
                 df = pd.DataFrame(columns=["name", "tag", "origin"])
                 df = add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats)
                 df = translit_non_latin(df)
-                form_files(df)
-                print(df.tail(60))
+                print("Forming files ...")
+                #form_files(df)
+                print("Printing Tail", df.tail(60))
 
                 return df
             else:
-                print(df_xlsx)
+                print("Printing df_xlsx", df_xlsx)
                 return df_xlsx
         except:
             print("An error occured")
@@ -553,7 +556,7 @@ def soup_names():
         df = pd.DataFrame(columns=["name", "tag", "origin"])
         df = add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats)
         df = translit_non_latin(df)
-        form_files(df)
+        #form_files(df)
         print(df.tail(60))
 
         return df
@@ -585,13 +588,16 @@ def add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats):
     for i in range(len(nations)):
         divide = False
         argument = "https://en.wiktionary.org/wiki/Appendix:{}_given_names".format(nations[i])
+        print(argument)
         file = requests.get(argument)
         print(str(file), "Iteration is {}".format(i), nations[i])
+        print("This has updated")
         if str(file) == "<Response [404]>":
             pass
         elif str(file) == "<Response [200]>":
             soup = BeautifulSoup(file.content, "lxml")
             rec_data = soup.find_all(probable_formats[i])
+            print(rec_data)
             item_txt = ""
             for item in rec_data:
                 item_txt = item.string
@@ -632,36 +638,36 @@ def add_names(df, name_div, name_fin, nation_abrev, nations, probable_formats):
                     else:
                         df = df.append({"name": adder, "tag": "F", "origin": origins},
                                        ignore_index=True)
-    def add_wiki_names(df_temp):
-        names_urls = read_wiki_names()
-        for key, value in names_urls.items():
-            try:
-                if "-" in key:
-                    nationality = key.split("-")[0]
-                else:
-                    nationality = key.split(" ")[0]
-            except:
-                pass
-            print(key, value)
-            if value == 'https://en.wikipedia.org/wiki/Category:Feminine_given_names':
-                # Wiktionary names are in their original language, need to follow deeper to find the english prounouncation
-                key_format = "https://en.wikipedia.org/wiki/Category:{}".format(key)
-                gender = "F"
-                # if key == "Arabic surnames" or key == "Persian surnames":
-                df_temp = read_category_names(df_temp, key_format, nationality.strip(), gender)
-            elif value == 'https://en.wikipedia.org/wiki/Category:Masculine_given_names':
-                key_format = "https://en.wikipedia.org/wiki/Category:{}".format(key)
-                gender = "M"
-                df_temp = read_category_names(df_temp, key_format, nationality.strip(), gender)
-        return df_temp
-    df_unmerged = add_wiki_names(df)
-    print(df_unmerged)
+    # def add_wiki_names(df_temp):
+    #     names_urls = read_wiki_names()
+    #     for key, value in names_urls.items():
+    #         try:
+    #             if "-" in key:
+    #                 nationality = key.split("-")[0]
+    #             else:
+    #                 nationality = key.split(" ")[0]
+    #         except:
+    #             pass
+    #         print(key, value)
+    #         if value == 'https://en.wikipedia.org/wiki/Category:Feminine_given_names':
+    #             # Wiktionary names are in their original language, need to follow deeper to find the english prounouncation
+    #             key_format = "https://en.wikipedia.org/wiki/Category:{}".format(key)
+    #             gender = "F"
+    #             # if key == "Arabic surnames" or key == "Persian surnames":
+    #             df_temp = read_category_names(df_temp, key_format, nationality.strip(), gender)
+    #         elif value == 'https://en.wikipedia.org/wiki/Category:Masculine_given_names':
+    #             key_format = "https://en.wikipedia.org/wiki/Category:{}".format(key)
+    #             gender = "M"
+    #             df_temp = read_category_names(df_temp, key_format, nationality.strip(), gender)
+    #     return df_temp
+    # df_unmerged = add_wiki_names(df)
+    #print(df_unmerged)
     df_clean = clean_df(df)
     print(df_clean)
-    con_frames = [df_clean,df_unmerged]
-    df_concat = pd.concat(con_frames, ignore_index=True)
-    print(df_concat)
-    return df_concat
+    #con_frames = [df_clean,df_unmerged]
+    #df_concat = pd.concat(con_frames, ignore_index=True)
+    #print(df_concat)
+    return df_clean
 
 def read_category_names(df_category, key, origins, gender):
         print("Value is from Wikipedia")
@@ -767,7 +773,7 @@ def translit_non_latin(df):
                 print(translit(name, "{}".format(language_code), reversed=True))
                 latin_name = translit(name, "{}".format(language_code), reversed=True)
                 df.at[index, "name"] = latin_name
-    print(df)
+    print("New Dataframe using translated names", df)
     return df
 
 def generate_city_input():
